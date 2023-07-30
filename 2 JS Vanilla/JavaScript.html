@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/c6a6e33750.js" crossorigin="anonymous"></script>
+
+    <!-- prism color Snippets (js at end) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-dark.min.css"
+        integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>JavaScript</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--uyi8FNan--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://d33wubrfki0l68.cloudfront.net/871521ecc315b651de02bb4b69804ae2dfb34f12/9281b/images/blog/javascript-logo.png">
+
+
+    <style>
+        body {
+            background-image: url(https://www.staritservices.net/assets/images/technology/javascript.png);
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        main {
+            background-color: rgba(9, 26, 50, 0.985);
+            color: rgb(214, 182, 0);
+            padding-bottom: 10%;
+        }
+
+        #greeting {
+            text-align: center;
+            margin-top: 7%;
+            border-bottom: 7px groove #FFF500;
+            width: 50%;
+            margin-bottom: 3%;
+        }
+
+        a {
+            color: #009a9a;
+            font-size: 1.2rem;
+        }
+
+        i {
+            color: greenyellow;
+        }
+
+        lab {
+            font-weight: 700;
+            color: #29ae7d
+        }
+
+        #pre1 {
+            background-color: rgba(40, 44, 52);
+            border: none;
+            align-self: center;
+            width: 80%;
+        }
+
+        #pre2 {
+            background-color: rgba(40, 44, 52);
+            border: none;
+            align-self: center;
+            width: 100%;
+            font-size: 1vh;
+
+        }
+
+
+
+        #code {
+            background-color: rgb(40, 44, 52);
+
+        }
+
+        article {
+            line-height: 1.7;
+        }
+
+        .BT {
+            font-size: 4rem;
+            text-align: center;
+            color: rgb(167, 221, 60);
+            text-shadow: rgb(128, 0, 64) 2px 0px 0px, rgba(77, 0, 38, 0.5) 3px 2px 0px, rgb(255, 0, 43) 3px 0px 3px, rgb(128, 0, 21) 5px 0px 3px, rgba(77, 0, 13, 0.5) 6px 2px 3px, rgb(255, 85, 0) 6px 0px 9px, rgb(128, 42, 0) 8px 0px 9px, rgba(77, 25, 0, 0.5) 9px 2px 9px, rgb(255, 213, 0) 9px 0px 18px, rgb(128, 106, 0) 11px 0px 18px, rgba(77, 66, 0, 0.5) 12px 2px 18px, rgb(212, 255, 0) 12px 0px 30px, rgb(106, 128, 0) 14px 0px 30px, rgba(64, 77, 0, 0.5) 15px 2px 30px, rgb(128, 255, 0) 15px 0px 45px, rgb(64, 128, 0) 17px 0px 45px, rgba(38, 77, 0, 0.5) 17px 2px 45px;
+            --darkreader-inline-color: #c6ee5b;
+            --darkreader-inline-bgimage: initial;
+            --darkreader-inline-bgcolor: #0a0b0b;
+            border-bottom: 7px groove #FFF500;
+            width: 35%;
+            margin-bottom: 15%;
+        }
+
+        .ST {
+            font-size: 1.5rem;
+            color: #FF7000;
+        }
+
+        .recap {
+            color: rgb(122, 187, 196);
+            background-color: rgb(44, 44, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="d-flex flex-column align-items-center pt-5 ">
+            <div id="greeting">
+                <i class="fa-brands fa-js display-1 mt-5" style="text-shadow:3px 3px 3px #04009A;"></i>
+                <label class="pb-5 mx-3">
+                    <h1 class="display-1 text-warning" style="text-shadow:3px 3px 3px #04009A ;">Hello, World!
+                    </h1>
+                </label>
+                <i class="fa-brands fa-node-js display-1 " style="text-shadow:3px 3px 3px #04009A"></i>
+            </Div>
+            <article class=" container d-flex flex-column ">
+                <strong class="align-self-center BT">JS Vanilla </strong>
+                <ul>
+                    <li>as in css , u can include ur code to the HTML file with3 ways inline script-tag or in-head
+                        script-tag or in separate file , when u use file ALWAYS PUT THE SCRIPT.src TAG MANUALLY B4 BODY
+                        CLOSE specially if it interact with html elements so the browser load it after the HTML elements
+                        are loaded, <br>
+                        in js when a though/definition/loop/func is finished Semicolon is expected , if its not there
+                        u can see in vs-code on the navigation-bar even if u go lines below that u still in the same
+                        though and not returned to empty space for new though. <br>
+                        every thing defined in the js file is added to a large obj that include all called window(with
+                        small w) that already come with the js built-in methods like alret and objects like math .
+
+                    </li>
+                    <li>
+                        <p><span class="ST">primitives :</span> (in other langs: types)</p>
+                        <ol>
+                            <li>Numbers: in VJS there is one type of numbers (no float or integer) , <br>
+                                mathmatical operators: +-*/ are built in in addition %(mod) **(rais pow): <br>
+                                operation and they behave as math order of operations (* 1st b4 +-) , mod (% operator
+                                gives the remaining) and through it js decide if no. is even(/2 %=0) or odd(/2 %=1) , **
+                                mean rais to some power 2**3=8 , js can store up to 16no. after decimal point then it
+                                will round up <br>
+                            <li>NaN : this primitive type is number! and it mean that the outcome is meaningless like
+                                0/0 or if any variable got NaN as value involved in other operation result will be NaN
+                            </li>
+
+                            <li>Variables(identifier): (name of the value) store values for further use/change , when u
+                                define it use let like let MyYear=2000 ,its look like the name of val just when its
+                                defined but when the named used l8er it means put the val of this name here, so in case
+                                u wna update var inc/depending on previous value u define it again and inside use the
+                                var-name as value:
+                                <code class="language-js">let MyCount = MyCount - 3 or MyCount-=3 ++</code>
+                                ,each ration/func must have var to store in it . <br>
+                                const : to define variable that wouldnt be changed <br>
+                                var : is the old way of let , so dont use it! . <br>
+                                in VJS variable type can be changed on redefine, also note that var keyword is existed
+                                and the diffirance from let is that it can be read from any scope/block , we use let to
+                                avoide multi-scope-defines issues .
+                                it is better when define empty varz to assign it to = undefined <br>
+                                declaration mean u mention an identifier but not necessary have brrn initialized with a
+                                value or expression(like funcs and class).
+                            </li>
+                            <li>Boolean : true/false usually identifier start with isXYZ (isLogedIn) to remind yes/no
+                                questions . <br>
+                                every value in js is true except : false , 0 , ``(empty string) , null ,
+                                undefined , NaN . </li>
+
+                            <li>String : most be wraped with ` ` or ' ' or " " (try to use backtick instead of quotes )
+                                specially when u add quote in the string then start wrap it with '' , every letter is
+                                indexed starting from 0 (as array[index]) inc the spaces , when u add 2 str1+str2
+                                the result is combined srt with no space (it rather be added), <br>
+                                building/concate string with js with the old way called concatenation ("you bought "+
+                                qty + " "+ "products") , the new way called <strong>Template Literals</strong> and it
+                                works only with backticks and it uses $ (means theContentOf as on most cases) e.g
+                                concatenation: <br>
+                                <code class="language-js">
+                                    `you bought ` + qty + ` ` + product + `. Total is: ` + price * qty
+                                </code> <br>
+                                temp.lit : <br>
+                                <code class="language-js">
+                                    `you bought ${qty} ${product.toUpperCase()}. Total is: $${price * qty}`
+                                </code> <br>
+                                str methods :
+                                <ol>
+                                    <li>they are built-in functions that applied on same var and change it, the can be
+                                        chained </li>
+                                    <li>.toUpperCase() : capitalize all</li>
+                                    <li>.trim() : remove extra spaces on beginning and end of str , useful for user
+                                        input when paste is expected </li>
+                                    <li>.indexOf('str') : argument need to be passed to this mesthod and it return
+                                        the index of 1st char on its 1st occurrance . if no match it return -1 . </li>
+                                    <li>.slice(6, 13) :it slice part of str and return it as new one , it take just
+                                        start index or start and end, if negative no. passed mean from end . </li>
+                                    <li>.replace('existed', 'new') : replace this chars with this one .</li>
+                                    <li>.split(`char`) : split the string into arrz on the selected char , the use case
+                                        for this usually is split(` `) on space so every word go to index .</li>
+                                </ol>
+                                js text properties :
+                                <ol>
+                                    <li>properties are built-ins that return info (need new var) about what b4 the dot
+                                        and the result had to be stored in another var , these dont have () </li>
+                                    <li>.length : givies the string/arr lenth in normal count (not index from 0)</li>
+                                    <li>few others and not in common use arguments-caller-displayName-name-prototype
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>null : means nothing here , it can be used explicitly as value or can be seen as return
+                                in console . </li>
+                            <li>undefined : js says idk ! the value u request never heared about it , (unlike i know
+                                what u talk about but its empty/null) </li>
+                        </ol>
+                    </li><br> <!-- Primitives end -->
+
+                    <li>Methods (general for primitive or data structure): mean a funcs that founded in object as values
+                        for an obj.name (or index) , these are js built in funcs (found on built in objz that warb
+                        another data structure) that u can attach to any data structure to execute that func on it
+                        <ol>
+
+
+                            <li>Math object : with capital , M its a collection of methods which u can full seen in
+                                console ,methods are const numbers(always capital) and pre-build funcs:
+                                <ol>
+                                    <li>eng reminder : ones , tens , hundreds after decimal point tenths , hundredths
+                                    </li>
+                                    <li>Math.floor() : is rounding down all time </li>
+                                    <li>Math.ceil() : is rounding up </li>
+                                    <li>Math.random() : gives random between 1-0 (0,1 not encluded) , if u want result
+                                        between two no. u need to figure how much options by subtract them and the start
+                                        point :between 24-57 (lower included!!!) are 33 options start from 24 :
+                                        <code class="language-js">Math.floor(Math.random()*33)+24</code>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    <li>Methods :
+                        <ol>
+                            <li>alert(``) : gonaa through alert with ok , no input </li>
+                            <li>prompt(``) : func that return the user input as STRING !! for numbers use u need
+                                to parsInt(userInput)so it need to be stored ;
+                                <code class="language-js">let USerInput = prompt(``)</code>
+                            </li>
+                            <li>parsInt(`str`) : take string and return it as no. , chage types(primitives) specially
+                                from user input </li>
+                            <li>toString(`no.`) : return a string from other primitives </li>
+                        </ol>
+
+                    </li><br><!-- Methods end -->
+
+                    <li>console methods :
+                        <ol>
+                            <li>its a way to KNOW/DISPLAY values and returns of funcs for depug and test</li>
+                            <li>typeOf(var) xyz : gives the type in console for check </li>
+                            <li>console.log(var) </li>
+                            <li>console.warn(``) : print warning in console with yellow highlight </li>
+                            <li>console.error(``) : print warning in console with red highlight </li>
+                            console.dir() : print a whole dir e.g document (DOM file)
+                        </ol>
+                    </li>
+
+
+                    <li><span class="ST">Conditions : </span> activate funcs according to condition result if its true
+                        or false:
+                        <ol>
+                            <li>comparison operators : > &lt; &lt;=>= == ===(type) != !==(type) </li>
+                            <li>Logical operators : &&(and) , ||(or shift+\ = pipe) , !Var (used in cond mean if this
+                                var is falsy). </li>
+                            <li>when u check if var with equality operators ALWAYS USE ===/!== and u can check equality
+                                to -1 means its not there myVar.indexOf(``) === -1</li>
+                            <li> if statment : if (condition) {doThis} / condition1 ? doThis or myVar===`xyz` && doThis;
+                                <br>
+                                if(condition){doThis};else{doThat} / condition1 ? doThis : DoThat;
+                                <br>
+                                if(){};else if(){} / condition1 ? doThis : condition2 ? DoThat ; <br>
+                                , the action will be done only if the condetion is true
+                                , when else if added it will be executed when the 1st if is false . <br>
+                                because the executed moves to next condetion when the previous is false u can make
+                                gradiual ranges checking using else-if . else alone is to cover all other cases. <br>
+                                an old way to write it with ; according to online editor <code class="language-js">if(myVar==`go`){console.log('go');}else
+                                    {console.log('purple');}</code><br>
+                                nesting : if u wna use more than condition each one have its own false outcome but they
+                                have one true outcome when all of them must be true : u can nest them one inside the
+                                other and they dont have true outcome except the deepest it will get the one common true
+                                outcome for all . <br>
+                                when condition made for part of a range that covered by another condition , the one that
+                                take place is the condition that written 1st , not the one that cover smaller (specific)
+                                part !!! . <br>
+                                else-if used to start/test new cond with its own else , but without adding else nad
+                                making the new cond !1st cond it will be equal to else (instead of else if)
+                            </li>
+
+                            <li>Switch statment : fancy way to write "else if" it uses when specific conditions needed
+                                to be checked and they cant be covered/grouped by ranges (except !var), note that the
+                                word break if not added it will execute every func come after the true condition with
+                                checking ther conditin , this can be used if u wana more than one func be activated when
+                                one condition is true or u can write 2+ cases one after another to give them same func ,
+                                the default is what funs to do if all of the conditions are false , and it can be just
+                                break.
+                            </li>
+
+                            <li> on condetions u can use identifier alone without assign on what value and it will
+                                mean if it true (defined with true value) , then if u used !var it will mean if the var
+                                have false value to cover the js false values .
+                            </li>
+                            <li>acording to w3schools: "The Boolean value of an expression is the basis for all
+                                JavaScript comparisons and conditions" <br>
+                                dont confuse true var with true conditionone , one sided condetion (without ==) is
+                                always check if true,if (!myVar) means if the opposite the Boolean value of myVar is tru
+                                (means if its false) </li>
+                            <li>special kind of condition without cond statment is used inside iterators-funcs like
+                                folows :
+                                <span><code class="language-js"> arr.filter(function(i){return i%2===0})
+                                    </code></span> means return only the indexes that even
+                            </li>
+                        </ol>
+                    </li><br> <!-- Conditions end  -->
+
+                    <li>
+                        <span class="ST">Data Structures : </span> structures that allow us to store multiple values
+                        in one var :
+                        <ol>
+                            <li><span class="ST">Arrays : </span> its a collection of values and its ordered (indexed)
+                                starting from 0 , usually
+                                data structures have a js built-in methods that can be executed on them by adding a dot
+                                and the method after the structure name , aray is not a type! typeOf(myArr)= obj! ,its
+                                just simplified with constant obj names as indexes (cant be customed).in js the
+                                valuesinside arr can be from all types unlike uther langs . it is accepted to refere in
+                                most
+                                langz to general indexes of the arr with "i" in addition in js with element .
+                                <ul>
+                                    <li>arr created by define a var and its values are inside [].</li>
+                                    <li>using/changing a value inside arr is by but its index (nth position) after arr
+                                        name : day[0] , u can nest indexes to access i inside nested arr or string :
+                                        arr[2][4] , <br>
+                                        u cann assign new value at nth postition if u have it to be at this exact one
+                                        even if it ahead of the last index , it will create empty(undefined) indexesand
+                                        they can be filled l8er . <br>
+                                        Object(inc arr) type contains (stored with) a reference, so to make 2 equals
+                                        they have to refere to the same object and be of the same type. String
+                                        (or primitives values) doesnt have reference, just the actual value, thats why 2
+                                        vars with exact primitive value can be compared with === and it will be true ,
+                                        meanwhile if u copy obj content to another or let obj2 = new obj1 they still not
+                                        equal , unless u use let obj2=obj1 and then the 2 vars will point to same
+                                        reference and if u make changes on obj2 also obj1 whill show same changes. with
+                                        that said , arrs always defined with "const" cuz if u use let then u can define
+                                        the same arr name with new reference (for each define = new reference even same
+                                        name) the content still can be changed on the same reference not with redefine
+                                        but via arr.methods(), unlike primitive-varz that dont have reference the then
+                                        with const u never can change them ! (just with "let" and redefine).
+
+                                    </li>
+                                    <li>Array Methods :
+                                        <ol>
+                                            <li>arr methodsthat work on string basically those who doesnt change the
+                                                original arr and result need to be stored in new var: .concat .length
+                                                .slice
+                                            </li>
+                                            <li>.length : give the length in NORMAL counting , if it 6 the last i=5</li>
+                                            <li>.push(arg)/pop(noArg) : add/remove from the end of the arr , unlike
+                                                strings changings got saved on same arr and no need for define new for
+                                                the new results , arr.pop can be deleted and stored in var . <br>
+                                            </li>
+                                            <li>.shift(from)/unshift(into) : remove/add in the beginning of array ,
+                                                behave like push/pop . </li>
+                                            <li>.concat : let arr3=arr1.concat(arr2) , combine 2 aars into 3rd</li>
+                                            <li>.includes(anyPrimitive) : check if arr inclide this Primitive is found
+                                                and return true/false . </li>
+                                            <li>.indexOf : return on whetch index this value found , -1 if its not</li>
+                                            <li>.reverse : arr.reverse() , reverse the arr </li>
+                                            <li>.join() : printf(arr.join()) , make the array as string inside join
+                                                parentheses if its empty it keeps commas between values , if u add
+                                                ``(ws will get spaces , (`-`)(`_`) will put between words, <br>
+                                                toStithout space) string will be without spaces , ` ` with space the
+                                                wordring can be uses and gives same result as epmty () but cant use to
+                                                devide values .
+                                            </li>
+                                            <li>.slice(3,5) : save part of array into new var original arr wouldnt
+                                                change , if no i assigned mean copy the whole array , one i mean from
+                                                this to end , two i mean from 1st to 2nd BUT THE SECOND NOT
+                                                ENCLUDED!!!!, if u choose negative i means count from the last of the
+                                                arr and this counting not start from 0 . if u wnat the sliced part to be
+                                                deleted from original arr u need to use .splice()
+                                            </li>
+                                            <li>.splice(i,#iDel,wtAdd) : u can use it to delete/add/both ON ORIGINAL
+                                                ARR! the delete/add done on same i passed to splice so if u want to add
+                                                some between2 i u pass the 2nd one ,
+                                            </li>
+                                            <li>Array ITERATORZ-Methods that iterate along with func (after funcz) ,
+                                                inside these u cant use a loop unless u got arr of arrz :
+                                                <ol>
+                                                    <li>.forEach(func+-return) : less used after the advent of
+                                                        for-of-loop (at loops), a method (for of is stand alone loop)
+                                                        for arrz that do the func on each element , u need to add arg
+                                                        represent elements to the anonymous func , this used in case u
+                                                        wna print or actually change the arr values(still the same
+                                                        reference even if saved on new var) if u wana new arr but keep
+                                                        the old use .map() </li>
+                                                    <li>.map(func+return): let newArr=oldArr.Map(func+return) ,make new
+                                                        arr via func invoked on previous one . </li>
+                                                    <li>.filter(func) :creat new arr saved to var , in-filter func
+                                                        checks a via iterator-cond on the valz, if true it will enter
+                                                        new arr
+                                                        <span><code class="language-js">
+                                                                arr.filter(i=>i%2===0)</code></span>
+                                                        means return only the indexes that even. <br>
+                                                        iterate filteron arr of objz then map to take just the name or
+                                                        just the year from these filtered objz is strong way of
+                                                        filterzz. also they can be chained in single line :
+                                                        <span><code class="language-js">
+                                                                let myVar=MyArr.filter(func).map(func)</code></span>
+
+                                                    </li>
+                                                    <li>.some()/.every() : check if some or every element inside arr is
+                                                        true/false and that what it return </li>
+                                                    <li>.reduce() : to reduce an arr to single value that need to be
+                                                        saved to const var, this method-func must take 2 params
+                                                        (accumulator "result",currentValue "i") , while the method
+                                                        executing
+                                                        the accum is the temp result for the steps of itteration , curr
+                                                        is +=1. basically reduse is doing func for elements one after
+                                                        another it can be sum (or any math op) or check them on cond ad
+                                                        return the 1st/only/etc elemnt that answer the cond . e.g : <br>
+                                                        <span>
+                                                            <code class="language-js">
+                                                                myArr.reduce((total,index)=>{return total+index})
+                                                            </code>
+                                                        </span><br>
+                                                        <span>
+                                                            <code class="language-js">
+                                                                myArr.reduce((min,price)=>{if(price < min) {return
+                                                                    price;}return min}) </code>
+                                                        </span> <br>
+                                                        add initial(shift) point to reduce : u can add a val at func and
+                                                        after a coma , the accum(result) starting from this b4 dealing
+                                                        with any arr[i]
+                                                    </li>
+                                                    <li>.sort() : const array1 = [1, 30, 4, 21, 100000]; array1.sort();
+                                                        output: [1, 100000, 21, 30, 4] , so it can be used only on
+                                                        string valz </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li><!-- Array Methods  end -->
+                                </ul>
+                            </li><br><!-- Arrays end -->
+
+
+
+
+                            <li><span class="ST">Object : </span> is a data sturcture that defined as:
+                                <code class="language-js">const myObj = {nm:vl , , }; </code>and contain data
+                                in form of pairs name(key):value each pair called property,name is instead of index in
+                                arr (which also obj) and value can be from any type, while obj is reference type its
+                                always defined as const myObj={name1 : value1 ,name2,value2}; names can be numbers but
+                                behinde the scene all names are converted to strings
+                                <ul>
+                                    <li>two ways to access object values : <ul>
+                                            <li>myObj.myName</li>
+                                            <li>myObj[`myName`] : in this one u can use varz inside [] without `` if the
+                                                var value is same as one of the obj names it will return the value of
+                                                that name, this cant be done with the 1st way . </li>
+                                        </ul>
+                                    </li>
+                                    <li>changing value of a name from outside is like arr[i]=NewVal : obj.name =newVal
+                                        and same to add new name , access obj.value inside arr: arr[i].name</li>
+                                    <li>the keyword this : (read after funcs) is a keyword that usually written inside
+                                        obj-method and it refere to the obj it self so u can easlly include names as
+                                        params,the tricky part is to use the mithod on other obj then it referes to that
+                                        obj slike define new name on 2nd obj with method from 1st obj :
+                                        let obj2.newName=obj1.mythodName , and of just general func to apply on objz
+                                        with this . if think about it its like specefic args that not passed in the ()
+                                        or the entire obj b4 the .meth is an arg .
+                                    <li>in objz when empty nameneed to be declared it MUST be assign it to = undefined
+                                    </li>
+                            </li>
+
+                    </li>
+
+                    <li>tables ?</li>
+                    <li>data ?</li>
+                    <li>hash ?</li>
+
+                    <li>when the term -literal- used structure(sting/arr/obj)-literal) means we r using now the
+                        structural shape : [] {} "" , its like to say "am not talking about an identifier type , am
+                        using actual structure (inside any) </li>
+                    </ol>
+                    </li><br><!-- Data Structures end  -->
+
+
+                    <li>
+                        <p><span class="ST">Loops : </span> used to repeat functionality</p>
+                        <ul>
+                            <li>for loop : consist of start point end point(as cond.) and steps size(incrementEx) ,
+                                note that in this loop u have declared a var to use as counter so no need for out side
+                                one , and if u start counting from 0 ur end point Ex should be
+                                <span><code class="language-js"> i&lt;arr.length or i&lt;=arr.length -1 </code></span>
+                                (like last i in arr) , usually u can cuz infinite loop when the stop
+                                point is not in the counting/stepping diriction , vs-code template have const
+                                element=arr[i] so u can apply methods and funcs on elemnt , always remember when an
+                                input is choosing value from arr it will be at [input-1] , like if user choose 1st thing
+                                ita at [0]!!!!! <br>
+                            </li>
+                            <li>nesting loops : when u have 2 nested 1st one have 6 iterations and inside it one with 7
+                                iterations then for each one of the 1st loop iterationsthere will be 7
+                                iterations(results), its like for each value u generate on 1st loop u include/applyOn it
+                                at 7 iterations on the second loop , usually the 1st one is preparing
+                                ordering/indixing/formation for the second .
+                                <br>
+                                an example for that is dealing with nested arrays : u have to make inside the 1st loop
+                                new var that in each parent loop step its value is one of the child arrays parentArr[i]
+                                then the second loop will full no. of iterations on each arr that saved in var at the
+                                time.
+                                <br>
+                                in loop if u choose to define i as loop inner var then remember the diffirance between
+                                ${i}(the incremented no. ) and ${arr[i]}(the actual value) , and when u wna print the
+                                index of value remember to add 1 on the concat so u start from 1 .
+                            </li>
+                            <li>while loop :this loop mostly used with user input/prompt rather than arrs/objs (but
+                                could be used) if for-loop means apply this funs on next [ith] , while means : while
+                                this condition is true execute these funcs then CHECK THE CONDITION AGAIN!!!! , just
+                                when its not true u can execute the rest of the code bcz of that its usually used with
+                                stand alone functionality like prompt , be used as for-loop just the 3 elements of start
+                                end increment are divided for 2 main cases :
+                                <ol>
+                                    <li>using pre-defined var :in order to use already defined var in the Window that we
+                                        need to use as start point, then on the while statment we define the
+                                        condetion(end) and inside we define the increment and watch out for its
+                                        position:usually its at the end so the funcs could be applied on the 1st i .
+                                    </li>
+                                    <li>user input(no increment): before write this while-loop u need 1st to prompt the
+                                        user(saved to var) , then if the var not as condition(false) func is same var
+                                        with prompt until wanted result is obtained , then after the loop a func that u
+                                        wna execute after success . with other functionality than prompt u need to be
+                                        sure that is have hold(?!) otherwise it will turn into infinite loop. <br>
+                                        u can make the prompt using if-func-break;
+                                    </li>
+                                    <li>double condetion and break; : double condetion used (mostly) when 1st one is a
+                                        boolean condetion to start this loop (otherwise wouldnt execute) then the func
+                                        that gonna be repeated then the change and the 2nd cond is the if statment that
+                                        contain cond with break; , here u can see thats its like Switch-case the
+                                        diffirance is that its start again as long as the 1st cond is true and 2nd if
+                                        false</li>
+                                </ol>
+                            </li>
+                            <li>for-of : its english-like shortcut of classic for-loop with +=1 only ! , for(const
+                                newVar of myArr){}; u can use it also on nested arrz
+                            </li>
+                            <li>iteration over obj : obj are not likly to get iterated on , there is a loob called
+                                for-in but its iterate over the obj names(keys)only but not commonly used , so more
+                                convenient way is to extract names and valz to arrz with methods Object.values(myObj)
+                                and Object.keys(myObj) and Object.entries(myObj) that return arr of arrz in each there
+                                is the name and val then use double nested for-of, func that take obj names and values
+                                to change them and put results into new obj (cuz objs is const cuz got ref) </li>
+                        </ul>
+                    </li><br><!-- Loops end -->
+
+
+                    <li>
+                        <p><span class="ST">Functions : </span></p> functions have identifier name to use l8er like
+                        anyother one which defined earlier to use l8er , in js (unlike other langz) u can use the func
+                        b4 definition .
+                        <br>
+                        funcs can be build with parameters (that gonna be replaced l8er with arguments) or without
+                        params , also the params can be a must or optional depends on how the func uses them , usually
+                        the optional are the latest ones so the params order matters .
+                        <ul>
+                            <li>
+                                function decleration (define) syntax :
+                                <code class="language-js">function name([param[, param[, ...
+                                    param]]]){statements}</code><br>
+                                param is the name (placeholder) for an argument to be passed to the function.
+                            </li>
+                            <li>return key word : (the func statment to the outer scope)used when the output value of
+                                func/method expected to be saved to identifier or the in method case followed by dot
+                                (obj.method.somMthd) to do somthing with that return Immediately without save in var
+                                , without that funcs will make changes when they invoked but the val will stay without
+                                use,saving to identifier is done WHEN THE FUNC INVOKED NOT WHEN DEFINED!!! , also
+                                note that return end the func any thing after it wouldnt be executed , in
+                                case of cond u can use return for if and return for func :when if-cond is true
+                                its return will be exuted and cancel every thing after it !!! </li>
+                            <li>when u use a func with a loop that need a var to be changes saver like total , it should
+                                be declared inside the func and returned in the bottom of the func </li>
+                            <li>if identifier defined b4 func and changed in it the change can be seen AFTER FUNC
+                                invoked
+                            </li>
+                            <li>scope types : global.scp / func.scp / block.scp / lexical.scp(nested inner can see outer
+                                bc to global) </li>
+                            <li>if identifier is redefined inside func scope the original will be changed just if u
+                                returned it and its not const , if no return then it will be just internal for the func
+                            </li>
+
+                            <li>Function Expression/pattern : 1st pattern was the normal define with func name , now 2nd
+                                is Anonymous Function which have 2 types of Expression :
+                                <ol>
+                                    <li>1st Anonymous : is define func inside var without func name ,invoked via var() ,
+                                        but now it can passed to func/obj/arr, or returned/pulled inside var. (l8er
+                                        also arrow func)
+                                    </li>
+                                    <li>arrow funcz : ()=>{}; make sure u have ; on end of last code b4 it , its
+                                        compact/shortcut for anonymous fucz , usually use inside methods and events but
+                                        on normal js window flow u have to give it a name; if it have 1 arg u can wright
+                                        it without the () , u can even eliminate thereturn keyword if ur func start with
+                                        return by replace {} with () and if this whole func is chained in one line (no
+                                        line break) u can also eliminate the () like :
+                                        <span><code class="language-js"> (a,b) => a*b </code></span>
+                                        &nbsp; or &nbsp;
+                                        <span><code class="language-js"> a => a*2 </code></span> <br>
+                                        arrow-func/js-methods and this:(vid 230) arrow-func cant see any scope back to
+                                        the window obj unless there is a function keyword on the way then this-k inside
+                                        the arrow will refere to the obj which function found in. its not the scope that
+                                        stop it from reaching the obj (e.g nested objz), so if its inside an obj method
+                                        like setTimeout (which naturaly inside func) at 4:35 it will not read the window
+                                        obj cuz no function word in the middle but there is one between it and person
+                                        obj then it will read it , and thus when anonymous is used like at 4:05 it does
+                                        read the window-obj of setTimeout. in short u wouldnt use arrow to define a
+                                        method , just when it alrdy inside an anonymous func.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Immediately Invoked Function Expressions (iife): that executes a function instantly
+                                after it's defined to ensure variables are only accessible within the scope of the
+                                defined function.the expression looks like : <code class="language-js"> (function
+                                    myFunc() {})();</code>
+                            </li>
+                            <li>Callback function : is passed into another function as an argument, which is then
+                                invoked inside the outer/primary function to complete a routine/action.
+                            </li>
+                            <li>high order function : its a func that include/accept/return funcs , now merging this
+                                with anonymous fucs give us nice automation for executing l8 the func name but the
+                                actual func is depending on high order func return and that could be depending on what
+                                had as arg func (the last exe line is blind exe), func return hard coded func is high
+                                order but one that build func according to argz called factory function ( like 1st lvl
+                                of argz to build a func that exe on 2nd lvl of argz !!) </li>
+                            <li>obj methods : same logic of anonymous just the func is a val of a name inside obj and it
+                                called as obj.name() </li>
+                            <li>try{}-catch()-finally(): error is expected out of some func , u but it in try-catch
+                                (like cond for funcs) that if the no err is back the code work fine but if there is a
+                                err the catch swill replace the try on the execution flow so the flow dont stop, on the
+                                catch usually its catch(anyParam){console.log(anyParam)} which will replace the red js
+                                err + alternative func to execute include msg to user, if u wna print the err use
+                                (anyArg)on catch to resample the err-msg . <br> [from future]: this catch and finally
+                                are the same as followed after promise so if there is a pre-built func that emit err
+                                catch will auto take it as arg so when u see on console " Uncaught error " it mean u
+                                havent prepare a catch for it !
+                                <br>
+                            </li>
+                            <li>setTimeout : activate this func after this time , setTimeout(()=>{},3000) </li>
+                            <li>setInterval : same patern as setTimeout wich but must be saved into a const-varin order
+                                to use clearInterval(var) ,this will repeat on the fixed time, 2 ways of syntax :
+                                <code class="language-js"> setInterval(()=>{div1.innerHTML+="Hello"},3000);</code><br>
+                                the recursive pattern : <br>
+                                <code class="language-js">(function loop(){setTimeout(()=>{div1.innerText +=
+                                    `Hello`;loop();}, 1100);})();</code>
+
+
+
+
+
+
+
+                            </li>
+                        </ul>
+                    </li><br><!-- Functions end -->
+
+
+                    <li>
+                        <p><span class="ST">New Features to JS : </span></p>
+                        <ol>
+                            <li>JavaScript Hoisting : (not new but here the place for it) Hoisting is JavaScript's
+                                default behavior of moving all declarations to the top of the current scope (to the top
+                                of the current script or the current function).means variable that declared with let and
+                                const (NOT FUNCZ!!) can be initialized with val and used before it has been declared !!
+                                (ofc declaration and initializations must be on same scope{lvl}) . therefore please note
+                                : JavaScript only hoists declarations, not initializations. <br>
+                                this feature one used in the old langz to make code more readable and not desturbed for
+                                person who read with declarations (make it more eng) but always declare variables at
+                                the beginning of every scope, and JavaScript in strict mode does not allow variables to
+                                be used if they are not declared. </li>
+                            <li>default params : when u put params in parentheses on define u can put (x,y,z=10) which
+                                mean if notheng passed on that arg the no.10 will be passed by default that way u dont
+                                need to add cond what to do on if undefined , on multi params put thee one with default
+                                l8 and the ones without defaul on start so if there is a lack in params no the not
+                                protected will get one and others will use default so the func still work and err seen
+                                on screen instead of console . </li>
+                            <li>Spread : used in fucs args,array literal,obj literal <ul>
+                                    <li>spread in func/mthd(...iterable) /,this is especially for fuc/mthd that expect
+                                        one value on each param ,like if u give it arrName its not a single val that can
+                                        work on ,so this one do expand/spread the arr INDEXES inside the parentheses, in
+                                        deap think
+                                        this is iteration the take every index and put it as argument .</li>
+                                    <li>spread arr in array literal: let myArr = [a,b,...anArr,"rt"] , also if it used
+                                        with sting it will add one char at a time </li>
+                                    <li>spread in obj literal : here its spread the names and value , if 2 objz are
+                                        spreaded sand they have common name the 2nd one is rewrite the val , if arr
+                                        spreaded in obj it will be index as name + valz </li>
+                                </ul>
+                            </li>
+                            <li>Rest : it look like spread(...) but used on in args at funcz-define (spread used on func
+                                invoke) , and what it do is collect the args from its position onward (A rest parameter
+                                must be last in a parameter list), and but them into an arr for in-func use . note that
+                                this is not workong incide arrow funcs. its also can be sused on destructuring
+                                (basically its used in args(arr-like) and destructuring arr) </li>
+                            <li>destructuring : <ul>
+                                    <li>arrz :
+                                        <span><code class="language-js"> const myArr=[98,60,59,30,29,28]
+                                            </code></span> &nbsp; then &nbsp;
+                                        <span><code class="language-js">
+                                                const [first,second,third,...others] =myArr
+                                            </code></span><br>
+                                        that way u alrdy got from "myArr" 3 varz and arr "others" for further use .
+                                    </li>
+                                    <li>objz :
+                                        <span><code class="language-js"> const myObj={email:a@a.com ,
+                                                born:1989 ,
+                                                died:undefined}
+                                            </code></span>&nbsp; then &nbsp;
+                                        <span><code class="language-js">
+                                                const {email , birth:birthDate, died:deathYear=`N/A` } = myObj
+                                            </code></span><br>
+                                        in objz u can use exact name or if u wna change assign it to new one with ":" ,
+                                        also as arrz rest-param can be used to creat new obj with the rest of the names
+                                    </li>
+                                    <li>in func-param destructure : u can prepare a destructuring inside the func params
+                                        and the part of =myObj is alrdy implicitly there applied when u pass an obj like
+                                        <br>
+                                        <span><code class="language-js">
+                                                function NameMail({f1stNm ,Lst ,Email=`N/A`}){return `user:${1st}
+                                                ${last}
+                                                mail:${Email}` };
+                                            </code></span>&nbsp;so when u put {} inside params its automatically
+                                        expected obj for destructuring. <br>
+                                        so when u use filter on arr of objz u can use this destructure way to shorten
+                                        the func : <br>
+                                        <span><code class="language-js">
+                                                instead of : let newArr=myArr.filter((elm)={elm.score>=90};) <br>
+                                                u can do : let newArr=myArr.filter(({score})={score>=90};)
+                                            </code></span><br> no need for index naming. and so if u need 3 names
+                                        inside
+                                        the arrow func.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li><br><!-- New Features to JS end -->
+                    <p> <span class="ST">DOM Manipulation : </span></p>
+                    <ul>
+                        <li>what is DOM : <br>
+                            Dom is a model (api) for the document-object wich ultimately connects web pages
+                            (html) to programming languages to represent the structure of a document—like page
+                            in memory (to somthing executable). Usually it refers to JavaScript, even though
+                            modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript
+                            language. like to say if we have H1 on the html page then on the DOM will get a JS object
+                            that modeling (represent) that H1 .
+                            <br>
+                            The DOM model represented as logical tree where connections; objz are related as
+                            perents and children . Each branch of the tree ends in a nodes, and
+                            each node contains objects. DOM methods allow programmatic access to the tree. With
+                            them, you can change the document's structure, style, or content.Nodes can also have
+                            event handlers attached to them. Once an event is triggered, the event handlers get
+                            executed.
+                            DOM (document object model) : is a common model(object/API!) for all browsers
+                            regarding how to represent the html on the page (instructions/data for displaying),we have 2
+                            problems :
+                            <ol>
+                                <li>html is just static markup lang but not programming lang , so we need js as
+                                    programming lang to cond/change things .</li>
+                                <li>html and js are not the same lang so we need an api to connect them so the
+                                    js can control the markups which is the DOM.</li>
+                            </ol>
+                            now the DOM is the obj that have all the info as objz for each data structure
+                            and its auto created for each web page (html). in DOM for every html elements
+                            there is pre-defined js obj and the attributes actually are the obj-names , in fact
+                            u can build html document using js only , sure it will be much longer work.
+                            from here u can imagine what it is : every element have entire object which its
+                            properties are the attributes , one of them is style ! , on vs-code all these auto
+                            complete intellisense at html are actually the pre-defined objects names .
+                            <br>
+                            then ,on the higher lvl of manipulation that we make with js by using the window-obj
+                            methods(the browser tab lvl), these are the most api-sh thing (DOM is html to js api
+                            ,this is js to browser-inner-lang api) bcz the definition of methods like
+                            onScroll/onLoad/onKeyPress is found on the browser engine-side that cant be changed
+                            (unlike the DOM values) we use it as event(cond) to execute funcs when it fired .
+                            <br>
+                            in terms of front end this is the higher on the tree(the deeper/closer to system
+                            resources) that we can get as web developers from here each browser have its own way
+                            of implementation on the otherside , that what make the difference in performace and
+                            compatibility but that not our concern as web dev .
+                            <br>
+                            note that after user interaction happen the results can be displayed but on
+                            refreshing the page they will disappeare , from here the next lvl is to save the changes on
+                            local-storage/server-side and load it on next page load / refresh .
+                            <br>
+                            this image recapping the lvlz : <br><br>
+                            <figure class="text-center">
+                                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XwipPdI3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czniaazwv9pgm5pegycu.png"
+                                    alt="WindowsObj+DOM">
+                            </figure><br>
+                            in console if u look for document or id of html element u will get tags but if u
+                            type the command: console.dir(document) or saved to var : myVar =
+                            document.getElementById(`ThisId`) then console.dir(myVar) it will print the DOM
+                            version of the selected id . <br>
+                            while we start to talk about js things , remember to include the js script tag at b4
+                            body close <br>
+                        </li><br>
+
+                        <li>DOM selecting elements methods :
+                            <ul>
+                                <li>document.getElementById(`ThisId`) can be saved to var for further use as
+                                    myVar.innerHTML or Immediately as (`ThisId`).innerHTML </li>
+                                <li>document.getElementsssByTagName(`ThisTag`) : this return an HTML collection
+                                    (which is NOT array) of all this tags </li>
+                                <li>HTML Collection its a list of Elements , can use .length and the iterable (can
+                                    use for-of) , not when u save one to var by id that not exist on page the var
+                                    will be null,but from tag or class it will be empty shell of collection </li>
+                                <li>document.getElementsssByClass Name(`ThisClass`) : same idea like tagName make
+                                    collection from class of urs or bootstrap </li>
+                                <li><i>document.querySelector/querySelectorAll(`elm` `#id` `.class`
+                                        `x[Attr="val"]`):</i>
+                                    this is a new addition to the DOM and it use all css Selectors and Combinators
+                                    for addressing elements, without all it return the 1st match </li>
+                                <li>remember attributes actually are properties in the element obj so when u iterate
+                                    over HTML collection u can use el.href el.src el.title </li>
+                                <li>all of these selecting methods could be used to extract and save to var or to
+                                    change properties in the element obj as we will see next up .</li>
+                            </ul>
+                        </li><br><br>
+
+
+                        <li>DOM Properties Manipulate :
+                            <ol>
+                                <li>
+                                    DOM properties to chanege/view text in el :
+                                    <ul>
+                                        <li>innerText: shows available text only, not hidden one or html tags
+                                            inside the element if some text have inside p> have strong> and style of
+                                            display:none; it will not show up at innerText var , also when this used
+                                            to change/insert/set it will only used for text , any htm tags will be
+                                            printed as text not executed .
+                                        </li>
+                                        <li>
+                                            textContet: this show all inc hidden text no HTML but the place
+                                            of
+                                            the other tags inside the chosen element will be replaced by empty
+                                            spaces
+                                            .when used to set it also put html tags as text .
+                                        </li>
+
+                                        <li>
+                                            <i>innerHTML</i> : shows all the text with the tags and when use to set
+                                            the html tags will be execute. these 3 option can be used to get/set/+=
+                                        </li>
+                                        <li>console.log(elVar.outerHTML): print the html inside that elVar</li>
+                                        <li>
+                                            <strong>
+                                                IMPORTANT NOTE ABOUT elVar.value : this property is problematic
+                                                while coding at least in VS Code , sometimes it is found in the
+                                                elVar obj yet it doesnt show up on the intellisense when concated
+                                                and it still works !!!!!!!!!
+                                            </strong>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>DOM properties to chanege attributes : <br>
+                                    normaly attributes can be changed directly via :
+                                    document.querySelector(`el`).attr=xyz ,but also can be viewed/saved after
+                                    element saved to var by elVar.<i>getAttribute</i>(`class`) and change the value
+                                    cen be either way:
+                                    <ul>
+                                        <li>elVar.<i>setAttribute</i>(`class/title`,`xyz`) :
+                                            it take the word class ( and the value is passed just into
+                                            the parenthese ; to replace just pass the val after the colon and to add
+                                            use string-literal as example:
+                                            <code class="language-js">elVar.setAttribute(`class`,`${myEl.className}
+                                                redClass bg-success`)</code>
+                                            <br><strong>WARNING THIS WAY : elVar.setAttribute(`class`)=xyz or +=xyz
+                                                DOESNT WORK!!!</strong>
+                                        </li>
+                                        <li><i>elVar.src=`https:`</i>when class need to be used in method if its
+                                            part of string-literal then use `class` if it concated to elVar then use
+                                            className (class property-name) </li>
+                                    </ul>
+
+                                <li>manipulate with pre-defined classes :(the idea of css libraries) its
+                                    writing on
+                                    css class name with style properties and add the name to class-atr </li>
+                                <li>uses of classList :an other ways for add or remove only is using :
+                                    elVar.<i>classList.add</i>(``) to last
+                                    and elVar.<i>classList.remove</i>(``) from any part of the class . <br>
+                                    there is a method to check if class-atr contain some class :
+                                    elVar.<i>classList.contain</i>(``)it return T/F . <br>
+                                    another method is elVar.<i>classList.toggle</i>(``) each time invoked it
+                                    flip T/F status , usually used onClick
+                                </li>
+
+
+                                <li>manipulate style : each element have the whole style object with the properties
+                                    thats applicable to the element, when element viewed in js u can see the style
+                                    that written inline note the one in css file to see the final version of
+                                    which applied at the end this method need to be used :
+                                    window.getComputedStyle(elVar),targiting a style.prop is by camelCase not with
+                                    dashes lik: FontSize not font-size, and the
+                                    values always in string-literal like so : elVar.<i>style</i>.fontSize=`xyz` , or
+                                    document.body.style.backgroundColor=`black` .
+                                </li>
+                                <li>navigate to parents and child with js : <br>
+                                    remember each elm can have 1 parent but lot of children <ul>
+                                        <li> <i>elVarParent=elVar.parentElement </i> : will return the uper-lvl-rlm,
+                                            .parentElement can be duplicated for 2 lvlz up . </li>
+                                        <li> <i>elVar.children </i> : return HTML collection(also with null) of children
+                                            to
+                                            save and choose from
+                                        </li>
+                                        <li><i>.nextElementSibling / .previousElementSibling</i> : as the browser
+                                            interpret
+                                            the htmlpage to DOM from top to bottom left to right these method whill
+                                            address
+                                            and return previous element on same parent , if 1st and last exceeded it
+                                            return
+                                            null.
+                                            <br>
+                                            compared to <i>.nextSibling/.previousSibling return the DOM-nod of the elm
+                                                (text-nod) </i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    creating,inserting and remove : elVar=<i>document.creatElement(`img`)</i>: this
+                                    creat
+                                    new element on the js file which not yet part of the DOM , attrz shall be added then
+                                    push it to the dom with <i>.appendChild</i> :
+                                    <ul>
+                                        <code class="language-js">myImg=document.createElement(`img`);</code><br>
+                                        <code class="language-js">myImg.src=`https`;</code><br>
+                                        <code class="language-js">myImg.classList.add(`img-fluid`)</code><br>
+                                        <code class="language-js">elVar.appendChild(elVarChi)</code><br>
+                                        <code class="language-js">elVar.remove(empty!)</code><br>
+                                        <code class="language-js">elVar.removeChild(elVarChi)</code><br>
+                                        <code class="language-js">PrnttVar.replaceChild(newElVar,anyChiVar)</code>
+                                        <br>
+                                        its always push as the end child in the parent . (there is no prependChiled)
+                                        <br>
+                                        <li><i>elVar.append(`text`,`text`)</i> its used to add texts to elm it insert at
+                                            lastchild of the elm at its end (like innerText+=``).</li>
+                                        <li><i>elVar.prepend(`text`,`text`)</i> use to add elVar(of text) to the start
+                                            of an elvar . <br>
+                                            ** if u want to generate lots of elm u have to do the creation inside the
+                                            loop so the var that created inside will be declared again (and not match to
+                                            previous one </li>
+                                        to insert on specific position (not start or end) use
+                                        <li><i>insElVar.insertAdjacentElement(afterend/beforebegin,targElvar) : self
+                                                explained
+                                                :)</i></li>
+                                        <li><i>elVar.after(elVar2)</i>: newer+short one </li>
+                                        <li><i>elVar.before(elVar2)</i>: newer+short one </li>
+                                        <li class="recap">recap these on my answer at stackoverflow <a target="_blank"
+                                                href="https://stackoverflow.com/questions/16126960/what-is-the-difference-between-appendchild-insertadjacenthtml-and-innerhtml/73710313#73710313">
+                                                here</a> <span class="text-danger">to recap :</span><br>
+                                            to choose elm : document.querySelector() <br>
+                                            to creat/remove : document.createElement(``) .remove(empty!) .removeChild()
+                                            .replaceChild() <br>
+                                            for elements placement : .after() .before()
+                                            .insertAdjacentElement(afterend/beforebegin,xyz) .appendChild() <br>
+                                            for text : .append() .prepend() <br>
+                                            for attributes : .getAttribute() .setAttribute()/elVar.attr+= <br>
+                                            spec for class-attr .classList.contain() .classList.add() classList.remove()
+                                            classList.toggle() .<br>
+                                        </li>
+                                        <li>notes : <br>
+                                            to catch the input text : inputVar.value<br>
+                                            with querySelector u cant use innertext , just innertHTML<br>
+                                            getElementById can use innertext<br>
+                                            innerhtml+=elvar will add the whole HTML obj (node) , appendChild will add
+                                            the elvar as html element<br>
+                                            e.preventDefault(); method is so sensitive for the code before it ,
+                                            if there is some wrong code that not conected to it even not in same scope
+                                            and even correct unused line gonna blow it .
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul><br><br>
+
+
+
+
+                    <li>
+                        <p> <span class="ST">Events : </span></p>
+                        executing code as response to user interaction with parts of the page . the base
+                        principle is that the browser is monitoring ur input hardware and listen for them all the time
+                        (as any input-depending software) ,so we gonna do some funcs after having an evt or evt.prop is
+                        true the use of this is when <br>
+                        each event can be added in 3 ways :
+                        <ol>
+                            <li>in-line as attribute inside HTML tag : button <i>onclick=</i>"(alert(``);)"> ,
+                                note that sif u use same kind of quotes u for attr and string u will get err and if
+                                there is </li>
+                            <li>set that event property after elVart : elVar.theEvent = function(){}; , note
+                                that its= func(){} not ev(func) or ev=func() and here u can know in js file you MUStNT
+                                INVOKE inside event cuz it will be executed on page loading , while u can do that on
+                                elm tag in HTML , this way u can do elVar with querySelectorAll(.thisClass) to
+                                make same event for all . for these 2 ways of adding event use this list of <a
+                                    target="_blank" href="events.html">events</a></li>
+                            <li>elVar.<i>addEventListener(`event`, func/funcVar(callback),{how})</i> : NO INVOKE
+                                , it use the event name without "on" ,and if u add predefined func add the name without
+                                parenthese so it wouldnt be exuted Immediately, also it can be add how to do it like
+                                {once:true}
+                            </li>
+                            ** the difference between 1st and 2nd way is that if u used elVar.event again it
+                            will overwrite the prop-val , but with addEventListener 2nd one will be add to the
+                            previous valz
+                        </ol>
+                        <ul>
+                            <li>events and "this" : while elVar is obj(!!!) and we change its props/methods ,
+                                then when we pass a callback and inside it we refere to elVar with this . meaning we can
+                                prepare callbacks with "this" and pass them to any elVar.method</li>
+                            <li>event obj : its an obj that passed to ur in-eventListener-func-paramz , which is
+                                contain the obj properties , for each kind of event there is different obj , add a param
+                                any name to catch it and use its evt.prop </li>
+
+                            <li>mouse events : <ol>
+                                    <li>click : is fired when the whole single click (mouse key down + clicked +
+                                        up on the same point + no drag ) , this event can be activated by code with
+                                        elVar.click() [thi will not show in intellisense but still work] </li>
+                                    <li>dblclick :Triggers on a mouse double-click </li>
+                                    <li>ondrag : Triggers when an element is dragged check the list for drag
+                                        events</li>
+                                </ol>
+                            </li>
+                            <li>keyboard events <ol>
+                                    <li>keyup/keydown/keypress: these specify on which phase (which is
+                                        self-explanatory)
+                                        of interaction with the key to fire the event , Important evt.porpz <ul>
+                                            <li>evt.key : which is the meaning of the key that pressed , meaning
+                                                if it capital/small letter it will be different also on other lagz the
+                                                val will be that lang letter </li>
+                                            <li>evet.code : this is a reference for each physical key on the
+                                                keyboard if u press a then evet.key is a and evet.code is KeyA as for
+                                                space evet.key is " " and evet.code is Space , both shif have Shift key
+                                                but code is ShiftLeft or ShiftRight etc . </li>
+                                        </ul>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                            </li>
+                            <li>form events : <ol>
+                                    <li>one of the form important action is the submission to the action=""
+                                        location , after the buttin pressed it take the input info to the
+                                        location and then refresh the page , a thing that we dont want on SPA , so the
+                                        event func should start with activating preventDefault() method then do what u
+                                        want with the info:
+                                        <span><code class="language-js">formVar.addEventListener(`submit`,function(e){
+                                                e.preventDefault(); do this with the input.value
+                                                });</code></span>
+                                    </li>
+                                    <li>change & input events : those 2 used for general change inside input elm
+                                        (not just keypress or click) in case of copy-paste, voice input etc , the
+                                        difference is that onChange take effect after making change and leave(unfocus)
+                                        the input while onInput firing on every CHANGE that happen inside input element,
+                                        if arrows and shift been pressed that doesnt count as change(eg. live view of
+                                        other user styping) </li>
+                                </ol>
+                            </li>
+
+                            <li>prevent events-bubbling : which is triggering an event on elm inside multi-lvl
+                                elmz that also have events will trigger them all , to stop that add
+                                <i>e.stopPropagation</i> on the lvl where u wana the bubble to stop .
+                            </li>
+                            <li>events delegation (for l8er created elm): a problem that gonna popup when u use
+                                for-of to give same event listener for HTML-collection which is that it will work only
+                                on thouse that exist (that was in the collection when the loop execcuted), so
+                                instead of assign event to the children we go to the parent and onclick inside the func
+                                the work done on e.target (ofc if there is nested lelements u need to make a cond like
+                                so: <br>
+                                <code class="language-js">myUl.addEventListener(`click`, () =>
+                                    {e.target.nodeName===`LI`&& target.parentElement.remove()})</code><br>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Events end -->
+                    <br><br><br>
+
+                    <li>
+                        <p> <span class="ST">OOP : </span></p>
+                        the idea behind OOP is organising the cod , designing and structure the code so the
+                        future usage of objects will be easy , by making a classes, add a prototype + methods +
+                        properties to it , so l8er when declare an instance from that class via new it will already
+                        inherit the features .
+                        <ul>
+                            <li>obj prototypes : <br>
+                                this is special kind of property which is way to inherit methods(features) in js
+                                from a parent template-obj to the children from same type , meaning in js there is a
+                                template(class) that contain the built in obj of methods called prototype so
+                                when an identifier defined as obj with {} it automatically get a copy from that template
+                                with a reference property (__proto__)(double underscore called dunder)different id
+                                and name of which u choose . methods can be add to any structure prototype (though
+                                missing around with js prototypes it is not recommended) and then the new method is
+                                valid locally in the page(file) it can be done by assigning : <br>
+                                <code class="language-js">String.prototype.myMythod=function(){alert(`hi`)}</code><br>
+                                bcz the names inside the class need there valz from outside u CANT pass func
+                                expression as arg to make method inside the new obj , thus they added to prototype
+                                section.
+
+                            </li>
+                            <li>factory function :(just know the concept ,its not commonly used) its a funct
+                                that take argz and save them as inner obj properties then u add couble of methods to the
+                                obj then the party start :) ,its just another way that looks more "organized" . </li>
+                            <li>constructor and the keyword new : constructor in its basic idea (the old way) is
+                                a func (evolved and will be used as class), inside it is a template of what prop and
+                                metods to add when it "invoked" INSIDE an obj identifier (obj from ) , to make obj out
+                                of it and keep unique reference we useing the keyword new on assign like so : <br>
+                                <code class="language-js">function CarPaint(r, g, b) {this.r = r;this.g =
+                                    g;this.b = b;}</code><br>
+                                <code class="language-js">const myInstance = new CarPaint(255,255,255)</code>
+                                <code class="language-js">result myInstance{r:255,g:255,b:255}</code> <br>
+                                notes <ol>
+                                    <li>why put the methods in constructor and not on the obj ? less messy when
+                                        obj is viewed </li>
+                                    <li>accepted symantec for constructor/class is to start identifier with
+                                        capital letter to be distinguishable from normal funcz/objz </li>
+                                    <li>__proto__ now had the ur constructor and the general __proto__ so the
+                                        constructorand dont mix with the JS __proto__</li>
+                                    <li>proto methods are added separatelly (in on constructor declare) </li>
+                                    <li>u cant but already invoked funcs or js methods ,just inside definition
+                                        of func otherwise on making instance the get invoked</li>
+                                    <li>vs code intellisense dont show __proto__ but its still work (like
+                                        myinput.value)
+                                    </li>
+                                    <li>remember not to use arrow-funcz cuz the problem with this </li>
+                                    <li>the main use of this is to make template that we gonna generate from it
+                                        values (dont forget the ultimate goal is to get values via applying the new
+                                        obj(instanse) method on the instance it self and it return the wanted
+                                        value), this way is good when numerous of instances from same features(propz)
+                                        are expected for the same kind of processing (different valz) e.g an input
+                                        of color/img to be b.g then on every user pick we make new instance from
+                                        predefined constructor(class)and use its method to change the div/body bg .
+                                    </li>
+
+                                </ol>
+
+                            </li>
+                            <li>class : is a better way to write a constructor , started with keyword class
+                                followed by capital 1st identifier then curly braces {},inside we define a constructor
+                                that take the propz as this.name and after it we define the prototype methods as
+                                funcName(){};NO FUNCTION keyword , a whole class whould be like : <br>
+
+                                <div class=" d-flex flex-column align-items-center ">
+                                    <pre id="pre1">
+                                        <code class="language-js ">
+                                            class color {
+                                            constructor(r,g,b) {
+                                            this.r = r;
+                                            this.g = g;
+                                            this.b = b;
+                                            }
+                                            rgb(r, g, b) {
+                                            return `rgb(${this.r},${this.g},${this.b}) `;
+                                            };
+                                            }
+                                        </code>
+                                    </pre>
+                                    <img src="https://cdn.discordapp.com/attachments/948299950008184902/1031879789209981019/class.jpg"
+                                        class="w-75" alt="e.g Class img discord">
+                                </div>
+
+                            </li>
+                            <li>extends & super : if there is 2 kind of obs to be produced nad they share most
+                                of the features then a common class can be made and EXTEND from it a class for each
+                                type of objz (class to make classes that make objz) with thge syntax : class Dog extends
+                                pet {}; now dog have all pet features(propz) and ready to add its own propz on its
+                                constructor for dogs objz . <br>
+                                u will find on dogs objs the pet.__proto__ are found in separate __proto__
+                                inside the dogObj one, therefore when concating a method it 1st go to the closest
+                                (extended) class proto then to its parent , 2 methods with same name the closest will be
+                                taken .
+                                <br>
+                                if u there is 3d/4th type thatu dont want it to extends the whole constructor u
+                                can inside the snd lvl class (like dog) ad in the constructor :
+                                constructor(bark,name,age){super(name,age);this.bark=bark; }
+                            </li>
+
+                        </ul>
+
+                    </li><br><br>
+                    <!-- OOP end -->
+
+                    <li>
+                        <p> <span class="ST">Asynchronous : </span></p>
+                        this section and next are about send and retrieve(fetching) data from a server
+                        asynchronously without interfering with the display and behaviour of the existing page handle
+                        potential blocking operations. <br>
+                        as an intro 2 concepts need to be explained about how JS work : <ul>
+                            <li>
+                                <lab>call stack (concept) :</lab> its the mechanism that js used to keep track of
+                                where/what being executed when high order function is executed .so if HOF calls func2
+                                that calls func3 1rs they stacked on top of each others then the execution started from
+                                func3 to give val to func2 then got deleted func2 give val to HOF and got deleted, then
+                                next func on the HOF until we have all the values from all funcs then return our wanted
+                                val , meaning 1st the funcs got stacked then the execution start from top to
+                                bottom (last in first out LIFO) . <br>
+                                (that was in same HOF lvl , on the file lvl its always top to bottom left to
+                                right). on same concept the browser debugger works : when breakpoint added and run the
+                                code its stop on the point then press step-in and u can see on Call-stack tab the stack
+                                of the func u at , and the arrow of execution start automatically from top while u
+                                step-in more on local tab u can see the func input val and the return val .
+                            </li>
+                            <li>
+                                <lab>single threaded & WebAPIs (concepts) :</lab> JS is single threaded mean that one
+                                "thing"/line of code of JS can be undergoing on a given point but not doing things
+                                simultaneously.
+                                <br> in case there is a func that already known by definition that it can take
+                                time js hand it of to the browser to handle tracking of result and continue to the next
+                                line , for instance setTimeout if there is func after setTimeout it will be executed b4
+                                the time out . <br>
+                                <strong><strong>!!! ADVANCE EXPLINATION !!!</strong> </strong><br>
+                                JavaScript is an interpreted language, not a compiled one.interpreter
+                                converts the JS code to a machine code. There are several types of interpreters
+                                (known as engines).The most popular browser engines are V8 (Chrome), Quantum
+                                (Firefox) and WebKit(Safari).Incidentally, V8 is also used in apopular non-browser
+                                runtime,Node.js.Each engine contains a memory heap, a call stack, an event
+                                loop, a callback queue and a WebAPI with HTTP requests, timers, events, etc., all
+                                implemented in its own way for faster and safer interpretation of the JS
+                                code.<br>
+                                single-thread language is one with a single call-stack and a single
+                                memory-heap. It means that it runs only one thing at a time. <br>
+                                Multithreaded programming is programming multiple, concurrent execution
+                                threads. These threads could run on a single processor. Or there could be multiple
+                                threads running on multiple processor cores. <br>
+                                Sometimes you can deal with a popular error, notified by Maximum call stack
+                                size exceeded. It is easy to get this using recursion :
+                                <br> <code class="language-js">function foo() {foo()} foo()</code> <br>
+                                and our browser or terminal freezes. Each browser, has a different call
+                                stack size limit.In the vast majority of cases, they are sufficient and the problem
+                                should be looked for elsewhere. <br>
+                                Blocked Call Stack: suppose u use Node.js synchronous function readFileSync.
+                                any code after it will not be exuted and the read finish.but JS can also be
+                                non-blocking and behave as if it were multi-threaded by using Asynchronous Behavior,
+                                It means that it doesnt wait for the response of an API call, I/O events, etc., and
+                                can continue the code execution. this is possible thanks to the JS engines which
+                                use (under the hood) real multi-threading languages, like C++ (Chrome) or Rust
+                                (Firefox). They provide us with the Web API under the browser hoods or ex.
+                                I/O API under Node.js that can take multiple async and start execute multiple at
+                                same time as its real multi-threaded . <br>
+                                The question is, how does the runtime know that the call stack is empty and
+                                how is the event in the callback queue invoked? meet Event Loop. It is a part of
+                                the JS engine. This process constantly checks if the call stack is empty and, if it
+                                is, monitors whether there is an event in the callback queue waiting to be
+                                invoked. That's all the magic behind the scenes!. next lvl is Multi-threading vs
+                                Parallel Programming!
+
+                            </li>
+                        </ul><br>
+                        <strong>Asynchronous evolotion (coding syntax) :</strong>
+                        <ol>
+                            <li>the callback hell : for every request func (gonna be huge high order func) u
+                                need to pass url, success callback and failure callback) and usually things go nested
+                                (as hell) on the success callback cuz we start to nest another callback to be
+                                executed(and failure) then on the second callback success another callback etc etc like
+                                so :
+                                <br>
+                                <img src="https://cdn.discordapp.com/attachments/948299950008184902/1033771513188462592/callback_hell.jpg"
+                                    alt="callback hell">
+                            </li> <br>
+
+
+                            <li><span>promise :</span> is a class that represent the success or failure of asynchronous
+                                operation(func) on completion! . the only thing that it does is making the
+                                executor temporary leave the code inside the promise instance we made for l8er. this
+                                class have resolve and reject methods and we need to name them inside the AF argz to use
+                                them l8er. the Af inner funcz executed Immediately when the promise instance is created.
+                                the asynchronous thing here is that the return of these funcz can take its time
+                                thanks to promise inner methods and propz, inside promise class there is 2 props
+                                State and Result : <br>
+                                State can be one of 3 valz : pending/fulfilled/rejected when its fulfilled (data
+                                recived) or rejected (error recived) but now if we got data/error from url then
+                                state!=pending) now the executor come to complete promise inner methods
+                                resolve()/reject() then/catch/finally part of the file! to execute our funcs of
+                                how to manage/handle the outcomes, if there is no err or val and no
+                                setTimeout it will still pending forever. in then-catch we usually include indication
+                                text to be displayed in console so we can be sure that this is a success respond in case
+                                it looks weird (then we know its server/database problem). <br>
+                                <strong>
+                                    UNSOLVED : does i need to make cond to determine if its resoleve() or
+                                    reject() ? and do i need to spicify resoleve/reject with what ? (its not auto with
+                                    what recived? <br>
+                                    seems if u use client no need its already automated and when u do some manual
+                                    examples yes u need !!!
+                                </strong>
+                                the result prop is changed with what passed to resoleve()/reject(), resolve() in
+                                promise only return(data? auto?) to the 1st .then() which return a hidden
+                                promise , reject() pass result only to .chatch() which also return a hidden promise and
+                                so there funcz can be async one (its there hidden just in case of more asynchronous
+                                funcz!) , in case of chained then note that pre-built async funcs from HTTP clients
+                                auto return the result , if u wna do some manual funcs inside one then u have to return
+                                the outcome to be auto inserted to next then . <br>
+                                so promise do 2 main things : <ol>
+                                    <li>delay the executor until we have data returned from the asynchronous
+                                        func </li>
+                                    <li>handling what ever return with resoleve()/reject() inside promise(to
+                                        fill result
+                                        and return result out) after that continue with further
+                                        handling/re-async with
+                                        .then() and.chatch()
+                                    </li>
+                                </ol>
+                                error handling u need to make condz for every expected different text to be
+                                attached in result prop and be used l8er by chained promise-class-prototype-methods
+                                then/catch/finally (take previous-promise-result as arg need a name) to be
+                                displayed in console by console.log or throwing error which can be done manually(usually
+                                with condition) via using throw keyword and new copy of Error class (which is the
+                                default err behavior on console looks just like auto generated error) : if !val throw
+                                new Error(`my err msg`) it gonna looks , like this in console: <br>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <pre id="pre2">
+                                        <code class="language-js">
+                                            Uncaught (in promise) Error: ops
+                                            at TryJs.js:285:15
+                                            (anonymous) @ TryJs.js:285
+                                            Promise.catch (async)
+                                            (anonymous) @ TryJs.js:284
+                                        </code>
+                                    </pre>
+                                </div> <br>
+                                working examples for promise:
+                                <br>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <pre id="pre2">
+                                        <code class="language-js">
+                                            let fetcherPromise = new Promise((resolve, reject) => {
+                                            let data = (()=>{return { user: `gg`, password:`*****` };})();
+                                            if (data.error) {reject(data)}
+                                            else{resolve(data)}})
+
+                                            .then((data) => {
+                                            printfSecondary(data);printf(data);})
+                                            .catch((data) => {
+                                            throw new Error(`HALO WTH U Doing !!! LOOK WHAT YOU HAVE DONE
+                                            :${data.error.message}`)})
+                                            // .finally(() => {
+                                            // stopSpinner()
+                                            // })
+
+                                            ////////////////// OR ///////////////////
+
+                                            function dataFetcher(url) {return new Promise((resolve, reject) => {
+                                            function gg() {return {error: {
+                                            message: `error 400 Bad Request The server cannot process the
+                                            request due to perceived client error.`}}
+                                            }
+
+                                            let data = gg();
+                                            if (data.error) {reject(data)}
+                                            else {resolve(data)}})}
+
+                                            dataFetcher()
+                                            .then((data) => {printfSecondary(data);printf(data)})
+                                            .catch((data) => {
+                                            throw new Error(`HALO WTH U Doing !!! LOOK WHAT YOU HAVE DONE
+                                            :${data.error.message}`)
+                                            })
+                                            // .finally(() => {
+                                            // stopSpinner()
+                                            // })
+
+                                        </code>
+                                    </pre>
+                                </div><br><br>
+
+                                <strong>
+                                    in any toturial that explain promise there is a proplem : promise is
+                                    take/used-after an async func for external request via a client like http/XHR or
+                                    internal request such as node(fetch) and these are teached l8er (usually these pre
+                                    built funcz return promise for that u need to understand this class)!! e.g:
+                                </strong><br>
+                                node(fetch) : <br>
+                                <img src="https://cdn.discordapp.com/attachments/948299950008184902/1038489376939847810/image.png"
+                                    alt="node(fetch)"> <br><br>
+                                or XHR (HTTP Client) : <br>
+                                <img src="https://cdn.discordapp.com/attachments/948299950008184902/1038494440777588816/dgsd.jpg"
+                                    alt="XHR"> <br>
+                            </li><br>
+
+
+
+                            <li>Async & Await : it a syntax sugar for promise to look nicer, async function is a
+                                function declared with the async keyword that always return a hidden promise so
+                                on invoke u can continue with then/catch .the promise will be resolved with that
+                                func returned val , if the func throws an exeptions the promise will be
+                                rejected : <br>
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <pre id="pre2">
+                                        <code class="language-js">
+                                            let dataFetcher = async () => {
+                                            let data = (() => { return { user: `gg`, password: `*****` }; })();
+                                            if (data.error) { throw new Error }
+                                            else { return }
+                                            };
+                                            dataFetcher().then()
+                                        </code>
+                                    </pre>
+                                </div>
+                                await is the next level to simplifymulti-async-funcz ,
+                                it MUST be used inside async func and must be followed by a func that return promise the
+                                goal is to get result for more than 1 asynchronous func to got more data on one promise
+                                trigger .we can use 1 catch for them all or we can for each await its own try-catch for
+                                more specificity, unlike promise where each 1 have only 1 catch . note that any func
+                                that can emit/return an err to after-promise-catch() can also emit/return it to
+                                after-try-catch() .
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <pre id="pre2">
+                                        <code class="language-js">
+
+                                            let runUpdater = async () => {
+                                            const srvr1AppV = await (() => { fetshV(srvr1) })();
+                                            const srvr2AppV = await (() => { fetshV(srvr12) })();
+                                            const srvr3AppV = await (() => { fetshV(srvr2) })();
+
+                                            if (currentV > srvr1AppV) { update(srvr1App) };
+                                            if (currentV > srvr2AppV) { update(srvr2App) };
+                                            if (currentV > srvr3AppV) { update(srvr3App) };
+                                            }
+                                            startSpinner()
+                                            runUpdater().then().catch().finally(stopSpinner())
+                                        </code>
+                                    </pre>
+                                </div>
+
+                            </li>
+
+                            <br><br><br>
+                            <!-- AJAX  -->
+                            <li>AJAX :( Asynchronous JavaScript And XML) for making requests behind the
+                                scene(without refreshing the page) interacting with our backend server
+                                or others api and get info seamlessly (eg infinite scroll/onKeyUp search
+                                suggestion).
+                                <ul>
+                                    <li>
+                                        <lab>API:</lab>(Aplication Programming Interface) its an interface for ur code
+                                        to interact-with and making calles(request) in order to get response(data)
+                                        ,Web API is interface that uses HTTP to make call to particular URL which also
+                                        called end point (the point that exposed to others).some of APIs allow the user
+                                        to send back info like auto retweet or API that on request sends SMS! these
+                                        called API unless it have publicly accessible by a remote application in that
+                                        case its just front-end and back-end.
+                                    </li><br>
+                                    <li>
+                                        <lab>JSON :</lab> (JavaScript Object Notation)(almost JSML ;] ) is the cononical
+                                        information interchange format today as a successor after XML, while the
+                                        wires/cloud understand only binary (a bit store 0 or 1 byte stor 8 bits
+                                        kilobyte 1000 etc) we need to simplify and unify our request format which for
+                                        now days is JSON which we need to stringify to string ! because string is just a
+                                        series of bytes and byts 8 bits ! and on the other side we need to parser to
+                                        revers binary to JSON and then saved to an identifier and push the info into
+                                        element then to the DOM. the syntax format is similar to JS obj but there is a
+                                        differences to note :
+                                        <ol>
+                                            <li>its consist of key(name)-valu but the names always in a string-literal
+                                                and double quotes is most singles are invalid in JSON
+                                            </li>
+                                            <li>in JASON values can be any type except undefined, null/true/false can be
+                                                written as is , just replace undefined with null </li>
+                                        </ol><br>
+                                        JSON also used in other languages as they have to connect to some APIs
+                                        so they have there own way of parsing JSON to there lang , so when we get
+                                        respond we actually get a string that saved to a var then it gonna be parsed to
+                                        current prog-lang format(obj?). in JS :
+                                        <ol>
+                                            <li>convert from obj to JSON string as follows :
+                                                toSend = JSON.stringify(myObj)
+                                            </li>
+                                            <li>parsing : pars text to obj and save it to var as follows :
+                                                const data = JSON.parse(stringVar)
+                                            </li>
+                                        </ol>
+                                    </li><br>
+                                    <li>
+                                        <lab>HTTP :</lab> do a request by customizing the URL, (Unlike REST
+                                        API),HyperText Transfer Protocol (HTTP) is the canonical way used on the web for
+                                        data communication and for making different types(customized)
+                                        requests/connections to servers/APIs. <br>
+                                        HTTP messages are how data is exchanged between a server and a client. There are
+                                        two types of messages:requests sent by the client to trigger an action and
+                                        responses from the server. <br>
+                                        The start-line and HTTP headers of the HTTP message are collectively known as
+                                        the head of the requests, whereas the HTTP message payload-body is the
+                                        actual information of the data that is sent in the HTTP Message Body
+                                        (if any), prior to transfer encoding being applied. If transfer encoding is not
+                                        used, the payload body and message body are the same! <br>
+                                        msgBody = payload + encoding , msgBody-encoding = payload !!! <br>
+                                        this division can be seen in the network tab after selecting a request/response
+                                        from the list . <br>
+                                        HTTP uses different "verbs"(pre-build in-client funcs) to determine what
+                                        kind of connection is intended for this upcoming URL, each URL is targeting a
+                                        point of entry into the server which called "endpoint" , endpoint name usually
+                                        is a Class name and using it as endpoint gives u access of the instances that
+                                        made from it. the server "response status" is numbred as first digit of the
+                                        status code specifies one of five standard Classes that describes the result of
+                                        the URL(verb) targeting the endpoint : <br>
+                                        <ol>
+                                            <li>1xx informational response - the request was received,
+                                                continuing process</li>
+                                            <li>2xx successful - the request was successfully received,
+                                                understood, and accepted</li>
+                                            <li>3xx redirection - further action needs to be taken in order to
+                                                complete the request</li>
+                                            <li>4xx client error - the request contains bad syntax or cannot be
+                                                fulfilled</li>
+                                            <li>5xx server error - the server failed to fulfil an apparently
+                                                valid request</li>
+                                        </ol>
+                                        to go specefic about endpoints usually APIs docs includes what variables
+                                        (pre-built queries) chained in the URL and the order of them .
+                                        different APIs uses different symantecs for there variables like id> :id
+                                        {{id}} mean fill the requested id here , or what is more common to use is query
+                                        string which manually fillter the endpoint content that gonna be returned
+                                        according to the query parameters, its look like '/cases?sort=desc&color=blue'
+                                        originnally {sort:'desc',color='blue'} which is key-val pairs and also class
+                                        properties that u searching on its instances . it means from the objz that is
+                                        copy of cases get hose that there color is blue srort them ascendent (Z-A) .
+                                        another use case for ? is to be followed by `q` in case of general search for
+                                        value (in any property).<br>
+                                        <strong>so it : endpoint followed by variable nad then if necessary (on get) can
+                                            be followed by query</strong> <br>
+                                        URLs must be accurate to target endpoint ,any typo with
+                                        generating-URL/(chaining/appending)-variables will result error, but not
+                                        after the query mark bcz u ask the server to look for something and it always
+                                        return 200 even if the results are 0 (doesnt count err).<br>
+                                        in API testing tools like HOPPSCOTCH or Postman there is an option
+                                        instead of adding to the URL ? and the query string u can put the basic URL and
+                                        under it u input pairs for the paramZ .
+                                    </li><br>
+                                    <li>
+                                        <lab>HeaderS :</lab> they are part of every request/respond its also key-val
+                                        pairs and it specify info about the content that gonna be recived in the
+                                        request/respond like the prog-lang of the content human-lang of the text and ofc
+                                        what the api docs require for there custom headers custom , in social media and
+                                        chat apps headers are used as sorce of basic info to be shown in "link view" ,
+                                        some API require devz to send headers along with the requests , more about it on
+                                        nodeJS .
+                                        Here are some of the most common API Headers you will encounter when testing any
+                                        API (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
+                                            target="_blank">full-list</a>) :
+                                        <ol>
+                                            <li>Authorization: Contains the authentication credentials
+                                                for HTTP authentication.</li>
+                                            <li>WWW-Authenticate: The server may send this as an
+                                                initial response if it needs some form of
+                                                authentication before responding with the actual resource being
+                                                requested. Often following this header is the
+                                                response code 401, which means “unauthorized”.</li>
+                                            <li>Accept-Charset: This header is set with the request and
+                                                tells the server which character sets
+                                                (e.g., UTF-8, ISO-8859-1, Windows-1251, etc.) are acceptable by the
+                                                client.</li>
+                                            <li>Content-Type: Tells the client what media type
+                                                (e.g., application/json,
+                                                application/javascript, etc.) a response is sent in. This is an
+                                                important header field that helps the client
+                                                know how to process the response body correctly.</li>
+                                            <li>Cache-Control: The cache policy defined by the server
+                                                for this response, a cached response can
+                                                be stored by the client and re-used till the time defined by the
+                                                Cache-Control header.</li>
+                                        </ol>
+                                        Usage : headers usually is more part of the server response also they are auto
+                                        generated by the HTTP clint like axios, but if there is an API demand to include
+                                        headers in the request then : on get request u need to chain them in the link as
+                                        any other body varz, in post request there should be a place for headers in
+                                        post-func-paramz depend on the HTTP client in use ,(eg on axios.post() its 3rd
+                                        param after url and body).
+                                    </li><br>
+                                    <li>
+                                        <lab>XHR :</lab> (just for concept and clients evo) : stand for
+                                        XML.HTTP.Requests it an old/original practice for AJAX conceptand making
+                                        requests , it doesnt
+                                        support promise (suquence must be nested) in which u need 1st to new obj from
+                                        XMLHttpRequest class and define the properties .onload (whet happen on
+                                        success) and .onerroer b4 starting use the request methods(verbs) . an example
+                                        gonna looks like the follows :
+                                        <div class="d-flex flex-row justify-content-center">
+                                            <pre id="pre2">
+                                                <code class="language-js">
+                                                    const myReq = new XMLHttpRequest();
+
+                                                    myReq.onload = function () {
+                                                    console.log("IT LOADED!!");
+                                                    const data = JSON.parse(this.responseText);
+                                                    console.log(data.name,data.height)
+                                                    };
+
+                                                    myReq.onerror = function () {
+                                                    console.log("ERROR!!!!");
+                                                    console.log(this);
+                                                    };
+
+                                                    myReq.open("GET", "https://swapi.dev/api/people/1/");
+                                                    myReq.send();
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li> <br>
+                                    <li>
+                                        <lab>Fetch API :</lab> a newer edition to js support promise used in the famous
+                                        Axios client (library) behind the scene .
+                                        <br>
+                                        (MDN definition : The Fetch API allows you to fetch resources across the
+                                        network, providing a modern alternative to XHR. It has a number of
+                                        advantages, and what is really nice about it is that browsers have recently
+                                        added the ability to consume a fetch response as a readable stream.The
+                                        Request.body and Response.body properties are available, which are getters
+                                        exposing the body contents as a readable stream.) ,
+                                        <br>
+                                        though it have a drawback/confusing part : its inner promise gonna be marked as
+                                        resolved as soon as there is a ready to read chunk from the stream (in our case
+                                        the response header) although the stream not closed yet and the data still
+                                        coming, for that we have to use on the 1st .then a fetsh method res.json() (this
+                                        is not JSON class!!) which by the time it turn comes in the funcs stack the
+                                        stream should be closed and the data is complete and it will read the data from
+                                        fetch , ofc the data need to be returned for next .then , so in short its always
+                                        2 steps with fetch the request and the parsing, note that error response doesnt
+                                        need parsing.
+                                        <br>
+                                        a nice thing of fetch with async still much compact syntax than XHR , u can make
+                                        it even nicer by replacing then/catch after exucting the async func with
+                                        try-catch that inside the async func making clean exucting with only funcName(),
+                                        another note that the actual response with headers and status code found only on
+                                        the the 1st then(or 1st identifier in async) and only the data passed to the
+                                        second then after being .json() , on post request the body should be JSON format
+                                        (JSON.stringify(obj))
+                                        <br>
+                                        in every response (success or error) the actual data (payload) is found in prop
+                                        called data (in error response more deeply nested) , in fetch-post-request only
+                                        return data , not the whole response .
+
+
+                                        fetch func always return promise
+                                        :
+                                        <div class="d-flex flex-row justify-content-center">
+                                            <pre id="pre2">
+                                                <code class="language-js">
+                                                    // fetch-get with promise
+                                                    fetch('https://swapi.dev/api/people/1/')
+                                                    .then((response) => response.json())
+                                                    .then((data) => console.log(data))
+                                                    .catch((e) => {
+                                                    console.log(e);
+                                                    });
+
+                                                    // fetch-post with promise
+                                                    const ask = () => {
+                                                    fetch('https://reqres.in/api/register', {
+                                                    method: 'POST',
+                                                    headers: { 'Content-Type': 'application/json' },
+                                                    body: JSON.stringify({
+                                                    email: 'eve.holt@reqres.in', password:
+                                                    'pistol'
+                                                    })})
+                                                    .then((raw) => { return raw.json() })
+                                                    .then((data) => { console.log(data) })
+                                                    }; ask();
+
+                                                    // fetch-get async-await try catch
+                                                    async function makeRequest() {
+                                                    try {
+                                                    const response = await fetch('https://swapi.dev/api/people/1/');
+                                                    const res = await response.json();
+                                                    console.log(res);
+                                                    } catch (err) {console.log(err);}
+                                                    };makeRequest();
+
+                                                    // fetch-post async-await
+                                                    const makeRequest = async () => {
+                                                    try{
+                                                    const fetchResponse = await fetch('https://reqres.in/api/register',
+                                                    {
+                                                    method: 'POST',
+                                                    headers: { 'Content-Type': 'application/json' },
+                                                    body: JSON.stringify({
+                                                    email: 'eve.holt@reqres.in', password:
+                                                    'pistol'
+                                                    })});
+                                                    console.log(fetchResponse)
+                                                    const res = await fetchResponse.json();
+                                                    console.log(res);}
+                                                    catch (err) {console.log(err)}
+                                                    };makeRequest();
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <lab>AXIOS :</lab> is a promise based HTTP client/library(not native part JS)
+                                        for the browser and node.js need to get flile/npmInstall then includ/import to
+                                        ur js(this way we get intellisense?), or add to HTML by cdn/file , check the
+                                        install in README on github <a href="https://github.com/axios/axios#installing"
+                                            target="_blank">here</a>
+                                        after including in the HTML file the axios obj is usable in the JS file or
+                                        inside a script tag but it will not auto complete (intellisense)
+                                        the basic use of it (for get request) is replacing fetch with axios.get() and no
+                                        need for extra step of internal parsing . the headers format is the same and the
+                                        body can take obj (no need to stringify . axios is smart about the body content
+                                        that u append thus if u didnt include headers of 'Content-Type'it will auto fill
+                                        it then if ur content tybe is not the right one the API can reject it bcz of
+                                        axios headers . <br>
+                                        in axios-get request there is optional param after the url called options which
+                                        its value can be automated to be added to the url it should look like : <br>
+                                        const options = { params: { id : val , q : val }, headers : {} } ; <br>
+                                        requests should look like :
+                                        <div class="d-flex flex-row justify-content-center">
+                                            <pre id="pre2">
+                                                <code class="language-js">
+                                                    //woeking axios.get
+                                                    const getData = () => {
+                                                    axios.get('https://swapi.dev/api/people/1/')
+                                                    .then(response => {
+                                                    console.log(response);});
+                                                    };
+
+                                                    // working axios.post
+                                                    const sendData = () => {
+                                                    axios.post(
+                                                    'https://reqres.in/api/register',
+                                                    { email: 'eve.holt@reqres.in', password: 'pistol' },
+                                                    { headers: { 'Content-Type': 'application/json' } })
+                                                    .then(response => {console.log(response.data);})
+                                                    .catch((e) => {console.log(e.response.data.error)}
+                                                    )};sendData()
+
+                                                    // axios.post with async-await try-catch
+                                                    const sendData = async () => {
+                                                    try {
+                                                    let responz = await axios.post(
+                                                    'https://reqres.in/api/register',
+                                                    { email: 'eve.holt@reqres.in', password: 'pistol' },
+                                                    { headers: { 'Content-Type': 'application/json' } })
+                                                    console.log(responz.data)
+                                                    }
+                                                    catch (error) {console.log(error.response.data.error)}
+                                                    }; sendData()
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        note that thee args on axios.post(string-literal , obj-literal , json-format).
+                                        which is url,body,header respectively <br>
+                                        a real life (not fully pollished) use of axios :
+                                        <div class="d-flex flex-row justify-content-center">
+                                            <pre id="pre2">
+                                                <code class="language-js">
+                                                    const form = document.querySelector('#searchForm');
+                                                    form.addEventListener('submit', async function (e) {
+                                                    e.preventDefault();
+                                                    const searchTerm = form.elements.query.value;
+                                                    const config = { params: { q: searchTerm, isFunny: 'colt' } }
+                                                    const res = await axios.get(`http://api.tvmaze.com/search/shows`,
+                                                    config);
+                                                    makeImages(res.data)
+                                                    form.elements.query.value = '';
+                                                    })
+
+                                                    const makeImages = (shows) => {
+                                                    for (let result of shows) {
+                                                    if (result.show.image) {
+                                                    const results = document.querySelector('#results');
+                                                    const img = document.createElement('IMG');
+                                                    img.src = result.show.image.medium;
+                                                    results.append(img)
+                                                    }}}
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center">
+                                            <pre id="pre2">
+                                                <code class="language-html">
+                                                    h1> TV Show Search /h1>
+                                                    form id="searchForm">
+                                                    input type="text" p laceholder="TV Show Title" name="query">
+                                                    button> Search /button>
+                                                    /form>
+                                                    div id="results" class="mt-2"> /div>
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </li> <br><br>
+
+                                    <li>
+                                        <lab>Notes for Asynchronous section :</lab>
+                                        <ol>
+                                            <li>async-await vs promiseFunc.then() useing cases of : <br>
+                                                Useful to use if your code works with Promises and needs to execute
+                                                sequentially. Due to blocking, you might lose some ability to process
+                                                code in parallel. I've primarily used async-await when making API
+                                                requests. If you develop your frontend with React.js, a typical use case
+                                                might be
+                                                to display a loading screen until a fetch request returns and then using
+                                                a setState to update the UI.
+                                            </li>
+                                            <li>What is Web Scraping?
+                                                Web scraping refers to the extraction of data from a website. This
+                                                information is collected and then exported into a format that is more
+                                                useful for the user. Be it a spreadsheet or an API.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- AJAX end -->
+                            <br><br><br>
+
+                        </ol>
+                    </li>
+                    <!-- asynchronous end -->
+
+
+                    <li>
+                        <lab>Notes for Vanilla JS :</lab>
+                        <ol>
+                            <li>window.alert() document.getElementById check methods on top </li>
+
+                            <li>by checking the sum r+g+b of elVar.style.bg-clr:rgb(r,g,b) if sum>50 dark then
+                                on elVar.style.color=rgb(255,255,255) , this usfull in sites where ppl choose bg
+                                clr of some text
+                            </li>
+                            <li>as programming mindset : conditions if-else starts from the most rare thing to
+                                happen to the most notmail thing to happen
+                            </li>
+                        </ol>
+                    </li>
+
+
+                </ul>
+                <!-- Vanilla JS end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br><br><br><br><br><br><br>
+
+
+                <div>
+                    <div class="container py-2" style="background: rgba(0, 0, 0, 0.664);width: 100%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(255, 0, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(255, 145, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(0, 255, 149);margin-left: 20%;">
+                        <hr style="width: 60%;height: 3px;border: 3px solid rgb(0, 153, 255);margin-left: 40%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(0, 60,255);margin-left: 60%;">
+
+                    </div>
+                </div>
+
+
+                <br><br><br><br><br><br>
+
+
+                <div style="text-align: center;">
+                    <i class="fas fa-biohazard" style="height: 100px;color: rgb(189, 6, 0);font-size: 7rem"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>
+                        <h1 class="text-danger" style="text-align: center;font-size: 7rem"> Experamental Zone </h1>
+                    </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-radiation-alt" style="height: 100px;color: rgb(189, 6, 0);font-size: 7rem"></i>
+                </div>
+
+
+                <br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+            </article>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"
+        integrity="sha512-RDQSW3KoqJMiX0L/UBgwBmH1EmRYp8LBOiLaA8rBHIy+7OGP/7Gxg8vbt8wG4ZYd29P0Fnoq6+LOytCqx3cyoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

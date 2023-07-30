@@ -1,0 +1,332 @@
+/*  universalz  */
+.btn {
+    font-size: 1.7vh;
+}
+
+.fa-shekel-sign {
+    font-size: 1.1vw !important;
+}
+
+/* End universalz (by attrz) */
+
+/*  singularz  + grouped */
+body {
+    background-image: url(https://www.frendlymarketing.com/Images/Main/FriendlyMarketingBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+}
+
+#firstDiv {
+    height: 100vh;
+    padding: 0 !important;
+    width: 100%;
+
+}
+
+#main {
+    height: 100vh;
+    background-color: rgb(48, 63, 71);
+}
+
+#nav {
+    height: 5%;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#page {
+    height: 95%;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+#productsDiv {
+    height: 95vh;
+    width: 75%;
+    border-radius: 10px;
+}
+
+#dueDiv {
+    height: 95vh;
+    width: 25%;
+}
+
+
+
+
+
+
+
+#vendor {
+    width: 25%;
+    height: 100%;
+}
+
+#vendorLogo {
+    width: 100%;
+    height: 100%;
+}
+
+#vendorName {
+    font-size: 2.5vw;
+    font-weight: 300;
+}
+
+#vendorLink {
+    text-decoration: none;
+}
+
+
+
+#ClockDate {
+    width: 10%;
+}
+
+#clock {
+    padding-top: -20%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8vw;
+    background-image: linear-gradient(180deg,
+            rgb(253, 253, 253) 0%,
+            rgb(220, 223, 50) 50%,
+            rgb(199, 97, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+#toolBar {
+    width: 30%;
+}
+
+#userPanel {
+    width: 50%;
+
+}
+
+.userIconz {
+    background-color: rgba(0, 195, 255, 0.068);
+}
+
+#toolsPanel {
+    width: 50%;
+
+}
+
+.toolzIconz {
+    background-color: rgba(68, 0, 255, 0.13);
+}
+
+.navIcons {
+    font-size: 1.6vw !important;
+}
+
+#userPanel .btn {
+    width: 33%;
+    height: 4vh;
+}
+
+#toolsPanel .btn {
+    width: 33%;
+    height: 4vh;
+}
+
+
+
+
+
+#catigories {
+    height: 100%;
+}
+
+#v-pills-tab {
+    /*  categories div */
+    background-color: rgb(207, 207, 207);
+    width: 10%;
+    border-top: 2px solid rgb(43, 43, 0);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav-link {
+    /*  categories btnz */
+    border-bottom: 1px solid rgb(199, 199, 199) !important;
+    border-top: 1px solid rgb(199, 199, 199) !important;
+    padding: 25% 0% 25% 0%;
+    margin: 0 2% 2% 0;
+    font-size: 1.2vw;
+    font-weight: 500;
+    width: 90%;
+    text-align: center;
+}
+
+#v-pills-tabContent {
+    /*  products div */
+    background-color: rgb(207, 207, 207);
+    border-right: 1px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+
+
+#v-pills-settings {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.tab-pane {
+    width: 99%;
+    margin-right: 2%;
+}
+
+
+
+.firstRow {
+    margin-top: 1%;
+}
+
+.row {
+    padding: 0 !important;
+    margin: 0 !important;
+    margin: 3%;
+
+}
+
+
+
+.item {
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 10px;
+    width: 19%;
+    height: 15vh;
+    margin: 0.1%;
+    padding: 0 !important;
+    margin: 1% 0.5% !important;
+    font-size: 1.05vw;
+    font-weight: 500;
+
+}
+
+.pics {
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+#pricing {
+    border-top: 2px solid rgb(43, 43, 0);
+    height: 75%;
+    border-top-right-radius: 10px;
+}
+
+#productTotal {
+    /* margin: 1% 1%; */
+    font-size: 1.1vw;
+    font-weight: 300;
+    height: 53vw;
+}
+
+.resultRow {
+    background-color: rgb(36, 48, 55);
+    border: none;
+    border-bottom: 1px dashed rgb(55, 75, 87);
+    font-size: 1.4vw;
+    width: 100%;
+    height: 7vw;
+
+}
+
+.group {
+    /* text div inside resultRow div */
+    padding: 2% 2% !important;
+    margin: 2% 0% !important;
+}
+
+.fa-tag {
+    font-size: 0.9vw !important;
+}
+
+.dropDiv {
+    font-size: 1.6vw;
+    width: 1% !important;
+    height: 2vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0px !important;
+    color: azure;
+    text-align: right;
+}
+
+.dropdown-menu {
+    background-color: rgb(6, 23, 34);
+}
+
+.dropdown-item {
+    color: rgb(255, 221, 176);
+}
+
+
+
+
+#totalPay {
+    height: 5%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 196, 0, 0.781);
+    font-size: 1.5vw;
+    font-weight: 300;
+    background-color: rgb(36, 48, 55);
+}
+
+#paymentOptions {
+    height: 20vh;
+    background-color: rgb(36, 48, 55);
+
+}
+
+.btnRows {
+    width: 100%;
+    height: 33%;
+}
+
+
+.payBtn {
+
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    width: 93%;
+    height: 6vh;
+
+}
+
+#custumerBtn {
+    background-color: rgb(106, 140, 255);
+}
+
+#CancelAllBtn {
+    background-color: rgb(255, 112, 112);
+}
+
+#returnBtn {
+    background-color: rgb(117, 121, 121);
+}
+
+#beforePayBtn {
+    background-color: rgb(247, 255, 176);
+}
+
+#payBtn {
+    background-color: rgb(0, 255, 128);
+}

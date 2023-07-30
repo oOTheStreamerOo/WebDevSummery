@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(245, 214, 213);
+    font-family: 'Nunito', sans-serif;
+}
+
+#NV .nav-link,
+#NV .navbar-brand {
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#NV .nav-link:hover {
+    color: red;
+}
+
+
+#Muztext {
+    line-height: 1.3;
+    font-size: 5vw;
+}
+
+div {
+    color: rgb(244, 152, 190);
+}
+
+#MusText {
+    color: white;
+    font-weight: 100;
+}
+
+h1 {
+    color: red;
+    font-weight: 100;
+}
+
+#loliText {
+    font-weight: 100;
+    font-size: 1.2rem;
+
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 100;
+    line-height: 2;
+}

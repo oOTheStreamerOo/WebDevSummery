@@ -1,0 +1,122 @@
+body {
+    background-color: #112B3C;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 4px 5px rgb(0, 2, 122);
+
+
+}
+
+main {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+
+.titleDiv {
+    display: block;
+    background-color: #9ede7398;
+    text-align: center;
+}
+
+#title {
+    color: red;
+    justify-self: center;
+}
+
+table,
+th,
+td {
+    border: 3px solid #20ff97;
+    border-collapse: collapse;
+    padding: 1.5%;
+}
+
+table {
+    width: 100%;
+    color: #64e8ffbd;
+    text-align: center;
+
+}
+
+#tableDiv {
+    width: 60%;
+    background-image: url(https://www.ikea.com/ext/ingkadam/m/490eb04d8daa7f9f/original/PH170052-crop001.jpg?f=s);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.Rozy {
+    width: 20%;
+}
+
+
+
+#firest {
+    width: 20%;
+    /* background-color: #F7E6AD; */
+    background-image: url(https://w0.peakpx.com/wallpaper/358/166/HD-wallpaper-blackbeauty-black-love-roses-beauty-beautiful-pretty-red.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+#second {
+    width: 20%;
+    /* background-color: #F7E6AD; */
+    background-image: url(https://i.pinimg.com/originals/c8/8d/88/c88d884ff01321e6ae2d01830d9cbdcd.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#firestUlt {
+    display: none;
+}
+
+.secondUlt {
+    display: none;
+}
+
+#title2 {
+    margin-top: 6%;
+}
+
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #firest {
+        display: none;
+    }
+
+    #second {
+        display: none;
+    }
+
+
+
+
+
+
+    .Ult {
+        width: 100%;
+    }
+
+    #firestUlt {
+        display: block;
+        width: 50%;
+
+    }
+
+    #title2 {
+        margin-top: 8%;
+    }
+
+}

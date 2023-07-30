@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google font-->
+    <!-- for Eng  Nunito  300 400 700  font-family: 'Oxygen', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- for arabic -->
+    <!-- Noto Kufi Arabic 300 400 500  font-family: 'Noto Kufi Arabic', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome My Kit  -->
+    <script src="https://kit.fontawesome.com/c6a6e33750.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap full  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <script src="bootstrap/bootstrap.bundle.js"></script>
+    <!-- css file -->
+    <link rel='stylesheet' type='text/css' media='screen' href='indexMain.css'>
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="https://media.baamboozle.com/uploads/images/163262/1612405850_19461">
+    <!-- Title -->
+    <title>B-POS</title>
+</head>
+
+<body>
+    <div id="firstDiv" class="container-fluid">
+        <main id="main" class="d-flex flex-column text-white">
+
+
+            <!-- start of new nav sections -->
+            <div id="nav" class="w-100 d-flex flex-row justify-content-between">
+                <div id="vendor" class=" d-flex flex-row justify-content-right ">
+                    <div><a href="indexMain.html"><img id="vendorLogo" class="img-fluid"
+                                src="https://media.baamboozle.com/uploads/images/163262/1612405850_19461"
+                                alt="icon"></a>
+                    </div>
+                    <div id="vendorName" class="align-self-center ">
+                        <a href="indexMain.html" id="vendorLink" class="text-warning">B-Predator</a>
+                    </div>
+                </div>
+                <div id="ClockDate" class="d-flex flex-row justify-content-around align-items-center ">
+                    <div id="clock" class="" dir="ltr"></div>
+                </div>
+                <div id="toolBar" class="d-flex flex-row-reverse  text-info  ">
+                    <div id="userPanel"
+                        class=" d-flex flex-row-reverse justify-content-left  justify-content-around align-items-center ">
+                        <div id="exit" class="btn btn-outline-warning userIconz">
+                            <i class="fa-solid fa-arrow-right-from-bracket navIcons "></i>
+                        </div>
+                        <div id="logIn" class="btn btn-outline-warning userIconz">
+                            <i class="fa-solid fa-user-check navIcons "></i>
+                        </div>
+                        <div id="sittings" class="btn btn-outline-warning userIconz">
+                            <i class="fa-solid fa-gear navIcons "></i>
+                        </div>
+
+                    </div>
+                    <div id="toolsPanel"
+                        class="d-flex flex-row-reverse justify-content-around  align-items-center ms-2">
+                        <div class="btn btn-outline-warning toolzIconz"><i
+                                class="fa-solid fa-calendar-days navIcons "></i>
+                        </div>
+                        <div class="btn btn-outline-warning toolzIconz"><i class="fa-solid fa-calculator navIcons "></i>
+                        </div>
+                        <div class="btn btn-outline-warning toolzIconz"><i
+                                class="fa-solid fa-magnifying-glass navIcons "></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of new nav sections -->
+
+
+
+
+            <div id="page" class="d-flex flex-row w-100  ">
+
+                <!-- start of products sections -->
+                <section id="productsDiv" class="d-flex flex-column justify-content-end ">
+                    <div id="catigories" class="mt-2">
+
+                        <!-- Tabs  -->
+                        <div id="tabsDiv" class="d-flex flex-row  h-100 w-100  ">
+                            <!-- Tabs navs -->
+                            <div id="v-pills-tab"
+                                class="nav nav-pills flex-column h-100 justify-content-start align-items-center "
+                                role="tablist" aria-orientation="vertical">
+                                <button class="nav-link active text-black mt-2 " id="v-pills-home-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                                    aria-controls="v-pills-home" aria-selected="true">الفطور</button>
+                                <button class="nav-link text-black" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile" aria-selected="false">الغداء</button>
+                                <button class="nav-link text-black" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-messages" type="button" role="tab"
+                                    aria-controls="v-pills-messages" aria-selected="false">عالماشي</button>
+                                <button class="nav-link text-black" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-settings" type="button" role="tab"
+                                    aria-controls="v-pills-settings" aria-selected="false">العشاء</button>
+                                <button class="nav-link text-black" id="v-pills-dessert-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-dessert" type="button" role="tab"
+                                    aria-controls="v-pills-dessert" aria-selected="false">حلويات</button>
+                            </div>
+                            <!--end Tabs navs -->
+
+                            <!-- start Tabs content -->
+                            <div id="v-pills-tabContent"
+                                class="tab-content d-flex flex-row text-black w-100 justify-content-center  ">
+                                <div class="tab-pane  fade show active " id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+
+                                    <div id="breakfastRow1Move" class="rowsMover firstRow ">
+                                        <div id="breakfastRow1" class="tab-content row w-100  ">
+                                            <div id="breakfast1" type="button" class="item  d-flex flex-column  ">
+                                                <div id="breakfast1Pic" class="h-75 w-100  w-100 h-50 ">
+                                                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shakshuka-horizontal-1535568876.png"
+                                                        alt="shakshuka" class="itemImg w-100 h-100 pics">
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row justify-content-end align-self-center w-100 h-25 px-2">
+                                                    <div id="" class="w-75  align-self-center"> شكشوكة الحجه
+                                                    </div>
+                                                    <div id=""
+                                                        class="d-flex flex-row justify-content-end align-self-center  w-25 ">
+                                                        <div>11.5</div>
+                                                        <div id="shekel"><i class="fa-solid fa-shekel-sign mx-1 "></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="breakfast2" type="button" class="item  d-flex flex-column  ">
+                                                <div id="breakfast2Pic" class="h-75 w-100  w-100 h-50 ">
+                                                    <img src="http://content.king5.com/photo/2016/10/20/pizzacrop_1476989849371_6568733_ver1.0.jpg"
+                                                        alt="2.5m pizza" class="itemImg w-100 h-100 pics">
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row justify-content-end align-self-center w-100 h-25 px-2">
+                                                    <div id="" class="w-75  align-self-center"> بيتسا 2.5م
+                                                    </div>
+                                                    <div id=""
+                                                        class="d-flex flex-row justify-content-end align-self-center  w-25 ">
+                                                        <div>300</div>
+                                                        <div id="shekel"><i class="fa-solid fa-shekel-sign mx-1 "></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div id="breakfast3" type="button" class="item  d-flex flex-column  ">
+                                                <div id="breakfast3Pic" class="h-75 w-100  w-100 h-50 ">
+                                                    <img src="https://s2.best-wallpaper.net/wallpaper/1920x1080/1809/Fast-food-big-hamburger-french-fries_1920x1080.jpg"
+                                                        alt="2.5m pizza" class="itemImg w-100 h-100 pics">
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-row justify-content-end align-self-center w-100 h-25 px-2">
+                                                    <div id="" class="w-75  align-self-center"> برجر 10 طوابق
+                                                    </div>
+                                                    <div
+                                                        class="d-flex flex-row justify-content-end align-self-center  w-25 ">
+                                                        <div>15</div>
+                                                        <div id="shekel"><i class="fa-solid fa-shekel-sign mx-1 "></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="breakfast4" type="button" class="item  ">hi</div>
+                                            <div id="breakfast5" type="button" class="item  ">hi</div>
+                                        </div>
+                                    </div>
+
+                                    <div id="breakfastRow2Move" class="rowsMover ">
+                                        <div id="breakfastRow2" class="tab-content row w-100 justify-content   ">
+                                            <div id="breakfast11" type="button" class="item  ">halo</div>
+                                            <div id="breakfast22" type="button" class="item  ">halo</div>
+                                            <div id="breakfast33" type="button" class="item  ">halo</div>
+                                            <div id="breakfast44" type="button" class="item  ">halo</div>
+                                            <div id="breakfast55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+
+                                    <div id="breakfastRow3Move" class="rowsMover ">
+                                        <div id="breakfastRow3" class="tab-content row w-100   ">
+                                            <div id="breakfast11" type="button" class="item  ">halo</div>
+                                            <div id="breakfast22" type="button" class="item  ">halo</div>
+                                            <div id="breakfast33" type="button" class="item  ">halo</div>
+                                            <div id="breakfast44" type="button" class="item  ">halo</div>
+                                            <div id="breakfast55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+
+                                    <div id="breakfastRow4Move" class="rowsMover ">
+                                        <div id="breakfastRow4" class="tab-content row w-100   ">
+                                            <div id="breakfast11" type="button" class="item  ">halo</div>
+                                            <div id="breakfast22" type="button" class="item  ">halo</div>
+                                            <div id="breakfast33" type="button" class="item  ">halo</div>
+                                            <div id="breakfast44" type="button" class="item  ">halo</div>
+                                            <div id="breakfast55" dir="ltr" type="button" class="item">
+                                                <ul>
+                                                    <li>scrollable items-div and total-Items-div</li><br>
+                                                    <li>popup from each click</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane w-100 fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">
+                                    <div id="lunchRow1Move" class="rowsMover  firstRow">
+                                        <div id="lunchRow1" class="tab-content row w-100  ">
+                                            <div id="lunch1" type="button" class="item  ">hi</div>
+                                            <div id="lunch2" type="button" class="item  ">hi</div>
+                                            <div id="lunch3" type="button" class="item  ">hi</div>
+                                            <div id="lunch4" type="button" class="item  ">hi</div>
+                                            <div id="lunch5" type="button" class="item  ">hi</div>
+                                        </div>
+                                    </div>
+                                    <div id="lunchRow2Move" class="rowsMover ">
+                                        <div id="lunchRow2" class="tab-content row w-100   ">
+                                            <div id="lunch11" type="button" class="item  ">halo</div>
+                                            <div id="lunch22" type="button" class="item  ">halo</div>
+                                            <div id="lunch33" type="button" class="item  ">halo</div>
+                                            <div id="lunch44" type="button" class="item  ">halo</div>
+                                            <div id="lunch55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+                                    <div id="lunchRow3Move" class="rowsMover ">
+                                        <div id="lunchRow3" class="tab-content row w-100   ">
+                                            <div id="lunch11" type="button" class="item  ">halo</div>
+                                            <div id="lunch22" type="button" class="item  ">halo</div>
+                                            <div id="lunch33" type="button" class="item  ">halo</div>
+                                            <div id="lunch44" type="button" class="item  ">halo</div>
+                                            <div id="lunch55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+                                    <div id="lunchRow4Move" class="rowsMover ">
+                                        <div id="lunchRow4" class="tab-content row w-100   ">
+                                            <div id="lunch11" type="button" class="item  ">halo</div>
+                                            <div id="lunch22" type="button" class="item  ">halo</div>
+                                            <div id="lunch33" type="button" class="item  ">halo</div>
+                                            <div id="lunch44" type="button" class="item  ">halo</div>
+                                            <div id="lunch55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane w-100 fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">
+                                    <div id="supperRow1Move" class="rowsMover  firstRow">
+                                        <div id="lunsupper1" class="tab-content row w-100  ">
+                                            <div id="supper1" type="button" class="item  ">hi</div>
+                                            <div id="supper2" type="button" class="item  ">hi</div>
+                                            <div id="supper3" type="button" class="item  ">hi</div>
+                                            <div id="supper4" type="button" class="item  ">hi</div>
+                                            <div id="supper5" type="button" class="item  ">hi</div>
+                                        </div>
+                                    </div>
+                                    <div id="supperRow2Move" class="rowsMover ">
+                                        <div id="supperRow2" class="tab-content row w-100   ">
+                                            <div id="supper11" type="button" class="item  ">halo</div>
+                                            <div id="supper22" type="button" class="item  ">halo</div>
+                                            <div id="supper33" type="button" class="item  ">halo</div>
+                                            <div id="supper44" type="button" class="item  ">halo</div>
+                                            <div id="supper55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+                                    <div id="supperRow3Move" class="rowsMover ">
+                                        <div id="supperRow3" class="tab-content row w-100   ">
+                                            <div id="supper11" type="button" class="item  ">halo</div>
+                                            <div id="supper22" type="button" class="item  ">halo</div>
+                                            <div id="supper33" type="button" class="item  ">halo</div>
+                                            <div id="supper44" type="button" class="item  ">halo</div>
+                                            <div id="supper55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+                                    <div id="supperRow4Move" class="rowsMover ">
+                                        <div id="supperRow4" class="tab-content row w-100   ">
+                                            <div id="supper11" type="button" class="item  ">halo</div>
+                                            <div id="supper22" type="button" class="item  ">halo</div>
+                                            <div id="supper33" type="button" class="item  ">halo</div>
+                                            <div id="supper44" type="button" class="item  ">halo</div>
+                                            <div id="supper55" type="button" class="item  ">halo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane w-100 fade" id="v-pills-settings" role="tabpanel"
+                                    aria-labelledby="v-pills-settings-tab">
+                                    <div id="dinnerMenu" class="tab-content d-flex flex-row w-100 h-100 ">
+                                        <div id="dinner1" type="button" class="item  ">hi</div>
+                                        <div id="dinner2" type="button" class="item  ">hi</div>
+                                        <div id="dinner3" type="button" class="item  ">hi</div>
+                                        <div id="dinner4" type="button" class="item  ">hi</div>
+                                        <div id="dinner5" type="button" class="item  ">hi</div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane w-100 fade" id="v-pills-dessert" role="tabpanel"
+                                    aria-labelledby="v-pills-dessert-tab">
+                                    <div id="dessertMenu" class="tab-content d-flex flex-row w-100 h-100 ">
+                                        <div id="dessert1" type="button" class="item  ">hi</div>
+                                        <div id="dessert2" type="button" class="item  ">hi</div>
+                                        <div id="dessert3" type="button" class="item  ">hi</div>
+                                        <div id="dessert4" type="button" class="item  ">hi</div>
+                                        <div id="dessert5" type="button" class="item  ">hi</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Tabs content -->
+                        </div>
+
+                    </div>
+                </section>
+                <!-- End of products sections -->
+
+
+                <!-- start of rusults sections -->
+                <section id="dueDiv" class="d-inline-flex flex-column  ">
+                    <div id="pricing" class="text-white text-center mt-2">
+                        <div id="productTotal" class="d-flex flex-column align-items-between ">
+
+
+                            <!-- start of 1st result item-->
+                            <div class="btn-group d-flex flex-row justify-content-between w-100 ">
+                                <div type="button"
+                                    class="btn button group d-flex flex-column justify-content-between text-white resultRow w-100 "
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    <div class="d-flex row justify-content-between  w-100 h-100 ">
+                                        <div class="d-flex flex-row justify-content-between ">
+                                            <div class="text-end w-75">
+                                                برجر 10 طوابق
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-between   w-25">
+                                                <div class="d-flex flex-row">
+                                                    <div>
+                                                        3
+                                                    </div>
+                                                    <div>
+                                                        X
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    45
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row  justify-content-between ">
+                                            <div class="d-flex flex-row  align-items-between ">
+                                                <div class=" ms-3">
+                                                    15
+                                                </div>
+                                                <div style=" display: none;" class="flex-row text-end ">
+                                                    <span>10%</span>
+                                                    <i class=" fa-solid fa-tag"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdownDiv ">
+                                        <div class="d-flex flex-row bg-danger ">
+                                            <ul class="dropdown-menu text-center ">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">حذف</div>
+                                                        <div class="ms-2"><i
+                                                                class="fa-regular fa-trash-can text-danger"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">الكميه</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-regular fa-pen-to-square text-info"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">خصم</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-tags text-success"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <hr class="dropdown-divider text-center">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">ارجاع</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-arrow-rotate-left text-warning"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">مدير</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-user-tie text-white"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- start of 2nd result item-->
+
+                            <div class="btn-group d-flex flex-row justify-content-between w-100 ">
+                                <div type="button"
+                                    class="btn button group d-flex flex-column justify-content-between text-white resultRow w-100 "
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    <div class="d-flex row justify-content-between  w-100 h-100 ">
+
+
+                                        <div class="d-flex flex-row justify-content-between ">
+                                            <div class="text-end w-75">
+                                                وجبة اطفال 2.5 متر بيتسا </div>
+                                            <div class="d-flex flex-row justify-content-between   w-25">
+                                                <div class="d-flex flex-row">
+                                                    <div>
+                                                        2
+                                                    </div>
+                                                    <div>
+                                                        X
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    545
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="d-flex flex-row  justify-content-between ">
+                                            <div class="d-flex flex-row  align-items-between ">
+                                                <div class=" ms-3">
+                                                    300
+                                                </div>
+                                                <div style=" display: initial;" class="flex-row text-end ">
+                                                    <span>10%</span>
+                                                    <i class=" fa-solid fa-tag"></i>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="dropdownDiv ">
+                                        <div class="d-flex flex-row bg-danger ">
+                                            <ul class="dropdown-menu text-center ">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">حذف</div>
+                                                        <div class="ms-2"><i
+                                                                class="fa-regular fa-trash-can text-danger"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">الكميه</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-regular fa-pen-to-square text-info"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">خصم</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-tags text-success"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <hr class="dropdown-divider text-center">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">ارجاع</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-arrow-rotate-left text-warning"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">مدير</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-user-tie text-white"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- start of 3rd result item-->
+                            <div class="btn-group d-flex flex-row justify-content-between w-100 ">
+                                <div type="button"
+                                    class="btn button group d-flex flex-column justify-content-between text-white resultRow w-100 "
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    <div class="d-flex row justify-content-between  w-100 h-100 ">
+                                        <div class="d-flex flex-row justify-content-between ">
+                                            <div class="text-end w-75">
+                                                شكشوكة الحجه
+                                            </div>
+                                            <div class="d-flex flex-row justify-content-between   w-25">
+                                                <div class="d-flex flex-row">
+                                                    <div>
+                                                        2
+                                                    </div>
+                                                    <div>
+                                                        X
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    23
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row  justify-content-between ">
+                                            <div class="d-flex flex-row  align-items-between ">
+                                                <div class=" ms-3">
+                                                    11.5
+                                                </div>
+                                                <div style=" display: none;" class="flex-row text-end ">
+                                                    <span>10%</span>
+                                                    <i class=" fa-solid fa-tag"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdownDiv ">
+                                        <div class="d-flex flex-row bg-danger ">
+                                            <ul class="dropdown-menu text-center ">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">حذف</div>
+                                                        <div class="ms-2"><i
+                                                                class="fa-regular fa-trash-can text-danger"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">الكميه</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-regular fa-pen-to-square text-info"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">خصم</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-tags text-success"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <hr class="dropdown-divider text-center">
+
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">ارجاع</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-arrow-rotate-left text-warning"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a class="dropdown-item d-flex flex-row justify-content-between"
+                                                        href="#">
+                                                        <div class="me-2">مدير</div>
+                                                        <div class="ms-2">
+                                                            <i class="fa-solid fa-user-tie text-white"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="totalPay" class=" d-flex flex-row justify-content-between mx-1 ">
+                        <div class="me-2 align-self-center ">المجموع :</div>
+                        <div id="totalPrice" class="d-flex flex-row justify-content-around align-self-center ms-2">
+                            <div id="priceNumber">608</div>
+                            <div class="me-2"><i class="fa-solid fa-shekel-sign"></i></div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="paymentOptions"
+                        class="d-flex flex-column justify-content-around align-items-center text-center ">
+
+
+
+
+                        <div class="d-flex flex-row justify-content-around align-items-center btnRows">
+
+                            <div id="return" class="d-flex flex-row justify-content-center align-items-center w-50">
+                                <div id="custumerBtn"
+                                    class="btn d-flex flex-row justify-content-center align-items-center payBtn ">
+                                    <div> زبون </div>
+                                </div>
+                            </div>
+
+                            <div id="return" class="d-flex flex-row justify-content-center align-items-center w-50 ">
+                                <div id="CancelAllBtn"
+                                    class="btn  d-flex flex-row justify-content-center align-items-center payBtn ">
+                                    <div> الغاء الكل</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class=" d-flex flex-row justify-content-around align-items-center  btnRows">
+
+                            <div id="return" class="d-flex flex-row justify-content-center align-items-center w-50 ">
+                                <div id="returnBtn"
+                                    class="btn  d-flex flex-row justify-content-center align-items-center payBtn">
+                                    <div>ارجاع منتجات</div>
+                                </div>
+                            </div>
+
+                            <div id="beforePay" class="d-flex flex-row justify-content-center align-items-center w-50">
+                                <div id="beforePayBtn"
+                                    class="btn  d-flex flex-row justify-content-center align-items-center payBtn">
+                                    <div>قبل الدفع</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class=" d-flex flex-row justify-content-center align-items-center btnRows">
+                            <div id="pay" class="d-flex flex-row justify-content-center align-items-center w-50">
+                                <div id="payBtn"
+                                    class="btn  d-flex flex-row justify-content-center align-items-center payBtn ">
+                                    <div>الدفع</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </section>
+                <!-- End of rusults sections -->
+            </div>
+            <!-- End of Page Div  -->
+
+
+
+        </main>
+    </div>
+</body>
+<script src='indexMain.js'></script>
+</body>
+
+</html>
