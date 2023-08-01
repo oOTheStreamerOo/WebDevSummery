@@ -628,7 +628,8 @@
                                 gonna be cached/mk-temp and waiting to be saved , the dot mean all files and can be
                                 replaced with file.ext or folder/ for 1 file/folder .in vscode the U changed to A fot
                                 the staged files , to discard changes and git back to Untracked run <i>git reset .</i>
-                                or for 1 file <i>git rm --cached xyz.ext</i> </li>
+                                or for 1 file <i>git rm --cached xyz.ext</i> ( more about rolling back in adv section
+                                down below</li>
                             <li><i>git commit -m "whatChng"</i> : save a snapshot (backup point) which include the
                                 changes that have been made since the last commit, ther is a shortcut command to do
                                 add&commit at wince with <i>git commit -a -m "whatChng"</i> ,every commit have an id
@@ -652,6 +653,8 @@
                             </li>
                         </ol>
                         <br>
+                    </li>
+                    <li>
                         <p class="ST">Github :</p>
                         now its time to understand github forthe next git commands : <ol>
                             <li>1st go to github site , make account , then new repo and important dont write any
@@ -674,15 +677,15 @@
                                 <i>git remote add origin http://xyz</i> after git-remote-add the 1st argument is
                                 alias that we need to assign to the link of the remote repo that we push to so l8er we
                                 write shorter commands , same idea with the argument upstream that we assign to the
-                                fetch repo that we update from
-                                whats it really do though is initial reference(pointer) to github tree(of branches) will
-                                start as origin(link)/main/.. while on local tree starts with main/.. ,the files that
-                                attached to this are the initial files that we gonna save changes from them on and
-                                they are important for ,verifing when we copy files to differant machine we will verify
-                                that new local/main iles and origin/main files are pointing to the same commit (thats
-                                why origin/main called remote-tracking branch), <i>git remote -v</i> also show the push
-                                and fetch links (the origin & upstream) that the same as we set b4 , or use
-                                <i>git remote show origin</i> for even more detailed (branches&configs).
+                                fetch repo that we update from whats it really do though is initial reference(pointer)
+                                to github tree(of branches) will start as origin(link)/main/.. while on local tree
+                                starts with main/.. ,the files that attached to this are the initial files that we gonna
+                                save changes from them on and they are important for ,verifing when we copy files to
+                                differant machine we will verify that new local/main iles and origin/main files are
+                                pointing to the same commit (thats why origin/main called remote-tracking branch),
+                                <i>git remote -v</i> also show the push and fetch links (the origin & upstream) that the
+                                same as we set b4 , or use <i>git remote show origin</i> for even more detailed
+                                (branches&configs).
                                 the url http://xyz is url on the repo page in github+ .git or it can be copied at the
                                 same page in the code button (the grean one not the tab) .
                             </li>
@@ -695,24 +698,33 @@
                                 repo to fech from when u u link ur local repo to other dev repo from gethub) so when we
                                 pull in the future we can just use git pull without additional arguments,by executing
                                 this command the whole local repo will be synced to the remote one meaning the files
-                                will be updated incthe .git folder which inclode the tree of changes ,on 1st push be
+                                will be updated incthe .git folder which include the tree of changes ,on 1st push be
                                 aware that u need a fresh remote repo with no history of changes or files that differant
                                 form ur local, also that u have used the github noreplay email or unchecked "Keep my
                                 email addresses private" on the sittings. from now on any changes on the local files do
                                 stgCmt line then push line , but if the opposite happened (u changed on remote) u will
                                 need the next command .
                             </li>
-                            <li><i>git merge</i>when the remote repo is one commit ahead there is 2 ways to use merge to
-                                sync with the local : <ul>
-                                    <li>the more difficult one is fetch the changes from remot repo then merge with
-                                        local : <i>git fetch</i>(now if click the main on left-bottom corner the list
-                                        that drop have 2 branches) then run <i>git merge origin/main</i> it take the the
-                                        side with changes as argument and it will be merged on top of the repo that the
-                                        command run from in this case merege on top of local repo, note that after
-                                        execution it say fast-forward which is the simplest merge strategy when the
-                                        commits easelly fit one after another so the pointer can move forward to the
-                                        most recent commit without conflicts , this case will be explained l8er. the
-                                        other simple way on the next command</li>
+                            <li><i>git fetch/merge/pull/rebase</i> when the remote repo is one commit
+                                ahead and the files looks differant from the local there is 3 ways to to sync with the
+                                local (using fetch then merge using pull using fetch then rebase) : <ol>
+                                    <li> fetch&merge: what fetch do is downloading the whole content (files and logs) to
+                                        be ready for u to choose what to take from them, merge take only the current
+                                        files that downlaoded and merge them with the local but not the logs history,
+                                        all the commits on a remote/other branch are combined into a single commit on
+                                        the master branch (which making tracking a bug harder cuz the feature commit
+                                        history is not included in the merge). <i>git fetch</i>(now if u click main
+                                        on left-bottom corner the list that drop have 2 branches) if the command
+                                        fetch used without argument (repo elias and branch) means that the upstream
+                                        branch (-u) has been selected b4, then <i>git merge origin/main</i> . both fetch
+                                        and merge must run from the repo/branch that in short with changes and in the
+                                        command the argument is the repo with more changes, the other way around is
+                                        using push ! . after execution it say fast-forward which is the simplest merge
+                                        strategy when the commits easelly fit one after another so the pointer can move
+                                        forward to the most recent commit without conflicts , conflict and solutions
+                                        will be explained l8er. ofc when merging 2 branches locally u dont need to fetch
+                                        1st .
+                                    </li>
                                     <li><i>git pull</i>allowing u to combain fetch and merge commands in a single
                                         go by using <i>git pull origin main</i> if u didnt set a branch as upstream ,
                                         but since we used the -u flag earlier for origin/main git pull automaically look
@@ -728,7 +740,27 @@
                                             git pull
                                         </i>
                                     </li>
-                                </ul>
+                                    <li><i>git rebase</i> : this command lets users integrate changes from one branch to
+                                        another, and the logs are modified once the action is complete. Git rebase was
+                                        developed to overcome merging disadvantages, specifically regarding logs.
+                                        git rebase takes all the changes, and moves the completed work from one branch
+                                        to another, typically the main branch. In the process, rebase flattens the
+                                        history, removing unwanted entries , unlike git merge that only changes the
+                                        target(usually main) branch and creates a commit, preserving the history of the
+                                        feature branch. its like merge do copy for the heads while rebase do cut (move),
+                                        so after rebase there is only 1 branch thus the most common use case for it is
+                                        to update local files from remote files or on any case u need a copy on and not
+                                        the original repo otherwise u and ur team will work on completly
+                                        deferant commits history which will make conflicts on later merge , in case
+                                        of updating local repo from remote one u need to use fitch which will make new
+                                        branch to rebase on or u make new another branch to rebase on , but never the
+                                        main ! :
+                                        <i>git remote add upstream https://orignalRepoLink</i>
+                                        <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
+
+
+                                    </li>
+                                </ol>
                             </li>
                             <li><i>git clone http://xyz</i> use this in case (for any reason) things went south and u
                                 need to download all the files from the remote repo , it make new folder with the repo
@@ -736,11 +768,12 @@
                                 remember when u cd to a dir if the bath have foler that its name have spaces to put the
                                 name in single qouts .</li>
                             <li><i>git branch</i> this allow devs to collaborate without getting in each other way ,
-                                everydev take branch of his own to add his part on the project(nav db ..) and when they
+                                every dev take branch of his own to add his part on the project(nav db ..) and when they
                                 finish + pass testing they can merge there work into the main/development branch.also
                                 individual dev can use branching for experiments without breaking the main branch ,
-                                alson in case of live code that cant be stopped for change and test . here is the branch
-                                commands : <ul>
+                                alson in case of live code that cant be stopped for change and test .remember every
+                                branch contain same files from the main branch as it was on branching + the features
+                                that the dev work on , branch commands : <ul>
                                     <li><i>git branch</i> will list all the current branches on the tree and the corrent
                                         one that u push to will be in grean (also with git status) </li>
                                     <li><i>git branch -M xyz</i> to rename the master branch in case u didnt do that on
@@ -761,56 +794,106 @@
                                 differant code so when u on main branch and try to merge another with <i>get merge
                                     xyz</i> while ur havnt done a commit the merge will fail and ask u to commit 1st
                                 , after commit a conflict can be bcz there is a differant try on the same line number
-                                in vs-code u will see the file with the
-                                conflict with red color meanwhile on the file the head (local latest) line and the
-                                incoming line from branch will be highlighted also can be viewed in the command line
-                                with <i>git diff</i>
-                                which case ur options is to manually keep one and delete/change the line at the other
-                                or put the new code after the old code (the team code after the main code) . these also
-                                cn be done via vs-code gui that pop above the line of conflict but beside viewing the
-                                diff , usually manual fix is the best but it also can be fixed with cli via prefering
-                                the cecurent(ours) : <i>git merge -s ours branch1 branch2 branchN</i> or the
-                                incoming(theirs): <i>git merge -s theirs branch1 branch2 branchN</i><br>
+                                in vs-code u will see the file with the conflict with red color meanwhile on the file
+                                the head (local latest) line and the incoming line from branch will be highlighted also
+                                can be viewed in the command line with <i>git diff</i> which case ur options is to
+                                manually keep one and delete/change the line at the other or put the new code after the
+                                old code (the team code after the main code) . these also cn be done via vs-code gui
+                                that pop above the line of conflict but beside viewing the diff , usually manual fix is
+                                the best but it also can be fixed with cli via prefering the cecurent(ours) :
+                                <i>git merge -s ours branch1 branch2 branchN</i> or the incoming(theirs):
+                                <i>git merge -s theirs branch1 branch2 branchN</i><br>
                                 after choosing how to merge u need to add and commit. else if u decide to stop the merge
                                 and role back original state use <i>git merge --abort</i>
                             </li>
                             <li>github fork & pull request: if u visit another dev repo page u can see fork button ,
-                                this will copy the repo to ur own account then download ur machine and make changes
+                                this will copy the repo to ur own account then clone it to ur machine and make changes
                                 without affecting the original repo but its still linked to the original repo so when u
                                 do changes and push to ur account (origin) u can ask the author to pull the changes to
-                                his repo (ur upstream) from ur repo (origin) when u go to ur fork repo u will seethe
-                                changes and a "compare & pull request" button, after the author review and accept ur
-                                code, while u work with the fork locally u can keep in sync with the original by making
-                                the author-repo-link ur upstream repo (and not ur copy on ur account), run the following
-                                commands to do so : <i>git remote add upstream https://orignalRepoLink</i> then when
-                                there is and update to that repo use <i>fit fetch upstream</i> then
-                                <i>git rebase upstream/main</i>
+                                his repo (ur upstream) from ur repo when u go to ur repo u will see the changes and a
+                                "compare & pull request" button, every auther have guidelines for contributors make sure
+                                to follow them and have a discustion in the issues b4 hitting the pull request , after
+                                the author review and accept ur code, while u work with the fork locally u can keep in
+                                sync with the original by making the author-repo-link ur upstream repo (and not ur copy
+                                on ur account), run the following commands to do so :
+                                <i>git remote add upstream https://orignalRepoLink</i> then when there is and update to
+                                that repo use <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
                             </li>
-                            <li></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <li>codeSpace : is a vs code that run in the browser provided by github and can be activated
-                                by going to the repo pnage and hit period(.) on ur keyboard or open this link :
-                                github.dev/{{user}}/{{repoName}} , tis is for fixing small things on the fly , the
-                                terminal is not included for free and can be activated with github vm service</li>
+                            <li>tip* github codeSpace : is a vs code that run in the browser provided by github and can
+                                be activated by going to the repo pnage and hit period(.) on ur keyboard or open this
+                                link : github.dev/{{user}}/{{repoName}} , tis is for fixing small things on the fly ,
+                                the terminal is not included for free and can be activated with github vm service</li>
                         </ol>
+                    </li><br>
+
+                    <li>
+                        <p class="ST">Advanced Git and Github :</p>
+                        <ol>
+                            <li>advanced <i>git reset</i> : there is few different techniques for dealing with screw-ups
+                                when your project state not ideal, git provides couple of tools to role back to an
+                                acceptable state , its important to understand the three different file areas of a Git
+                                so u know where u to role back (and what command to use): current working files ,
+                                staging area (which is cached files) and commit history which is a saved changes state
+                                (in files) that you committed previously now fixing things in git often means deleting
+                                files !so u need to understand what the right kind of files u wna fix .
+                                so staged files (after git add .) can be removed with <i>git reset</i> , if the files
+                                had been commited then u need the id or sha for that commit via <i>git log</i> copy the
+                                id then run <i>get reset idXYZ</i> note that this keep the staged files (the cached) and
+                                roll back the local files , to delete the commit and the staged files in one go
+                                <i>get reset heard idXYZ</i>
+                                so if there is new file made between the 2 commits (not modified) it will be completly
+                                deleted,so carfull with this , also when u work with team u never do a reset been pushed
+                                to a remote repo on github cuz if others already have it in there commit tree it will be
+                                hard to make up this differance, which where the next command come handy .
+                            </li>
+                            <li><i>git revert idXYZ </i>this roll back the changes but keep the commit in the tree ,
+                                after this u need to commit again and it auto include after ur msg that "this reverts
+                                commit idXYZ" </li>
+                            <li><i>git commit --amend </i> if commited with minor mistake like typo in the msg or u
+                                staged then made changes then commited without staging again , u can modify ur last
+                                commit with amend, though the situations to use at are limited. "commit" in this command
+                                refere to the last commit and cant be replaced with commits id , when u run the comand
+                                it means to edit the last commit add the corrent changes to it so in general whin u wna
+                                include files changes u 1st do them then stage them then runn the command
+                                <i>git commit --amend --no-edit</i> ("no edit" for the msg) . in case u wna also edit
+                                the msg <i>git commit --amend -m "newmsg"</i>, this is better option than "reset hard"
+                                (delete commit and staged) or "revert"(delete changes in the last and add new commit) it
+                                allows to fix small things on local and add this to the last commit .
+                            </li>
+                            <li><i>git stash</i>is away to sve some code aside for later recall on the same lines , its
+                                like leaving the lines empty for this code to recall it later to try how it impact the
+                                rest of the code thet came after it ,be aware that this take all the code that have not
+                                commited yet so all the code before this snippet should be comitted, u can save multi
+                                stashes and give name for each , if u have just one snippet u can use <i>git stash</i>
+                                and recall it with <i>git stash pop</i> , if u use multiple stahes save each with
+                                <i>git stash save xyz</i>(xyz a name to recognize) then when u need to use it back u
+                                need see what ts number in the list and call the number :
+                                <i>git stash list</i> <i>git stash apply #</i> , keep in mind the lines so u dont run
+                                into conflict.
+                            </li>
+                            <li><i>git rebase</i></li>
+                            <li><i>git squash</i></li>
+                            <li>github actions</li>
+                            <li>13 tips</li>
+                        </ol>
+
+
+
+
                     </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     <br><br><br><br><br>
                     <li>
@@ -885,7 +968,7 @@
 
                 </ul>
 
-                <!-- Git end -->
+                <!-- Git & Github end -->
 
 
 
@@ -895,13 +978,6 @@
 
 
 
-                <ul>
-
-
-
-                </ul>
-
-                <!-- Github end -->
 
 
 
