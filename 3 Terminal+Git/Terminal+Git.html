@@ -632,10 +632,13 @@
                                 down below</li>
                             <li><i>git commit -m "whatChng"</i> : save a snapshot (backup point) which include the
                                 changes that have been made since the last commit, ther is a shortcut command to do
-                                add&commit at wince with <i>git commit -a -m "whatChng"</i> ,every commit have an id
+                                add&commit at wince with <i>git commit -am "whatChng"</i> ,every commit have an id
                                 which can be seen by running the next command ..</li>
                             <li><i>git log</i> it displays for each commit in a repository history its Secure Hash
-                                Algorithm (SHA) ,which branch got commit on, author, date, commit message</li>
+                                Algorithm (SHA) id ,which branch got commit on, author, date, commit message, when u run
+                                <i>git log --oneline --graph --decorate --all</i> u will get max deitaled and
+                                decorated view
+                            </li>
                             <li>vscode git and gitLens extentions/plugins : <br>
                                 the git icon on the left brings the source control panel it give a breakdown of all the
                                 file changes in the project and whether or not they're staged, if you click on a file it
@@ -871,10 +874,65 @@
                                 <i>git stash list</i> <i>git stash apply #</i> , keep in mind the lines so u dont run
                                 into conflict.
                             </li>
-                            <li><i>git rebase</i></li>
-                            <li><i>git squash</i></li>
-                            <li>github actions</li>
-                            <li>13 tips</li>
+                            <li><i>git squash</i> (to be used with rebase) :
+                                when working on a feature and it finally ready to gets merged onto the main branch many
+                                of the commits are likely irrelevant to the rest of the team so the maintainer of the
+                                project may ask you to squash your commits which means you need to take multiple commits
+                                and combine them into one single commit with a single message (or it might be multiple
+                                smaller commits that are just more organized!?!?) , to do that go ahead and run
+                                <i>git rebase main -- interactive</i> this will open a document in ur editor to
+                                customize the commits, for each line there is the word pick (means keep) followed with
+                                the latest commit id followed by theat commit msg , u can replace oick with squash to
+                                add that commit to the combined one we making , after u save the file and close it then
+                                another file will be opened to custumize any of the messages in it save and close then
+                                run <i>git log</i> to see single command that replace the squashes ons and it include
+                                there msgz.
+                            </li>
+                            <li>github actions : watch this after u finish with teting/deploying (Jest webpack firebase)
+                            </li>
+                            <li>13 tips : <ol>
+                                    <li><i>git commit -am "whatChng"</i> is shorter way to do git add then git commit
+                                    </li>
+                                    <li><i>git config --global alias.xyz "commit -am"</i> is a way to make alias for
+                                        intire/part-of git command to write fewer l8er</li>
+                                    <li><i>git commit --amend -m "myMgs"</i> is a fatser way to add things to latest
+                                        commit (1st do changes thin run this) ifno change in msg then put --no-edit ,
+                                        this is faster than reseting and make new commit this is only work if u havnt
+                                        pushed ur work to remot repo then :</li>
+                                    <li><i>git puch origin main --force</i> : this will overwrite the remote commit
+                                        (that been edited) with the state of ur local code , BE AWARE if there is a
+                                        commits on the remote branch (from ur team) that u dont have they will be lost
+                                        !!! </li>
+                                    <li><i>git revert cmtID</i> if u pushed changes to remote repo that dont need to be
+                                        there this remove the changes of that commet , but the commit stay in the
+                                        history log and a new commit for reverting need to be added then pushed to the
+                                        repo</li>
+                                    <li>github remote work : in case u dont have ur pc u can login to ur account on
+                                        github from anywherego to ur repo and hit period(.) on ur keyboard to open
+                                        vs-code in the browser and write code from there except the terminal which is
+                                        paied</li>
+                                    <li><i>git stash</i> save a code that u though it MIGHT be good here , do this after
+                                        commiting everything b4 it (to isolate it) then <i>git stash save xyz</i> and
+                                        when u wna put it back to same linse look for its title xyz in ur stash list
+                                        <i>git stash list </i> then apply with its number <i>git stash apply #</i>
+                                    </li>
+                                    <li><i>git branch -M main</i> to rename master branchto any </li>
+                                    <li>git log output can be harder to read as the project get more complex then
+                                        use <i>git log --oneline --graph --decorate --all</i> for max deitaled and
+                                        decorated view</li>
+                                    <li><i>git bisect</i> commandz allow u to trace a bug and find in which commit in
+                                        this branch it started, typically the last commit is a bad one so dont need to
+                                        put commit id in the command cuz u r on it , sowe run <i>git bisect start</i>
+                                        then <i>git bisect bad</i> the next to do is to provide a commit id from log
+                                        that is good for sure with <i>git bisect good xyz</i>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+
+
+                            </li>
                         </ol>
 
 
