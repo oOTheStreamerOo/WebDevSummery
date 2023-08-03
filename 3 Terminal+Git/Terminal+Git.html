@@ -743,23 +743,34 @@
                                             git pull
                                         </i>
                                     </li>
-                                    <li><i>git rebase</i> : this command lets users integrate changes from one branch to
-                                        another, and the logs are modified once the action is complete. Git rebase was
-                                        developed to overcome merging disadvantages, specifically regarding logs.
-                                        git rebase takes all the changes, and moves the completed work from one branch
-                                        to another, typically the main branch. In the process, rebase flattens the
-                                        history, removing unwanted entries , unlike git merge that only changes the
-                                        target(usually main) branch and creates a commit, preserving the history of the
-                                        feature branch. its like merge do copy for the heads while rebase do cut (move),
-                                        so after rebase there is only 1 branch thus the most common use case for it is
-                                        to update local files from remote files or on any case u need a copy on and not
-                                        the original repo otherwise u and ur team will work on completly
-                                        deferant commits history which will make conflicts on later merge , in case
-                                        of updating local repo from remote one u need to use fitch which will make new
-                                        branch to rebase on or u make new another branch to rebase on , but never the
-                                        main ! :
-                                        <i>git remote add upstream https://orignalRepoLink</i>
-                                        <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
+                                    <li><i>git rebase</i> : this command have 2 major uses <ul>
+                                            <li>rebace lets users integrate changes from one branch to another where the
+                                                log of commits get modified once the action is complete ,rebase can
+                                                overcome merge disadvantages, specifically regarding commits log. git
+                                                rebase takes all the changes, and moves the completed work from one
+                                                branch to another, typically the main branch. In the process, rebase
+                                                flattens the history and removing unwanted entries , unlike git merge
+                                                that only changes the target(usually main) branch and creates a one
+                                                commit for merging, meanwhile rebase preserving the history of the
+                                                feature branch. its like so after rebase there is only 1 branch thus the
+                                                most common use case for it is to update local files from remote files
+                                                or on any case u need a copy on and not the original repo otherwise u
+                                                and ur team will work on completly deferant commits history which will
+                                                make conflicts on later merge or pull-request(github) , in case of
+                                                updating local repo from remote one u need to use fitch which will make
+                                                new branch to rebase on or u make new another branch to rebase on , but
+                                                never the main ! :
+                                                <i>git remote add upstream https://orignalRepoLink</i>
+                                                <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
+                                            </li>
+                                            <li>rebase have flags to manage and edit the commits on the log, like change
+                                                the order and fix commits msgz , and edit any commit on list by changing
+                                                "pick" into the desired action to do that start with the interactive
+                                                list of commits for the targeted branch xyz with this command
+                                                <i>git rebase --interactive xyz</i>
+                                            </li>
+                                        </ul>
+
 
 
                                     </li>
@@ -780,7 +791,7 @@
                                     <li><i>git branch</i> will list all the current branches on the tree and the corrent
                                         one that u push to will be in grean (also with git status) </li>
                                     <li><i>git branch -M xyz</i> to rename the master branch in case u didnt do that on
-                                        the begining with <i>git config --global init.defaultBranch main </i></li>
+                                        the beginning with <i>git config --global init.defaultBranch main </i></li>
                                     <li><i>git branch xyz</i> to make a new branch</li>
                                     <li><i>git branch -d xyz</i> this with small -d delete a branch if its not merged or
                                         have uncommited changes with capital -D it will delete no matter what so careful
@@ -924,7 +935,20 @@
                                         this branch it started, typically the last commit is a bad one so dont need to
                                         put commit id in the command cuz u r on it , sowe run <i>git bisect start</i>
                                         then <i>git bisect bad</i> the next to do is to provide a commit id from log
-                                        that is good for sure with <i>git bisect good xyz</i>
+                                        that is good for sure with <i>git bisect good xyz</i> after this bisect will
+                                        start showing you (check out) on ur text editor the file/s from the commit that
+                                        in the middle between the good and bad and u need deside if its good/bad with
+                                        <i>git bisect good/bad</i> without commit id cuz u on it (the commit checked)
+                                        also its brovide how much steps (checkes) remains this is good important
+                                        techninal reason : of u dont use gui like kraken no other way (that i know of)
+                                        can load past commits in the editor (u can look for what changes happened back
+                                        then bit not load the files with that state and run/execute them for testing)
+                                        so basically it can be that know from the beginning what is wrong in the code
+                                        and u just wna know wehere it started , or u dont know what exactly what is
+                                        wrong in the code then u need to run/visual-load/execute the files to know if
+                                        the bug is also found in this commit or not. on any way u choose when u find the
+                                        1st commit with the bug u need to look what changes have been made then , so
+                                        when u on that commit use <i>git diff</i> and after finding the bad lines
                                     </li>
                                     <li></li>
                                     <li></li>
