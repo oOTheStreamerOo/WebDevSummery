@@ -763,15 +763,52 @@
                                                 <i>git remote add upstream https://orignalRepoLink</i>
                                                 <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
                                             </li>
-                                            <li>rebase have flags to manage and edit the commits on the log, like change
-                                                the order and fix commits msgz , and edit any commit on list by changing
-                                                "pick" into the desired action to do that start with the interactive
-                                                list of commits for the targeted branch xyz with this command
-                                                <i>git rebase -i upStmBrnch</i> if u already assignrd upstream branch
-                                                (-u) u can leave it empty otherwise u have to make alias for one with
-                                                "git add" then use it here . be aware that this work on commited branch
-                                                if not it will ask u to commit,also this work on commits that are not
-                                                pushed so its good not to puch to much even for ur private remote repo .
+                                            <li>rebase have flags to manage and edit the commits THAT HAVE NOT BEEN
+                                                PUSHED YET !!!, like change the order and fix commits msgz , and manage
+                                                any commit on list by changing "pick" (mean leave as is) to the keyword
+                                                of the desired action, as start load the interactive list
+                                                <i>git rebase -i xyz</i>(it compare current branch with th -u branch to
+                                                list the unpushed commits) if u assigned -u branch then leave xyz empty
+                                                (otherwise fill repo/brch from gitAdd) , after running the command it
+                                                will load ur default editor of the terminal with text file that u can
+                                                edit, for each line there is the keyword for the action default is pick
+                                                followed by the commit id and the msg , below it a summary for the
+                                                keywords,to use them replace pick with one of them , also this istext
+                                                edito u can cut and paste to change there order , the keywords : <ul>
+                                                    <li>squash : when working on a feature and it finally ready to gets
+                                                        merged onto the main branch many of the commits are likely
+                                                        irrelevant to the rest of the team so the maintainer of the
+                                                        project may ask you to squash your commits which means you need
+                                                        to take multiple commits and combine them into one single commit
+                                                        with a single message, to do that go ahead and run
+                                                        <i>git rebase main -i</i> this will open a document in ur
+                                                        editor to customize the commits, for each line there is the word
+                                                        pick (means keep)
+                                                        followed with
+                                                        the latest commit id followed by theat commit msg , u can
+                                                        replace pick
+                                                        with squash to
+                                                        add that commit to the combined one we making , after u save the
+                                                        file
+                                                        and close it then
+                                                        another file will be opened to custumize any of the messages in
+                                                        it save
+                                                        and close then
+                                                        run <i>git log</i> to see single command that replace the
+                                                        squashes ons
+                                                        and it include
+                                                        there msgz.
+                                                    </li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+
+
+
+
 
 
                                             </li>
@@ -891,20 +928,7 @@
                                 <i>git stash list</i> <i>git stash apply #</i> , keep in mind the lines so u dont run
                                 into conflict.
                             </li>
-                            <li><i>git squash</i> (to be used with rebase) :
-                                when working on a feature and it finally ready to gets merged onto the main branch many
-                                of the commits are likely irrelevant to the rest of the team so the maintainer of the
-                                project may ask you to squash your commits which means you need to take multiple commits
-                                and combine them into one single commit with a single message (or it might be multiple
-                                smaller commits that are just more organized!?!?) , to do that go ahead and run
-                                <i>git rebase main -- interactive</i> this will open a document in ur editor to
-                                customize the commits, for each line there is the word pick (means keep) followed with
-                                the latest commit id followed by theat commit msg , u can replace oick with squash to
-                                add that commit to the combined one we making , after u save the file and close it then
-                                another file will be opened to custumize any of the messages in it save and close then
-                                run <i>git log</i> to see single command that replace the squashes ons and it include
-                                there msgz.
-                            </li>
+
                             <li>github actions : watch this after u finish with teting/deploying (Jest webpack firebase)
                             </li>
                             <li>13 tips : <ol>
