@@ -693,7 +693,7 @@
                                 same page in the code button (the grean one not the tab) .
                             </li>
                             <li><i>git push</i> : after u used
-                                <br><i style="font-size: 1.7vw;">git commit -a -m "whatChng"</i>
+                                <br><i style="font-size: 1.7vw;">git commit -am "whatChng"</i>
                                 its time to upload the code from the local repo to the remote repo with this command
                                 <br><i style="font-size: 1.7vw;"> git push origin main -u</i>
                                 takes 2 arguments: remote-repo-name and branch, the 3rd is optional flag means upstream
@@ -753,7 +753,7 @@
                                                 unwanted entries , unlike git merge that only changes the target head
                                                 and creates a one commit for merging, the most common use case for
                                                 rebase is to update team member branch (local files) from remote files
-                                                by fetching then rebace (so u dont rebase the original work to ur
+                                                by fetching then rebase (so u dont rebase the original work to ur
                                                 branch!!) or if u rebase when the upstream branch and ur branch found on
                                                 the same machine then u need to make new branch as copy from main then
                                                 repase ur branch from it but never the local main !! otherwise u and ur
@@ -771,15 +771,23 @@
                                                 be swiched) if u assigned -u branch then leave xyz empty (otherwise fill
                                                 repo/brch from gitAdd) ,in the list u can manage any commit by changing
                                                 "pick" (mean stay as is) to the keyword of the desired action, after
-                                                running the interactive command it will load ur default editor of the
-                                                terminal
-                                                with
-                                                text file
-                                                that u can edit, for each line there is the keyword for
-                                                the action default is pick followed by the commit id and the msg , below
-                                                it a summary for the keywords,to use them replace pick with one of them
-                                                or with the 1st letter , also this is text edito u can cut and paste to
-                                                change there order , ABOURT !! , the keywords : <ul style="list-style-type:circle">
+                                                running the interactive command it will open
+                                                "repo/.git/rebase-merge/git-rebase-todo" with ur default test editor ,
+                                                (it also can be opened with vscode explorer for more gui edit), for each
+                                                line there is the action keyword (default is pick) followed by the
+                                                commit id and the msg , below these lines there is brief explaining the
+                                                keywords,to replace pick with keyword or with the 1st letter , also this
+                                                is text editor u can cut and paste to change there order , after u
+                                                finish u just save and exit the file and the rebase starts, some
+                                                keywords pause rebase and open another file to edit and when this
+                                                finished rebase coninue until it go back to terminal and writes
+                                                "Successfully..." , remember rebase must be complete b4 u continue with
+                                                more changes , if changes made meanwhile they will disapeare when u
+                                                finish as it auto go to last commit (in vscode u can retore them by
+                                                hitting ctrl+z then save) ,if u dont wna continue wuth rebase run
+                                                <i>git rebase --abort</i>, <br>
+                                                rebase keywords :
+                                                <ul style="list-style-type:circle">
                                                     <li>squash : when working on a feature and it finally ready to gets
                                                         merged onto the main bran`ch many of the commits are likely
                                                         irrelevant to the rest of the team so the maintainer of the
@@ -796,7 +804,6 @@
                                                         single command that replace the squashes ons and it include
                                                         there msgz.
 
-                                                        
                                                     </li>
                                                     <li></li>
                                                     <li></li>
@@ -905,16 +912,13 @@
                             <li><i>git revert idXYZ </i>this roll back the changes but keep the commit in the tree ,
                                 after this u need to commit again and it auto include after ur msg that "this reverts
                                 commit idXYZ" </li>
-                            <li><i>git commit --amend </i> if commited with minor mistake like typo in the msg or u
-                                staged then made changes then commited without staging again , u can modify ur last
-                                commit with amend, though the situations to use at are limited. "commit" in this command
-                                refere to the last commit and cant be replaced with commits id , when u run the comand
-                                it means to edit the last commit add the corrent changes to it so in general whin u wna
-                                include files changes u 1st do them then stage them then runn the command
-                                <i>git commit --amend --no-edit</i> ("no edit" for the msg) . in case u wna also edit
-                                the msg <i>git commit --amend -m "newmsg"</i>, this is better option than "reset hard"
-                                (delete commit and staged) or "revert"(delete changes in the last and add new commit) it
-                                allows to fix small things on local and add this to the last commit .
+                            <li><i>git commit --amend </i> if u want to make few changes and add them to tatest commit
+                                with /without editing the last commit msg then this is it ! after the last commit do
+                                what ever you want and in the end run <i>git commit --amend --no-edit</i> or
+                                <i>git commit --amend -m "newmsg"</i> and changes just added to last commit . this is
+                                better option than "reset hard" (delete commit and staged) or "revert"(delete changes in
+                                the last and add new commit) it allows to fix small things on local and add this to the
+                                last commit .
                             </li>
                             <li><i>git stash</i>is away to sve some code aside for later recall on the same lines , its
                                 like leaving the lines empty for this code to recall it later to try how it impact the
@@ -995,7 +999,9 @@
 
 
 
-
+                    1
+                    2
+                    3
 
 
 
