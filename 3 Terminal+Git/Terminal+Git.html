@@ -63,7 +63,7 @@
         }
 
         i {
-            color: #863863;
+            color: #ba4c89;
             background-color: #000000;
             padding: 0 0.3% 0 0.3%;
         }
@@ -698,15 +698,16 @@
                                 <br><i style="font-size: 1.7vw;"> git push origin main -u</i>
                                 takes 2 arguments: remote-repo-name and branch, the 3rd is optional flag means upstream
                                 (upstream in git cli set the branch as the one fetch when u work on ur repos or set the
-                                repo to fech from when u u link ur local repo to other dev repo from gethub) so when we
+                                repo to fech from when u u link ur local repo to other dev repo from github) so when we
                                 pull in the future we can just use git pull without additional arguments,by executing
                                 this command the whole local repo will be synced to the remote one meaning the files
-                                will be updated incthe .git folder which include the tree of changes ,on 1st push be
+                                will be updated inc the .git folder which include the tree of changes ,on 1st push be
                                 aware that u need a fresh remote repo with no history of changes or files that differant
-                                form ur local, also that u have used the github noreplay email or unchecked "Keep my
-                                email addresses private" on the sittings. from now on any changes on the local files do
-                                stgCmt line then push line , but if the opposite happened (u changed on remote) u will
-                                need the next command .
+                                form ur local in this case to overwrite the remote repo u can use
+                                <i>git push --force</i> , also that u have used the github noreplay email or unchecked
+                                "Keep my email addresses private" on the sittings. from now on any changes on the local
+                                files do stgCmt line then push line , but if the opposite happened (u changed on remote)
+                                u will need the next command .
                             </li>
                             <li><i>git fetch/merge/pull/rebase</i> when the remote repo is one commit
                                 ahead and the files looks differant from the local there is 3 ways to to sync with the
@@ -728,76 +729,74 @@
                                         will be explained l8er. ofc when merging 2 branches locally u dont need to fetch
                                         1st .
                                     </li>
-                                    <li><i>git pull</i>allowing u to combain fetch and merge commands in a single
-                                        go by using <i>git pull origin main</i> if u didnt set a branch as upstream ,
-                                        but since we used the -u flag earlier for origin/main git pull automaically look
-                                        for upstream branch so we dont need to specify the remote fetch branch and u
-                                        good with <i>git pull</i> only.
-                                        however u need always to commit ur changes on local repo otherwise the operation
-                                        will fail . but on the other hand u may want to do this deliberately to reset
-                                        any changes that happened on local and pull the remote repo with its changes for
-                                        that : <br>
+                                    <li><i>git pull</i> : it do the fetch and merge in single go by using
+                                        <i>git pull origin main</i> if u didnt set a branch as upstream , but since we
+                                        used the -u flag earlier for origin/main git pull automaically look for upstream
+                                        branch so we dont need to specify the remote fetch branch and u good with only
+                                        <i>git pull</i> . however u need always to commit ur changes on local repo
+                                        otherwise the operation will fail . but on the other hand u may want to do this
+                                        deliberately to reset any changes that happened on local and pull the remote
+                                        repo with its changes for that : <br>
                                         <i>
                                             git fetch --all <br>
                                             git reset --hard origin/main <br>
                                             git pull
                                         </i>
                                     </li>
-                                    <li><i>git rebase</i> : this command have 2 major uses <ul>
-                                            <li>rebace lets users integrate changes from one branch to another where the
-                                                log of commits get modified once the action is complete ,rebase can
-                                                overcome merge disadvantages, specifically regarding commits log. git
-                                                rebase takes all the changes, and moves the completed work from one
-                                                branch to another, typically the main branch. In the process, rebase
-                                                flattens the history and removing unwanted entries , unlike git merge
-                                                that only changes the target(usually main) branch and creates a one
-                                                commit for merging, meanwhile rebase preserving the history of the
-                                                feature branch. its like so after rebase there is only 1 branch thus the
-                                                most common use case for it is to update local files from remote files
-                                                or on any case u need a copy on and not the original repo otherwise u
-                                                and ur team will work on completly deferant commits history which will
-                                                make conflicts on later merge or pull-request(github) , in case of
-                                                updating local repo from remote one u need to use fitch which will make
-                                                new branch to rebase on or u make new another branch to rebase on , but
-                                                never the main ! :
-                                                <i>git remote add upstream https://orignalRepoLink</i>
+                                    <li><i>git rebase</i> : this command can be used in 2 ways (major uses): <ul>
+                                            <li>rebase lets users integrate changes from one branch to another where all
+                                                of the current changes and the commit log get merged ,this is an
+                                                overcome for merge disadvantage that onlt the current changes moved
+                                                wwith 1 commit for doing the merge, git rebase takes all the changes,
+                                                and moves the completed work from one branch to another, typically the
+                                                main branch. In the process, rebase flattens the history and removing
+                                                unwanted entries , unlike git merge that only changes the target head
+                                                and creates a one commit for merging, the most common use case for
+                                                rebase is to update team member branch (local files) from remote files
+                                                by fetching then rebace (so u dont rebase the original work to ur
+                                                branch!!) or if u rebase when the upstream branch and ur branch found on
+                                                the same machine then u need to make new branch as copy from main then
+                                                repase ur branch from it but never the local main !! otherwise u and ur
+                                                team will work on completly different commits log which will make
+                                                conflicts on later merge or , the general approuch :
+                                                <i>git remote add upstream https://orignalRepoLink</i> <br>
                                                 <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
                                             </li>
                                             <li>rebase have flags to manage and edit the commits THAT HAVE NOT BEEN
-                                                PUSHED YET !!!, like change the order and fix commits msgz , and manage
-                                                any commit on list by changing "pick" (mean leave as is) to the keyword
-                                                of the desired action, as start load the interactive list
-                                                <i>git rebase -i xyz</i>(it compare current branch with th -u branch to
-                                                list the unpushed commits) if u assigned -u branch then leave xyz empty
-                                                (otherwise fill repo/brch from gitAdd) , after running the command it
-                                                will load ur default editor of the terminal with text file that u can
-                                                edit, for each line there is the keyword for the action default is pick
-                                                followed by the commit id and the msg , below it a summary for the
-                                                keywords,to use them replace pick with one of them , also this istext
-                                                edito u can cut and paste to change there order , the keywords : <ul>
+                                                PUSHED TO UPSTREAM YET !!!, u edit if they are local or on local and
+                                                origin (in this case u can force rewrite orgin ) like change the order
+                                                and fix commits msgz and more ,as tart load the interactive list <br>
+                                                <i>git rebase -i xyz</i> (it compare current branch with th -u branch
+                                                (xyz)to list the commits that have not pushed yet , xyz and -i order can
+                                                be swiched) if u assigned -u branch then leave xyz empty (otherwise fill
+                                                repo/brch from gitAdd) ,in the list u can manage any commit by changing
+                                                "pick" (mean stay as is) to the keyword of the desired action, after
+                                                running the interactive command it will load ur default editor of the
+                                                terminal
+                                                with
+                                                text file
+                                                that u can edit, for each line there is the keyword for
+                                                the action default is pick followed by the commit id and the msg , below
+                                                it a summary for the keywords,to use them replace pick with one of them
+                                                or with the 1st letter , also this is text edito u can cut and paste to
+                                                change there order , ABOURT !! , the keywords : <ul style="list-style-type:circle">
                                                     <li>squash : when working on a feature and it finally ready to gets
-                                                        merged onto the main branch many of the commits are likely
+                                                        merged onto the main bran`ch many of the commits are likely
                                                         irrelevant to the rest of the team so the maintainer of the
                                                         project may ask you to squash your commits which means you need
                                                         to take multiple commits and combine them into one single commit
                                                         with a single message, to do that go ahead and run
-                                                        <i>git rebase main -i</i> this will open a document in ur
-                                                        editor to customize the commits, for each line there is the word
-                                                        pick (means keep)
-                                                        followed with
-                                                        the latest commit id followed by theat commit msg , u can
-                                                        replace pick
-                                                        with squash to
-                                                        add that commit to the combined one we making , after u save the
-                                                        file
-                                                        and close it then
-                                                        another file will be opened to custumize any of the messages in
-                                                        it save
-                                                        and close then
-                                                        run <i>git log</i> to see single command that replace the
-                                                        squashes ons
-                                                        and it include
+                                                        <i>git rebase -i</i> this will open a document in ur editor to
+                                                        customize the commits, for each line there is the word pick
+                                                        (means keep) followed with the latest commit id followed by
+                                                        that commit msg , replace pick with squash to add that commit to
+                                                        the combined one we making , after u save the file and close it
+                                                        then another file will be opened to custumize any of the
+                                                        messages in it save and close then run <i>git log</i> to see
+                                                        single command that replace the squashes ons and it include
                                                         there msgz.
+
+                                                        
                                                     </li>
                                                     <li></li>
                                                     <li></li>
