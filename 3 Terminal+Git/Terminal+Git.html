@@ -93,8 +93,6 @@
             font-size: 1vh;
         }
 
-
-
         #code {
             background-color: rgb(40, 44, 52);
 
@@ -133,7 +131,6 @@
         .ST {
             font-size: 1.5rem;
             color: #FF7000;
-
         }
     </style>
 </head>
@@ -150,7 +147,7 @@
                 </label>
 
                 <i class="bi bi-git display-1 mt-5" style="text-shadow:3px 3px 3px #c105ffbb;"></i>
-            </Div>
+            </div>
             <article class=" container d-flex flex-column ">
                 <strong class="align-self-center BT1">Terminal </strong><br>
 
@@ -206,12 +203,11 @@
                                 handling, memory management, and process management. </li>
 
                         </ul>
-
                         <br> <br>
+
                         <p><span class="ST">Bash</span></p>
 
                         <div class="d-flex flex-column align-items-center">
-
                             <div class="d-flex img-fluid w-50 mb-3">
                                 <img src="https://cdn.discordapp.com/attachments/948299950008184902/1089308773362970774/Bash.jpg"
                                     class="img-fluid">
@@ -220,7 +216,6 @@
                                 <img src="https://cdn.discordapp.com/attachments/948299950008184902/1067468281604210758/BASH.jpg"
                                     class="img-fluid">
                             </div>
-
                         </div><br><br>
 
                         <p>
@@ -299,25 +294,23 @@
                                     <li>lastly go install vs-code extention of wls for better sync from vs-code terminal
                                         with wls</li>
                                 </ol>
-
-                                u can actually install git CLI in bash with <i>sudo apt install git-all</i> (every
-                                modern linux and WSL have git pre-installed , while bash environment wasnt officialy
-                                supported in win 10 git made there own offical copy) . <br>
-                                after done with installing WSL u can open bash from ubunto app or in CMD-prompt by the
-                                typing "bash" ("exit" get u back to cmd ).
-
-                                after finishing with installing WSL it should have latest git version for linux (after
-                                upgrade) , future updating git can be done togother along with system by update+upgrade
-                                or individually by running "sudo apt-get update" then <i>sudo apt-get install
-                                    git</i> and check version with <i>git --version </i> . <br>
-                                if u tried to install git via git-window-installer one of the steps is installing bash ,
-                                git-bash is custom shell with git commands (its not the full scripting lang?); default
-                                home bath is "C:\Users\{{thisUser}}" (as parallel to the user folder in linux). <br>
-                                on debian-destro : "sudo apt update" "sudo apt install git" "git --version"
+                                <p>u can actually install git CLI in bash with <i>sudo apt install git-all</i> (every
+                                    modern linux and WSL have git pre-installed , while bash environment wasnt officialy
+                                    supported in win 10 git made there own offical copy) . <br>
+                                    after done with installing WSL u can open bash from ubunto app or in CMD-prompt by
+                                    the typing "bash" ("exit" get u back to cmd ).
+                                    after finishing with installing WSL it should have latest git version for linux
+                                    (after upgrade) , future updating git can be done togother along with system by
+                                    update+upgrade or individually by running "sudo apt-get update" then
+                                    <i>sudo apt-get install git</i> and check version with <i>git --version </i> . <br>
+                                    if u tried to install git via git-window-installer one of the steps is installing
+                                    bash , git-bash is custom shell with git commands (its not the full scripting
+                                    lang?); default home bath is "C:\Users\{{thisUser}}" (as parallel to the user folder
+                                    in linux). <br>
+                                    on debian-destro : "sudo apt update" "sudo apt install git" "git --version"
+                                </p>
                             </li>
                         </ol> <br>
-
-
 
                         <strong>How to Use</strong>/open terminal:
                         <ol>
@@ -366,16 +359,14 @@
                             <li>Bashrc is a configuration file for Bash shell,this file is executed each time you open a
                                 new terminal, it contains commands that are executed in every kind of shell.Bashrc is
                                 used to set environment variables, define aliases, and create functions. It's also used
-                                to prompt that appears in your terminal.
-                            </li>
+                                to prompt that appears in your terminal.</li>
                             <li>Bash_profile is also configuration file for Bash shell, but it's executed only once
                                 when you log in to your account. its like few more commands that special for each user
                                 and they dont take effect in a sission untill a user log-in .
                                 This file is used to set the user environment, variables and run commands that are
                                 needed only once at start of your session/subshell. Bash_profile is commonly used to set
                                 PATH variable, which is variable that determines where shell searches for
-                                custom executables.
-                            </li>
+                                custom executables.</li>
                             Bashrc is executed each time you open a new terminal window regardless if its on account
                             log-in or not , while bash_profile is executed only once when you log in to your account.
                             This means that any changes you make to bashrc will take effect immediately, while when you
@@ -391,14 +382,6 @@
                             can do this by adding following line to your bash_profile file:
                             export PATH=$PATH:/home/user/myapp/bin .
                         </ul> <br>
-
-
-
-
-
-
-
-
 
                     </li>
                     <li> <strong>BASH Commands List :</strong> <br><br>
@@ -550,26 +533,6 @@
                     </li>
                 </ul><!-- Terminal end -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <strong class="align-self-center BT2">Git & Github </strong><br>
                 <div class="d-flex flex-row justify-content-center w-100 ">
                     <div><img
@@ -610,7 +573,6 @@
                                 address there is a sugestion for noreply email provided in the text , copy it and use it
                                 instead of urz.
                             </li>
-
                             <li><i>git init</i> : to implement git empty repo in a folder cd there in VScode terminal
                                 then "git init", notice files and folders name are now green and to the right on git tab
                                 there is no. of the files that need to be saved and on the left-bottom corner it says
@@ -637,7 +599,8 @@
                             <li><i>git log</i> it displays for each commit in a repository history its Secure Hash
                                 Algorithm (SHA) id ,which branch got commit on, author, date, commit message, when u run
                                 <i>git log --oneline --graph --decorate --all</i> u will get max deitaled and
-                                decorated view
+                                decorated view . note that if there is a differance between local and remote rebo u will
+                                see 2 logs , to exit log hit "q" .
                             </li>
                             <li>vscode git and gitLens extentions/plugins : <br>
                                 the git icon on the left brings the source control panel it give a breakdown of all the
@@ -659,7 +622,8 @@
                     </li>
                     <li>
                         <p class="ST">Github :</p>
-                        now its time to understand github forthe next git commands : <ol>
+                        now its time to understand github forthe next git commands :
+                        <ol>
                             <li>1st go to github site , make account , then new repo and important dont write any
                                 description cuz it will be saved as README file and even deleting it will make
                                 differance between local and remote repo !! note that the repo name is after
@@ -711,7 +675,8 @@
                             </li>
                             <li><i>git fetch/merge/pull/rebase</i> when the remote repo is one commit
                                 ahead and the files looks differant from the local there is 3 ways to to sync with the
-                                local (using fetch then merge using pull using fetch then rebase) : <ol>
+                                local (using fetch then merge using pull using fetch then rebase) :
+                                <ol>
                                     <li> fetch&merge: what fetch do is downloading the whole content (files and logs) to
                                         be ready for u to choose what to take from them, merge take only the current
                                         files that downlaoded and merge them with the local but not the logs history,
@@ -763,9 +728,9 @@
                                                 <i>git fetch upstream</i> then <i>git rebase upstream/main</i>
                                             </li>
                                             <li>rebase have flags to manage and edit the commits THAT HAVE NOT BEEN
-                                                PUSHED TO UPSTREAM YET !!!, u edit if they are local or on local and
-                                                origin (in this case u can force rewrite orgin ) like change the order
-                                                and fix commits msgz and more ,as tart load the interactive list <br>
+                                                PUSHED TO UPSTREAM YET !!!, if commits already on local and origin then
+                                                u need to force rewrite orgin , rebase have edits like change commits
+                                                order and fix commits msgz and more ,as start load the interactive list
                                                 <i>git rebase -i xyz</i> (it compare current branch with th -u branch
                                                 (xyz)to list the commits that have not pushed yet , xyz and -i order can
                                                 be swiched) if u assigned -u branch then leave xyz empty (otherwise fill
@@ -785,48 +750,51 @@
                                                 more changes , if changes made meanwhile they will disapeare when u
                                                 finish as it auto go to last commit (in vscode u can retore them by
                                                 hitting ctrl+z then save) ,if u dont wna continue wuth rebase run
-                                                <i>git rebase --abort</i>, <br>
-                                                rebase keywords :
+                                                <i>git rebase --abort</i><br>
+                                                run <i>git rebase -i xyz</i> then use rebase keywords :
                                                 <ul style="list-style-type:circle">
-                                                    <li>squash : when working on a feature and it finally ready to gets
-                                                        merged onto the main bran`ch many of the commits are likely
-                                                        irrelevant to the rest of the team so the maintainer of the
-                                                        project may ask you to squash your commits which means you need
-                                                        to take multiple commits and combine them into one single commit
-                                                        with a single message, to do that go ahead and run
-                                                        <i>git rebase -i</i> this will open a document in ur editor to
-                                                        customize the commits, for each line there is the word pick
-                                                        (means keep) followed with the latest commit id followed by
-                                                        that commit msg , replace pick with squash to add that commit to
-                                                        the combined one we making , after u save the file and close it
-                                                        then another file will be opened to custumize any of the
-                                                        messages in it save and close then run <i>git log</i> to see
-                                                        single command that replace the squashes ons and it include
-                                                        there msgz.
-                                                        if u stuck with "error: cannot 'squash' without a previous
-                                                        commit" then abort then start again with the oldest commit (#1)
-                                                        marked with "r" (reword) this will squash the commits and take
-                                                        the reword msg which also can be edited in a file that open
-                                                        after u close the interactive-list file .
-
+                                                    <li>pick : simply means that the commit is included as is,
+                                                        changing the line order doesnt need special keyword If you
+                                                        choose not to include a commit, you should delete the entire
+                                                        line. </li>
+                                                    <li>reword : is a way to change the commit msg like using
+                                                        <i>git commit --amend -m "newmsg"</i> , this also can
                                                     </li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
+                                                    <li>squash : when u ready to merge ur work to the main branch many
+                                                        of the commits are likely irrelevant to the rest of the team so
+                                                        the maintainer of the project may ask you to squash your commits
+                                                        which means you need to take multiple commits and combine them
+                                                        into one single commit with a single message, to do that go
+                                                        ahead and run <i>git rebase -i</i> and replace pick keyword with
+                                                        squash or the letter "s" and this will squash the commit up to
+                                                        the previous commit , after u save the file and close it
+                                                        another will open to edit the oldest messages (to become the new
+                                                        one commit msg) also u can edit the other msgz down below , save
+                                                        and close then run <i>git log</i> to see single command
+                                                        that replace the squashed ones (note that in log u see on ur
+                                                        branch one commit u cant see it on orgin cuz its not pushed).
+                                                        u can see the squashed msgz by ctrl+click in vs-code terminal or
+                                                        use the commit id in <i>git show xyz</i>
+                                                        <br>
+                                                        if u stuck with "error: cannot 'squash' without a previous
+                                                        commit" then abort then start again with the oldest (can be
+                                                        newests?) commit (#1) marked with "r" (reword) this will squash
+                                                        the commits and take the reword msg which will be edited in
+                                                        a file that open after u close the rebase-i file .
+                                                    </li>
+                                                    <li>fixup : This is similar to squash, but the commit to be merged
+                                                        has its message discarded. The commit is simply merged into the
+                                                        commit above it, and the msg from the commit b4 it will be used
+                                                        to describe both .</li>
+                                                    <li>edit If you choose to edit a commit, you'll be given the chance
+                                                        to amend the commit, meaning that you can add or change
+                                                        the commit entirely. You can also make more commits before you
+                                                        continue the rebase. This allows you to split a large
+                                                        commit into smaller ones, or, remove erroneous changes made in a
+                                                        commit.</li>
                                                 </ul>
-
-
-
-
-
-
                                             </li>
                                         </ul>
-
-
-
                                     </li>
                                 </ol>
                             </li>
@@ -853,8 +821,8 @@
                                     <li><i>git checkout xyz</i> will switch u to xyz branch instead of main , or u can
                                         use vs code ui by hitting the branch name on the left-bottom corner and choose
                                         from the list up . u can create and checkout branch in single command with
-                                        <i>git checkout -b xyz</i> , u can get back to main without write its name as so
-                                        <i>git checkout -</i>
+                                        <i>git checkout -b xyz</i> , if u work on a branch and u forgot its name u can
+                                        <i>git checkout -</i> and will refer to the current branch .
                                     </li>
                                 </ul>
                             </li>
@@ -897,7 +865,7 @@
                     <li>
                         <p class="ST">Advanced Git and Github :</p>
                         <ol>
-                            <li>advanced <i>git reset</i> : there is few different techniques for dealing with screw-ups
+                            <li><i>git reset</i> : there is few different techniques for dealing with screw-ups
                                 when your project state not ideal, git provides couple of tools to role back to an
                                 acceptable state , its important to understand the three different file areas of a Git
                                 so u know where u to role back (and what command to use): current working files ,
@@ -925,6 +893,26 @@
                                 the last and add new commit) it allows to fix small things on local and add this to the
                                 last commit .
                             </li>
+                            <li><i>git bisect</i> commandz allow u to trace a bug and find in which commit in
+                                this branch it started, typically the last commit is a bad one so dont need to
+                                put commit id in the command cuz u r on it , sowe run <i>git bisect start</i>
+                                then <i>git bisect bad</i> the next to do is to provide a commit id from log
+                                that is good for sure with <i>git bisect good xyz</i> after this bisect will
+                                start showing you (check out) on ur text editor the file/s from the commit that
+                                in the middle between the good and bad and u need deside if its good/bad with
+                                <i>git bisect good/bad</i> without commit id cuz u on it (the commit checked)
+                                also its brovide how much steps (checkes) remains this is good important
+                                techninal reason : of u dont use gui like kraken no other way (that i know of)
+                                can load past commits in the editor (u can look for what changes happened back
+                                then bit not load the files with that state and run/execute them for testing)
+                                so basically it can be that know from the beginning what is wrong in the code
+                                and u just wna know wehere it started , or u dont know what exactly what is
+                                wrong in the code then u need to run/visual-load/execute the files to know if
+                                the bug is also found in this commit or not. on any way u choose when u find the
+                                1st commit with the bug u need to look what changes have been made then , so
+                                when u on that commit use <i>git diff</i> and after finding the bad lines u can
+                                start <i>git rebase -i xyz</i> and use the edit keyword on the bad commit line
+                            </li>
                             <li><i>git stash</i>is away to sve some code aside for later recall on the same lines , its
                                 like leaving the lines empty for this code to recall it later to try how it impact the
                                 rest of the code thet came after it ,be aware that this take all the code that have not
@@ -936,10 +924,11 @@
                                 <i>git stash list</i> <i>git stash apply #</i> , keep in mind the lines so u dont run
                                 into conflict.
                             </li>
-
                             <li>github actions : watch this after u finish with teting/deploying (Jest webpack firebase)
                             </li>
-                            <li>13 tips : <ol>
+
+                            <li>13 tips :
+                                <ul>
                                     <li><i>git commit -am "whatChng"</i> is shorter way to do git add then git commit
                                     </li>
                                     <li><i>git config --global alias.xyz "commit -am"</i> is a way to make alias for
@@ -968,132 +957,62 @@
                                     <li><i>git branch -M main</i> to rename master branchto any </li>
                                     <li>git log output can be harder to read as the project get more complex then
                                         use <i>git log --oneline --graph --decorate --all</i> for max deitaled and
-                                        decorated view</li>
-                                    <li><i>git bisect</i> commandz allow u to trace a bug and find in which commit in
-                                        this branch it started, typically the last commit is a bad one so dont need to
-                                        put commit id in the command cuz u r on it , sowe run <i>git bisect start</i>
-                                        then <i>git bisect bad</i> the next to do is to provide a commit id from log
-                                        that is good for sure with <i>git bisect good xyz</i> after this bisect will
-                                        start showing you (check out) on ur text editor the file/s from the commit that
-                                        in the middle between the good and bad and u need deside if its good/bad with
-                                        <i>git bisect good/bad</i> without commit id cuz u on it (the commit checked)
-                                        also its brovide how much steps (checkes) remains this is good important
-                                        techninal reason : of u dont use gui like kraken no other way (that i know of)
-                                        can load past commits in the editor (u can look for what changes happened back
-                                        then bit not load the files with that state and run/execute them for testing)
-                                        so basically it can be that know from the beginning what is wrong in the code
-                                        and u just wna know wehere it started , or u dont know what exactly what is
-                                        wrong in the code then u need to run/visual-load/execute the files to know if
-                                        the bug is also found in this commit or not. on any way u choose when u find the
-                                        1st commit with the bug u need to look what changes have been made then , so
-                                        when u on that commit use <i>git diff</i> and after finding the bad lines
-                                    </li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ol>
-
-
-                            </li>
-                        </ol>
-
-
-
-
-                    </li>
-
-
-
-                    1
-                    2
-                    3
-
-
-
-
-
-
-
-
-
-
-                    <br><br><br><br><br>
-                    <li>
-                        using git to manage files between local machine and github : <ol>
-                            <li>open the main folder of the projectS with vs-code (we gonna download a folder with the
-                                repo name)</li>
-                            <li>open termenal of vs-code with ctrl+` (to set default shell open command palette
-                                ctrl+shift+p search for " Terminal: Select Default Profile " then chose WSL) </li>
-                            <li>it auto set the dir for the folder u opened , check that !</li>
-                            <li>go to ur project repo on on github -&gt;Code tab -&gt;Code dropdown button , and copy
-                                the HTTPS link or if u made SSH (secure shell protocol) key . </li>
-                            <li>run the command <i>git clone {{the project link/key}}</i> now files should be downloaded
-                            </li>
-                            <li>cd into the downloaded file , hit "ls -la" and u will see file ".git" which is all
-                                commit history of this repo inc the ones on github </li>
-                            <li>now make changes in ur local files when u start stop writing note next to cursor a
-                                faded note of "uncommited changes and if u installed git extention you will git a
-                                notification badges . u can 1st check what is not commited yet by <i>git status</i>
-                                which show which files have a changes but not commited yet or new files that not still
-                                untracked</li>
-                            <li><i>git add {{file.ex/folder in this dir}}/"." </i>to make tracked for 1
-                                file/folder/all-in-dir"." , after that check again with "git status" now all should be
-                                grean(tracked by .git on local). </li>
-                            <li><i>git commit -m "myMSG" -m "myDiscription"</i> commit most be with msg of what/why u
-                                commit, now changes saved to .git on local </li>
-                            <li><i>git push</i> upload the changes to the repo on the remote host (github) it will ask u
-                                for username and passowrd but authorization via password has stopped in favor for more
-                                secure ways : ssh-token(key)[recomended by community more secure] or https[simple and
-                                was recomended by GitHub until its stopped] countinue about push after finish with auth
-                                step(11) , a flags to be added to push is <i>git push origin main</i>
-                            </li>
-                            <li>github authentication on command line access can be donein two ways, HTTPS and SSH :
-                                <ul>
-                                    <li>SSH Key : Secure Socket Shell are a pair of public and private keys
-                                        that are used to authenticate and establish an encrypted communication
-                                        channel between a client and a remote machine over the internet. while it use
-                                        client/server model to berform the "handshake"(auth) u need to generate a
-                                        private and public keys via the shell the private will stay on the machine in a
-                                        file that the shell make for it and it will use it for further auth (need to
-                                        know the path), the public one will be given to otherz to be able to make auth.
-                                        <br> to do that follow these steps : go to ur bash/zsh terminal type
-                                        <i>ssh-keygen -t rsa -b 4096 -C "email@g.com"</i> after it generated it ask
-                                        where to save it and what name for the file hit Enter for default(recomended)
-                                        which is "/home/{{thisUser}}/.ssh/id_rsa" or type full path ends with file name
-                                        or type the file name alone and it will keep the default path, then it prompt
-                                        for overwrite previous key yes(recomended), then prompt for secure passphrase
-                                        like password . now copy the public key with the command from WLS
-                                        <i>clip.exe &gt; /home/streamer/.ssh/id_rsa.pub </i> or from any bash enviroment
-                                        print to terminal with <i>cat &gt; /home/{{thisUser}}/.ssh/id_rsa.pub</i> then
-                                        copy it by only highlight it or highlight+rightClick, now go to github -&gt;
-                                        sittings -&gt; SSH and GPG keys -&gt; new SSH key , on title add the
-                                        name/discription of the machine then paste the key down below its should start
-                                        with ssh-rsa then cryptic then ur mail.after making this file backup it and make
-                                        system restore point is recommended . now what remain is to add ur private SSH
-                                        key to ssh-agent o it can be automaically used by local git by running these 2
-                                        commands : <br>
-                                        <i>eval "$(ssh-agent -s)"</i> then <i>ssh-add /home/{{thisUser}}/.ssh/id_rsa</i>
-                                    </li>
-                                    <li>HTTPS :not used anymore for push (it was by only push to same repo url also
-                                        need to write ur username and password everytime), its the defult for pull the
-                                        only advantages HTTPS has are network related i.e. the handshakes can be
-                                        slightly faster, and because it's more ubiquitous (used in browsers), less
-                                        likely to have issues with firewalls / NAT.
-
+                                        decorated view. </li>
+                                    <li><i>git bisect</i></li>
+                                    <li>squash</li>
+                                    <li>git hooks : for reop maintainer to run code before or after any event happened.
+                                        in git
+                                        files there one named hooks that js devs can customize via a package called
+                                        husky that
+                                        can be download from npm to configure git hooks </li>
+                                    <li>ti delete ur local completly :
+                                        <i>git fetch origin</i> <i>git reset --hard origin/main </i> now ur changes are
+                                        synced
+                                        but it could be files that u made and these will not be deleted so :
+                                        <i>git clean -df</i>
                                     </li>
                                 </ul>
                             </li>
                         </ol>
-                    </li>
-
-
-
                 </ul>
 
                 <!-- Git & Github end -->
 
 
 
+
+
+
+                <br><br><br><br><br><br><br>
+
+
+                <div>
+                    <div class="container py-2" style="background: rgba(0, 0, 0, 0.664);width: 100%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(255, 0, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(255, 145, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(0, 255, 149);margin-left: 20%;">
+                        <hr style="width: 60%;height: 3px;border: 3px solid rgb(0, 153, 255);margin-left: 40%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(0, 60,255);margin-left: 60%;">
+
+                    </div>
+                </div>
+
+
+                <br><br><br><br><br><br>
+
+
+                <div class=" " style="text-align: center;">
+                    <i class="fas fa-biohazard" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>
+                        <h1 class="text-danger" style="text-align: center;font-size: 5vw"> Experamental
+                            Zone
+                        </h1>
+                    </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-radiation-alt" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+                </div>
+
+                <br><br><br><br><br><br>
 
 
 
