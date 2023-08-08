@@ -126,9 +126,12 @@ for (const btn of btnClose) {
 }
 
 
+let qty = 2;
+let product = `appelz`;
+let price = 5;
 
 
-
+printfDanger('you bought ' + qty + ' ' + product + '. Total is: ' + price * qty)
 
 
 

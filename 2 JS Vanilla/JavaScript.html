@@ -43,7 +43,7 @@
 
         main {
             background-color: rgba(9, 26, 50, 0.985);
-            color: rgb(214, 182, 0);
+            color: rgb(255, 217, 0);
             padding-bottom: 10%;
         }
 
@@ -138,54 +138,63 @@
 
             <article class=" container d-flex flex-column ">
                 <ul>
-                    <li>as in css , u can include ur code to the HTML file with3 ways inline script-tag or in-head
-                        script-tag or in separate file , when u use file ALWAYS PUT THE SCRIPT.src TAG MANUALLY B4 BODY
-                        CLOSE specially if it interact with html elements so the browser load it after the HTML elements
-                        are loaded, <br>
+                    <li>as in css , u can include js code in HTML file with 3 ways:inline-script-tag,
+                        in-head-script-tag, separate file, when u use file ALWAYS PUT THE SCRIPT.src TAG MANUALLY B4
+                        BODY CLOSE specially if it interact with html elements directly so the browser load js after the
+                        HTML elements loading is complete, <br>
                         in js when a though/definition/loop/func is finished Semicolon is expected , if its not there
-                        u can see in vs-code on the navigation-bar even if u go lines below that u still in the same
-                        though and not returned to empty space for new though. <br>
-                        every thing defined in the js file is added to a large obj that include all called window(with
-                        small w) that already come with the js built-in methods like alret and objects like math .
+                        u can see in vs-code navigation-bar that u still in the same though and not returned to empty
+                        space for new though. <br>
+                        every built-in object or method is found inside one big object called window (with small w) like
+                        Math onj or alert method.
 
                     </li>
                     <li>
                         <p><span class="ST">primitives :</span> (in other langs: types)</p>
                         <ol>
-                            <li>Numbers: in VJS there is one type of numbers (no float or integer) , <br>
-                                mathmatical operators: +-*/ are built in in addition %(mod) **(rais pow): <br>
-                                operation and they behave as math order of operations (* 1st b4 +-) , mod (% operator
-                                gives the remaining) and through it js decide if no. is even(/2 %=0) or odd(/2 %=1) , **
-                                mean rais to some power 2**3=8 , js can store up to 16no. after decimal point then it
-                                will round up <br>
+                            <li>Numbers: in vanilla JS there is only type called numbers (no float or integer) , <br>
+                                mathmatical operators: +-*/ are built, in addition %(modulo) **(raise power)
+                                operations,all behave as math order of operations (* done prior to +-) . mod operator(%)
+                                gives(return) the remaining and through it js decide if a number is even(/2 %=0) or
+                                odd(/2 %=1) , raise power ** used like : 2**3=8 , js can store up to 16 no. after
+                                decimal point after that it will round up <br>
                             <li>NaN : this primitive type is number! and it mean that the outcome is meaningless like
-                                0/0 or if any variable got NaN as value involved in other operation result will be NaN
+                                0/0 , if any variable got NaN value is involved in operation the result will be NaN .
                             </li>
-
-                            <li>Variables(identifier): (name of the value) store values for further use/change , when u
-                                define it use let like let MyYear=2000 ,its look like the name of val just when its
-                                defined but when the named used l8er it means put the val of this name here, so in case
-                                u wna update var inc/depending on previous value u define it again and inside use the
-                                var-name as value:
-                                <code class="language-js">let MyCount = MyCount - 3 or MyCount-=3 ++</code>
-                                ,each ration/func must have var to store in it . <br>
-                                const : to define variable that wouldnt be changed <br>
-                                var : is the old way of let , so dont use it! . <br>
-                                in VJS variable type can be changed on redefine, also note that var keyword is existed
-                                and the diffirance from let is that it can be read from any scope/block , we use let to
-                                avoide multi-scope-defines issues .
-                                it is better when define empty varz to assign it to = undefined <br>
-                                declaration mean u mention an identifier but not necessary have brrn initialized with a
-                                value or expression(like funcs and class).
+                            <li>Variables(identifier): (name of the value) store values for further use//track/change ,
+                                declare mean u mention an identifier but not necessary have initialized with a
+                                value or expression(like funcs and class),while define mean it initialized with value .
+                                when u define it use "let" keyword when the content is likly to change in when its used
+                                like let count=100 , l8ter when its time to use that content of the variable u just use
+                                the name and js know to replace the variable name with its content (value) .
+                                if u wna update the variable value there is 2 way to do that : define again (u can use
+                                the current value as part of the new value with useing the variablename !) or if the
+                                value is no. u can just use the variable with math operator : <br>
+                                <code class="language-js">let MyCount = MyCount - 3 or MyCount-=3 MyCount++</code>
+                                <br>
+                                decleration/define keyword : <ul>
+                                    <li>var: is the old way to use "let" , so dont use it! </li>
+                                    <li>let : when the variable value is likely to change or unknown if it gonna change
+                                        then let is used with the declaration</li>
+                                    <li>const : when the variable value will change for sure like when u write a
+                                        function </li>
+                                </ul>
+                                the difference between var keyword and let is that var can be read from any
+                                scope/block while let isnt, we use let to avoide multi-scope-defines issues .
+                                like when u use inside a function or obj a universal-variable-name like count or i in 2
+                                different places in the js file the 2nd variable will not take the the 1st variable
+                                value . in VJS types can be changed along with the variable redefine. to only declare
+                                variable as empty initiate it and to assign it to = undefined <br>
                             </li>
-                            <li>Boolean : true/false usually identifier start with isXYZ (isLogedIn) to remind yes/no
-                                questions . <br>
-                                every value in js is true except : false , 0 , ``(empty string) , null ,
-                                undefined , NaN . </li>
-
-                            <li>String : most be wraped with ` ` or ' ' or " " (try to use backtick instead of quotes )
+                            <li>Boolean : true/false usually identifier start with isXYZ (isLogedIn) to make coding
+                                close to eng and make it look like yes/no question . <br>
+                                every value in js have implicit true/false in it , like to say every value can be truthy
+                                or falsy , the false values are few but when they included in operation they make the
+                                reuslt/output false then u need to check what is ur inputs, false values are : false , 0
+                                , ``(empty string) , null , undefined , NaN . </li>
+                            <li>String : most be wraped with ` ` or ' ' or " " (try to use backtick instead of quotes)
                                 specially when u add quote in the string then start wrap it with '' , every letter is
-                                indexed starting from 0 (as array[index]) inc the spaces , when u add 2 str1+str2
+                                indexed starting from 0 (as array[index]) includ the spaces , when u add 2 str1+str2
                                 the result is combined srt with no space (it rather be added), <br>
                                 building/concate string with js with the old way called concatenation ("you bought "+
                                 qty + " "+ "products") , the new way called <strong>Template Literals</strong> and it
