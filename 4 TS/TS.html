@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/c6a6e33750.js" crossorigin="anonymous"></script>
+
+    <!-- prism color Snippets (js at end) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-dark.min.css"
+        integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>TypeScript</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico"
+        href="https://blog.teamtreehouse.com/wp-content/uploads/2015/05/87a5a0fdc86455c3f94b0b0eebfdb1b9_400x400.png">
+
+
+    <style>
+        body {
+            background-image: url(https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xN2U0MTRmMWQzYzJhMWMxOTBhMWZlMDRkOTg1MDI4Nj9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.Ufd3HsqkPJWlTZtq1OBtT4Iet-7xBiskpQReDe4XKP8);
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        main {
+            background-color: rgba(0, 0, 0, 0.953);
+            color: rgb(126, 253, 255);
+            padding-bottom: 10%;
+        }
+
+        #greeting {
+            text-align: center;
+            margin-top: 7%;
+            border-bottom: 7px groove #00ff9d;
+            width: 50%;
+            margin-bottom: 3%;
+        }
+
+        a {
+            color: #009a9a;
+            font-size: 1.2rem;
+        }
+
+
+
+        lab {
+            font-weight: 700;
+            color: #29ae7d
+        }
+
+        #pre1 {
+            background-color: rgba(40, 44, 52);
+            border: none;
+            align-self: center;
+            width: 80%;
+        }
+
+        #pre2 {
+            background-color: rgba(40, 44, 52);
+            border: none;
+            align-self: center;
+            width: 100%;
+            font-size: 1vh;
+
+        }
+
+
+
+        #code {
+            background-color: rgb(40, 44, 52);
+
+        }
+
+        article {
+            line-height: 1.7;
+        }
+
+        .BT {
+            font-size: 4rem;
+            text-align: center;
+            color: #007acc;
+            text-shadow: rgba(148, 223, 255, 0.679) 2px 0px 0px, rgba(96, 255, 255, 0.523) 3px 2px 0px, rgba(0, 179, 255, 0.605) 3px 0px 3px, rgb(0, 128, 28) 5px 0px 3px, rgba(77, 0, 13, 0.5) 6px 2px 3px, rgb(136, 0, 255) 6px 0px 9px, rgb(77, 0, 98) 8px 0px 9px, rgba(77, 25, 0, 0.5) 9px 2px 9px, rgb(255, 213, 0) 9px 0px 18px, rgb(255, 255, 255) 11px 0px 18px, rgba(255, 255, 255, 0.5) 12px 2px 18px, rgb(255, 255, 255) 12px 0px 30px, rgb(106, 128, 0) 14px 0px 30px, rgba(64, 77, 0, 0.5) 15px 2px 30px, rgb(0, 149, 255) 15px 0px 45px, rgb(0, 87, 128) 17px 0px 45px, rgba(15, 223, 171, 0.5) 17px 2px 45px;
+            --darkreader-inline-color: #5beeee;
+            --darkreader-inline-bgimage: initial;
+            --darkreader-inline-bgcolor: #0a0b0b;
+            border-bottom: 7px groove #00ff9d;
+            width: 35%;
+            margin-bottom: 15%;
+        }
+
+        .ST {
+            font-size: 1.5rem;
+            color: #FF7000;
+        }
+
+        .recap {
+            color: rgb(122, 187, 196);
+            background-color: rgb(44, 44, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="d-flex flex-column align-items-center pt-5 ">
+
+
+
+            <div id="greeting" class="d-flex justify-content-center  mb-5">
+                <i class="fa-brands fa-js text-info mt-3 me-3 "
+                    style="font-size: 5vw;text-shadow:3px 3px 3px #04009A;"></i>
+                <label class="  ">
+                    <h1 class=" text-info" style="font-size: 6vw;text-shadow:3px 3px 3px #04009A ;">
+                        Hello, World!
+                    </h1>
+                </label>
+                <i class="fa-brands fa-node-js text-info mt-3 ms-3"
+                    style="font-size: 5vw;text-shadow:3px 3px 3px #04009A"></i>
+            </div>
+
+
+            <strong class="mt-5 align-self-center BT"> TypeScript </strong>
+
+
+
+            <article class=" container d-flex flex-column ">
+
+                <ul>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos vitae, assumenda aperiam cupiditate
+                    sequi fugit sunt alias tempora omnis culpa, ex asperiores praesentium minima dolorum? Culpa
+                    veritatis eos esse dolore?
+                </ul>
+                <!-- Typescript end -->
+
+
+
+
+                <br><br><br><br><br><br><br>
+
+
+                <div>
+                    <div class="container py-2" style="background: rgba(0, 0, 0, 0.664);width: 100%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(255, 0, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(255, 145, 0);">
+                        <hr style="height: 0vw; width: 60%;border: 3px solid rgb(0, 255, 149);margin-left: 20%;">
+                        <hr style="width: 60%;height: 3px;border: 3px solid rgb(0, 153, 255);margin-left: 40%;">
+                        <hr style="height: 0vw; width: 40%;border: 3px solid rgb(0, 60,255);margin-left: 60%;">
+
+                    </div>
+                </div>
+
+
+                <br><br><br><br><br><br>
+
+
+                <div class=" " style="text-align: center;">
+                    <i class="fas fa-biohazard" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>
+                        <h1 class="text-danger" style="text-align: center;font-size: 5vw">
+                            Experamental Zone
+                        </h1>
+                    </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-radiation-alt" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+                </div>
+
+                <br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+            </article>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"
+        integrity="sha512-RDQSW3KoqJMiX0L/UBgwBmH1EmRYp8LBOiLaA8rBHIy+7OGP/7Gxg8vbt8wG4ZYd29P0Fnoq6+LOytCqx3cyoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
