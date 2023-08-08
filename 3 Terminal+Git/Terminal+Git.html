@@ -53,7 +53,7 @@
             text-align: center;
             margin-top: 7%;
             border-bottom: 7px groove #02008afc;
-            width: 70%;
+            width: 50%;
             margin-bottom: 3%;
         }
 
@@ -63,9 +63,8 @@
         }
 
         i {
-            color: #ba4c89;
-            background-color: #000000;
-            padding: 0 0.3% 0 0.3%;
+            color: #00aab0;
+
         }
 
         td {
@@ -112,7 +111,7 @@
             --darkreader-inline-bgcolor: #0a0b0b;
             border-bottom: 7px groove #02008afc;
             width: 35%;
-            margin: 15% 0% 5% 0%;
+            margin-bottom: 15%;
         }
 
         .BT2 {
@@ -125,7 +124,7 @@
             --darkreader-inline-bgcolor: #0a0b0b;
             border-bottom: 7px groove #02008afc;
             width: 35%;
-            margin: 15% 0% 5% 0%;
+
         }
 
         .ST {
@@ -138,18 +137,26 @@
 <body>
     <main class="container-fluid">
         <div class="d-flex flex-column align-items-center pt-5 ">
-            <div id="greeting">
-                <i class="bi bi-terminal display-1 " style="text-shadow:3px 3px 3px #c105ffbb"></i>
 
-                <label class="pb-5 mx-3">
-                    <h1 class="display-1 text-success" style="text-shadow:3px 3px 3px #c105ffbb ;">Hello, World!
+
+            <div id="greeting" class="d-flex justify-content-center mb-5">
+                <i class="bi bi-terminal display-1 mt-3 me-3"
+                    style="font-size: 5vw;text-shadow:3px 3px 3px #c105ffbb ;"></i>
+
+                <label class="  ">
+                    <h1 class="display-1 text-success" style="font-size: 6vw;text-shadow:3px 3px 3px #c105ffbb ;">
+                        Hello, World!
                     </h1>
                 </label>
 
-                <i class="bi bi-git display-1 mt-5" style="text-shadow:3px 3px 3px #c105ffbb;"></i>
+                <i class="bi bi-git display-1 mt-3 ms-3" style="font-size: 5vw;text-shadow:3px 3px 3px #c105ffbb ;"></i>
             </div>
+
+            <strong class="align-self-center mt-5 BT1">Terminal </strong><br>
+
+
+
             <article class=" container d-flex flex-column ">
-                <strong class="align-self-center BT1">Terminal </strong><br>
 
                 <p><span class="ST">Terminal -&gt; Shell(CLI) -&gt; Kernal :</span></p>
                 <ul>
