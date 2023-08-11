@@ -67,6 +67,10 @@ function checkTF(x) {
     } else { printfDanger(`this is "truthy" val `) }
 }
 
+//capitalize First Letter
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 
 
@@ -131,7 +135,7 @@ let product = `appelz`;
 let price = 5;
 
 
-printfDanger('you bought ' + qty + ' ' + product + '. Total is: ' + price * qty)
+printfDanger(`you bought ${qty} ${capitalize(product)} not ${product.toUpperCase()}. Total is: $${price * qty}`)
 
 
 

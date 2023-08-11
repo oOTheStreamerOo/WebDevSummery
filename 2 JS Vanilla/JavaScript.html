@@ -197,30 +197,33 @@
                                 indexed starting from 0 (as array[index]) includ the spaces , when u add 2 str1+str2
                                 the result is combined srt with no space (it rather be added), <br>
                                 building/concate string with js with the old way called concatenation ("you bought "+
-                                qty + " "+ "products") , the new way called <strong>Template Literals</strong> and it
-                                works only with backticks and it uses $ (means theContentOf as on most cases) e.g
-                                concatenation: <br>
+                                qty + " "+ "products") and if u wna break line just add br>, the new way called
+                                <strong>Template Literals</strong> and it works only with backticks and it uses $ (means
+                                theContentOf as on most cases) e.g concatenation: <br>
                                 <code class="language-js">
                                     `you bought ` + qty + ` ` + product + `. Total is: ` + price * qty
                                 </code> <br>
-                                temp.lit : <br>
+                                template literal : <br>
                                 <code class="language-js">
-                                    `you bought ${qty} ${product.toUpperCase()}. Total is: $${price * qty}`
+                                    `you bought ${qty} ${capitalize(product)} not ${product.toUpperCase()}. Total is: $${price * qty}`
                                 </code> <br>
                                 str methods :
                                 <ol>
-                                    <li>they are built-in functions that applied on same var and change it, the can be
-                                        chained </li>
+                                    <li>they are built-in functions that applied on can be chained to the string
+                                        variable and change it as var.method(), the can be chained </li>
                                     <li>.toUpperCase() : capitalize all</li>
                                     <li>.trim() : remove extra spaces on beginning and end of str , useful for user
-                                        input when paste is expected </li>
-                                    <li>.indexOf('str') : argument need to be passed to this mesthod and it return
-                                        the index of 1st char on its 1st occurrance . if no match it return -1 . </li>
+                                        input when paste is expected eg userInput for email </li>
+                                    <li>.indexOf('Love') : argument need to be passed to this mesthod and when it fine
+                                        the word love it return the index of 1st char (L) on its 1st occurrance . if no
+                                        match it return -1 . </li>
                                     <li>.slice(6, 13) :it slice part of str and return it as new one , it take just
                                         start index or start and end, if negative no. passed mean from end . </li>
                                     <li>.replace('existed', 'new') : replace this chars with this one .</li>
-                                    <li>.split(`char`) : split the string into arrz on the selected char , the use case
-                                        for this usually is split(` `) on space so every word go to index .</li>
+                                    <li>.split(`char`) : make splits on the selected char and enter them into arr, the
+                                        use case for this usually is split(` `) on each space or split(`.`) on each
+                                        period so every word or every paragraph go to index .
+                                    </li>
                                 </ol>
                                 js text properties :
                                 <ol>
@@ -1287,7 +1290,7 @@
                                 so :
                                 <br>
                                 <img src="https://cdn.discordapp.com/attachments/948299950008184902/1033771513188462592/callback_hell.jpg"
-                                    alt="callback hell">
+                                    alt="callback hell" class="w-100">
                             </li> <br>
 
 
