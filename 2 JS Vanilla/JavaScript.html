@@ -161,18 +161,25 @@
                             <li>NaN : this primitive type is number! and it mean that the outcome is meaningless like
                                 0/0 , if any variable got NaN value is involved in operation the result will be NaN .
                             </li>
+                            <i>BigInt values : represent numeric values which are too large to be represented by the
+                                number primitive.</i>
                             <li>Variables(identifier): (name of the value) store values for further use//track/change ,
                                 declare mean u mention an identifier but not necessary have initialized with a
                                 value or expression(like funcs and class),while define mean it initialized with value .
                                 when u define it use "let" keyword when the content is likly to change in when its used
-                                like let count=100 , l8ter when its time to use that content of the variable u just use
+                                like let count=100 (note that the = oporator is for assignment and not for equal more
+                                about js oporators l8er),when its time to use that content of the variable u just use
                                 the name and js know to replace the variable name with its content (value) .
                                 if u wna update the variable value there is 2 way to do that : define again (u can use
                                 the current value as part of the new value with useing the variablename !) or if the
                                 value is no. u can just use the variable with math operator : <br>
                                 <code class="language-js">let MyCount = MyCount - 3 or MyCount-=3 MyCount++</code>
                                 <br>
-                                decleration/define keyword : <ul>
+                                <p>adv note : there is 2 ways to increment with ++ : var++ and ++var both give the same
+                                    result but not the same processing , var++ return the var 1st then increment by 1
+                                    whereas ++var 1st increment by 1 then return the result , this is can be important
+                                    in case u got undefined instead of number after some func/loob run</p>
+                                decleration/define keywords : <ul>
                                     <li>var: is the old way to use "let" , so dont use it! </li>
                                     <li>let : when the variable value is likely to change or unknown if it gonna change
                                         then let is used with the declaration</li>
@@ -190,79 +197,47 @@
                                 close to eng and make it look like yes/no question . <br>
                                 every value in js have implicit true/false in it , like to say every value can be truthy
                                 or falsy , the false values are few but when they included in operation they make the
-                                reuslt/output false then u need to check what is ur inputs, false values are : false , 0
-                                , ``(empty string) , null , undefined , NaN . </li>
-                            <li>String : most be wraped with ` ` or ' ' or " " (try to use backtick instead of quotes)
-                                specially when u add quote in the string then start wrap it with '' , every letter is
-                                indexed starting from 0 (as array[index]) includ the spaces , when u add 2 str1+str2
-                                the result is combined srt with no space (it rather be added), <br>
-                                building/concate string with js with the old way called concatenation ("you bought "+
-                                qty + " "+ "products") and if u wna break line just add br>, the new way called
-                                <strong>Template Literals</strong> and it works only with backticks and it uses $ (means
-                                theContentOf as on most cases) e.g concatenation: <br>
-                                <code class="language-js">
-                                    `you bought ` + qty + ` ` + product + `. Total is: ` + price * qty
-                                </code> <br>
-                                template literal : <br>
-                                <code class="language-js">
-                                    `you bought ${qty} ${capitalize(product)} not ${product.toUpperCase()}. Total is: $${price * qty}`
-                                </code> <br>
-                                str methods :
-                                <ol>
-                                    <li>they are built-in functions that applied on can be chained to the string
-                                        variable and change it as var.method(), the can be chained </li>
-                                    <li>.toUpperCase() : capitalize all</li>
-                                    <li>.trim() : remove extra spaces on beginning and end of str , useful for user
-                                        input when paste is expected eg userInput for email </li>
-                                    <li>.indexOf('Love') : argument need to be passed to this mesthod and when it fine
-                                        the word love it return the index of 1st char (L) on its 1st occurrance . if no
-                                        match it return -1 . </li>
-                                    <li>.slice(6, 13) :it slice part of str and return it as new one , it take just
-                                        start index or start and end, if negative no. passed mean from end . </li>
-                                    <li>.replace('existed', 'new') : replace this chars with this one .</li>
-                                    <li>.split(`char`) : make splits on the selected char and enter them into arr, the
-                                        use case for this usually is split(` `) on each space or split(`.`) on each
-                                        period so every word or every paragraph go to index .
-                                    </li>
-                                </ol>
-                                js text properties :
-                                <ol>
-                                    <li>properties are built-ins that return info (need new var) about what b4 the dot
-                                        and the result had to be stored in another var , these dont have () </li>
-                                    <li>.length : givies the string/arr lenth in normal count (not index from 0)</li>
-                                    <li>few others and not in common use arguments-caller-displayName-name-prototype
-                                    </li>
-                                </ol>
+                                reuslt/output false then u need to check what is ur inputs, false values are : <br>
+                                false , 0 , ``(empty string) , null , undefined , NaN .
                             </li>
                             <li>null : means nothing here , it can be used explicitly as value or can be seen as return
                                 in console . </li>
-                            <li>undefined : js says idk ! the value u request never heared about it , (unlike i know
-                                what u talk about but its empty/null) </li>
+                            <li>undefined : js says idk ! the value u requestes i cant see it at least in the current
+                                scope, (unlike i know what u talk about but its empty/null) </li>
                         </ol>
                     </li><br> <!-- Primitives end -->
 
-                    <li>Methods (general for primitive or data structure): mean a funcs that founded in object as values
-                        for an obj.name (or index) , these are js built in funcs (found on built in objz that warb
-                        another data structure) that u can attach to any data structure to execute that func on it
+                    <li>Methods (for data structure): mean a funcs that founded in object as values (obj.name) , a js
+                        built in funcs found in built in objz these objz warb its target data structure for u can
+                        to attach/chain them to the identifier in order to perform some common funcz on it.
+                        String-obj-methods can be used/chained after any string var name same for array and obj ,
+                        nombers dont have special data structure so they have independant obj called Math and instead of
+                        chaining we put the var indisde the () of the method .
                         <ol>
-
-
-                            <li>Math object : with capital , M its a collection of methods which u can full seen in
-                                console ,methods are const numbers(always capital) and pre-build funcs:
+                            <li>Math object : with capital M is a collection of methods allows you to perform
+                                mathematical tasks on numbers, :
                                 <ol>
                                     <li>eng reminder : ones , tens , hundreds after decimal point tenths , hundredths
                                     </li>
-                                    <li>Math.floor() : is rounding down all time </li>
+                                    <i>Math.round() : rounding to its nearest true no.</i>
                                     <li>Math.ceil() : is rounding up </li>
+                                    <li>Math.floor() : is rounding down </li>
+                                    <li>Math.trunc() : cut(truncate) the decimal point with the digits to the right and
+                                        return the natural nombers (new in ES6)</li>
                                     <li>Math.random() : gives random between 1-0 (0,1 not encluded) , if u want result
-                                        between two no. u need to figure how much options by subtract them and the start
-                                        point :between 24-57 (lower included!!!) are 33 options start from 24 :
-                                        <code class="language-js">Math.floor(Math.random()*33)+24</code>
+                                        between two no. u need to figure how much natural options between them by
+                                        subtract them and then start point :between 24-57 (lower included!!!) are 33
+                                        options start from 24 :
+                                        <code class="language-js">Math.floor/trunc(Math.random()*33)+24</code>
                                     </li>
+                                    <li>Math.pow(x, y) : returns the value of x to the power of y Math.pow(8,2) /// 64
+                                    <li>Math.sqrt(x) returns the square root of x:</li>
+                                    <li>Math.min()/max() : can be used to find the lowest or highest value in a list of
+                                        arguments</li>
                                 </ol>
                             </li>
                         </ol>
-                    <li>Methods :
+                    <li>Methods of Window obj can be used without mention Window b4 it :
                         <ol>
                             <li>alert(``) : gonaa through alert with ok , no input </li>
                             <li>prompt(``) : func that return the user input as STRING !! for numbers use u need
@@ -270,15 +245,30 @@
                                 <code class="language-js">let USerInput = prompt(``)</code>
                             </li>
                             <li>parsInt(`str`) : take string and return it as no. , chage types(primitives) specially
-                                from user input </li>
-                            <li>toString(`no.`) : return a string from other primitives </li>
+                                from user input that always is string </li>
+                            <li>toString(`no.`) : return a string from any other primitives </li> <br>
+
+                            <p>just to hear of these : </p>
+                            <li>open(``) : Opens a new browser window with the name of the file in the corrent folder u
+                                can use ../xyz to go 1 lvl up and chhose file from there </li>
+                            <li>close() : Closes the current window</li>
+                            <li>print() : Prints the content of the current window</li>
+                            <li>scrollTo() : Scrolls the document to the specified coordinates</li>
+                            <li>stop() : Stops the window from loading</li>
+
+                            <p>advanced for l8er :</p>
+                            <li>setInterval() : Calls a function or evaluates an expression at specified intervals (in
+                                milliseconds)</li>
+                            <li>setTimeout() Calls a function or evaluates an expression after a specified number of
+                                milliseconds</li>
+                            <li>addEventListener() : Attaches an event handler to the window</li>
+                            <li>removeEventListener() : Removes an event handler from the window</li>
                         </ol>
 
                     </li><br><!-- Methods end -->
 
-                    <li>console methods :
-                        <ol>
-                            <li>its a way to KNOW/DISPLAY values and returns of funcs for depug and test</li>
+                    <li>console at f12 on browser its a way to KNOW/DISPLAY values and returns of funcs for debug and
+                        test purposes , console methods : <ol>
                             <li>typeOf(var) xyz : gives the type in console for check </li>
                             <li>console.log(var) </li>
                             <li>console.warn(``) : print warning in console with yellow highlight </li>
@@ -286,7 +276,73 @@
                             console.dir() : print a whole dir e.g document (DOM file)
                         </ol>
                     </li>
+                    <p>its prefered to read string from data structures and then continue here </p>
 
+                    <li>JS oporators : Operators are mostly signs fond on ur keyboard that used to perform a specific
+                        mathematical and logical computations on operands. In other words, we can say that an operator
+                        operates the operands. In JavaScript, operators are used to compare values, perform arithmetic
+                        operations, etc. in each section that have its operators a table will be included , Mathmatical
+                        (Arithmetic) Oporators: <br><br>
+
+                        <table class=" d-flex table table-striped table-info ">
+                            <tbody>
+                                <tr>
+                                    <th style="width:35%;text-align: left;">Operator</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>+</td>
+                                    <td>Addition</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>Subtraction</td>
+                                </tr>
+                                <tr>
+                                    <td>*</td>
+                                    <td>Multiplication</td>
+                                </tr>
+                                <tr>
+                                    <td>**</td>
+                                    <td>Exponentiation (<a href="js_2016.asp">ES2016</a>)</td>
+                                </tr>
+                                <tr>
+                                    <td>/</td>
+                                    <td>Division</td>
+                                </tr>
+                                <tr>
+                                    <td>%</td>
+                                    <td>Modulus (Division Remainder)</td>
+                                </tr>
+                                <tr>
+                                    <td>++</td>
+                                    <td>Increment</td>
+                                </tr>
+                                <tr>
+                                    <td>--</td>
+                                    <td>Decrement</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>there is special cetagory of oporators called "Type Operators" which is a js methods to check
+                            varz usually in console :</p>
+                        <table class="d-flex table table-striped table-info ">
+                            <tbody>
+                                <tr>
+                                    <th style="width:30%">Operator</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>typeof()</td>
+                                    <td>Returns the type of a variable</td>
+                                </tr>
+                                <tr>
+                                    <td>instanceof()</td>
+                                    <td>Returns true if an object is an instance of an object type</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
 
                     <li><span class="ST">Conditions : </span> activate funcs according to condition result if its true
                         or false:
@@ -341,13 +397,132 @@
                                 <span><code class="language-js"> arr.filter(function(i){return i%2===0})
                                     </code></span> means return only the indexes that even
                             </li>
-                        </ol>
+                        </ol> <br>
+
+                        JavaScript Comparison Operators :
+                        <table class="d-flex table table-striped table-info">
+                            <tbody>
+                                <tr>
+                                    <th style="width:12%">Operator</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>==</td>
+                                    <td>equal to</td>
+                                </tr>
+                                <tr>
+                                    <td>===</td>
+                                    <td>equal value and equal type</td>
+                                </tr>
+                                <tr>
+                                    <td>!=</td>
+                                    <td>not equal</td>
+                                </tr>
+                                <tr>
+                                    <td>!==</td>
+                                    <td>not equal value or not equal type</td>
+                                </tr>
+                                <tr>
+                                    <td>&gt;</td>
+                                    <td>greater than</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;</td>
+                                    <td>less than</td>
+                                </tr>
+                                <tr>
+                                    <td>&gt;=</td>
+                                    <td>greater than or equal to</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;=</td>
+                                    <td>less than or equal to</td>
+                                </tr>
+                                <tr>
+                                    <td>?</td>
+                                    <td>ternary operator</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        Logical Operators :
+                        <table class="d-flex table table-striped table-info">
+                            <tbody>
+                                <tr>
+                                    <th style="width:12%">Operator</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>&amp;&amp;</td>
+                                    <td>logical and</td>
+                                </tr>
+                                <tr>
+                                    <td>||</td>
+                                    <td>logical or</td>
+                                </tr>
+                                <tr>
+                                    <td>!</td>
+                                    <td>logical not</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
                     </li><br> <!-- Conditions end  -->
 
                     <li>
                         <span class="ST">Data Structures : </span> structures that allow us to store multiple values
                         in one var :
                         <ol>
+                            <li>String : sequence of characters, wraped with ` ` or ' ' or " " (try to use backtick
+                                instead of quotes) specially when u add quote in the string then start wrap it with '' ,
+                                every letter is indexed starting from 0 (as array[index]) includ the spaces , when u add
+                                2 str1+str2 the result is combined srt with no space (it rather be added), <br>
+                                building/concate string in js via the old way called concatenation ("you bought "+
+                                qty + " "+ "products") and if u wna break line just add br>, the new way called
+                                <strong>Template Literals</strong> and it works only with backticks and it uses $ (means
+                                theContentOf as on most cases) e.g concatenation: <br> <br>
+
+                                <code class="language-js">
+                                `you bought ` + qty + ` ` + product + `. Total is: ` + price * qty
+                                </code> <br>
+                                template literal : <br>
+                                <code class="language-js">
+                                `you bought ${qty} ${capitalize(product)} not ${product.toUpperCase()}. 
+                                Total is: $${price * qty}`
+                                </code> <br> <br>
+
+                                Str Methods : they are built-in functions to change/use the sting it can be applied by
+                                chaining to the string variable var.method() . most used methods :
+                                <ol>
+                                    <li>.toUpperCase() : capitalize all chars</li>
+                                    <li>.toLowerCase() : smalls all chars</li>
+                                    <li>.trim() : remove extra spaces on beginning and end of str , useful for user
+                                        input when paste is expected eg userInput for email </li>
+                                    <li>.indexOf('Love') : argument need to be passed to this mesthod and when it fine
+                                        the word love it return the index of 1st char (L) on its 1st occurrance . if no
+                                        match it return -1 . </li>
+                                    <li>.slice(6, 13) :it slice part of str and return it as new one , it can take
+                                        start index only (means to the end) or start and end, if negative no. passed
+                                        mean from end . </li>
+                                    <li>.replace('existed', 'new') : replace this chars with this one .</li>
+                                    <li>.split(`char`) : make splits on the selected char and enter them into arr, the
+                                        use case for this usually is split(` `) on each space or split(`.`) on each
+                                        period so every word or every paragraph go to index .
+                                    </li>
+                                </ol>
+                                js String properties : every one of the data sturcture have a set/list of properties
+                                that calculated and processed automatically by the laguage engine from the creation and
+                                on every change these not a methodas that u need to run in order to find the info , the
+                                info already there and we use the properties to instantly view them or use them , its
+                                same idea as file properties (name size date etc) , these dont need () after them and
+                                can be used on the run inside a function (usuall as part of condition) or stored in a
+                                var for further use . string properties :
+                                <ol>
+                                    <li>.length : givies the string/arr lenth in normal count (not index from 0)</li>
+                                    <li>few others and not in common use arguments,caller,displayName,name,prototype
+                                    </li>
+                                </ol>
+                            </li>
                             <li><span class="ST">Arrays : </span> its a collection of values and its ordered (indexed)
                                 starting from 0 , usually
                                 data structures have a js built-in methods that can be executed on them by adding a dot
@@ -456,7 +631,7 @@
                                                         </span><br>
                                                         <span>
                                                             <code class="language-js">
-                                                                myArr.reduce((min,price)=>{if(price < min) {return
+                                                                myArr.reduce((min,price)=>{if(price &lt; min) {return
                                                                     price;}return min}) </code>
                                                         </span> <br>
                                                         add initial(shift) point to reduce : u can add a val at func and
@@ -509,7 +684,7 @@
                     <li>data ?</li>
                     <li>hash ?</li>
 
-                    <li>when the term -literal- used structure(sting/arr/obj)-literal) means we r using now the
+                    <li>when the term -literal- used structure(sting/arr/obj)-literal means we r using now the
                         structural shape : [] {} "" , its like to say "am not talking about an identifier type , am
                         using actual structure (inside any) </li>
                     </ol>
@@ -1304,7 +1479,7 @@
                                 State and Result : <br>
                                 State can be one of 3 valz : pending/fulfilled/rejected when its fulfilled (data
                                 recived) or rejected (error recived) but now if we got data/error from url then
-                                state!=pending) now the executor come to complete promise inner methods
+                                state!=pending now the executor come to complete promise inner methods
                                 resolve()/reject() then/catch/finally part of the file! to execute our funcs of
                                 how to manage/handle the outcomes, if there is no err or val and no
                                 setTimeout it will still pending forever. in then-catch we usually include indication
@@ -1312,7 +1487,7 @@
                                 it looks weird (then we know its server/database problem). <br>
                                 <strong>
                                     UNSOLVED : does i need to make cond to determine if its resoleve() or
-                                    reject() ? and do i need to spicify resoleve/reject with what ? (its not auto with
+                                    reject() ? and do i need to spicify resoleve/reject with what ? its not auto with
                                     what recived? <br>
                                     seems if u use client no need its already automated and when u do some manual
                                     examples yes u need !!!
@@ -1732,7 +1907,7 @@
                                         inside a script tag but it will not auto complete (intellisense)
                                         the basic use of it (for get request) is replacing fetch with axios.get() and no
                                         need for extra step of internal parsing . the headers format is the same and the
-                                        body can take obj (no need to stringify . axios is smart about the body content
+                                        body can take obj (no need to stringify) . axios is smart about the body content
                                         that u append thus if u didnt include headers of 'Content-Type'it will auto fill
                                         it then if ur content tybe is not the right one the API can reject it bcz of
                                         axios headers . <br>

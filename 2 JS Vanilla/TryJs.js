@@ -129,16 +129,17 @@ for (const btn of btnClose) {
     btn.addEventListener(`click`, () => { btn.parentElement.remove() })
 }
 
-
-let qty = 2;
+let qty = 2.3;
 let product = `appelz`;
 let price = 5;
+let numbz = [1, 2, 3, 4, 5, 6]
+
+printfDanger(numbz.indexOf(Math.max(...numbz)))
 
 
-printfDanger(`you bought ${qty} ${capitalize(product)} not ${product.toUpperCase()}. Total is: $${price * qty}`)
 
-
-
+let meme = 
+printfSuccess(meme)
 
 // let myStrrr = `The lord of the rings`;
 // let myStrr = `The lord of the`;
@@ -196,10 +197,4 @@ printfDanger(`you bought ${qty} ${capitalize(product)} not ${product.toUpperCase
 // printf(c1)
 // let hiz = c1.rgb()
 // printf(hiz)
-
-
-
-
-
-
 
