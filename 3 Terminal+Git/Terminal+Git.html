@@ -403,7 +403,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>FLAGS</td>
+                                        <td>FLAGS (aka options)</td>
                                         <td>are options that can be added to a command for customed action . usually its
                                             a dash followed by no/letter to combine flags just type all of them after
                                             the dash without spaces u can write them separately (-l -a) or togother
@@ -468,14 +468,20 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>clear </td>
-                                        <td>Clear your terminal window</td>
+                                        <td>cp </td>
+                                        <td>"cp [options] source1 source2.. destination" copy those sources to this
+                                            distination </td>
                                     </tr>
+                                    <tr>
+                                        <td>mv </td>
+                                        <td>"mv [options] source1 source2.. destination" move those sources to this
+                                            distination </td>
+                                    </tr>
+
                                     <tr>
                                         <td>echo</td>
                                         <td>console.log / printf</td>
                                     </tr>
-
                                     <tr>
                                         <td>locate</td>
                                         <td>the simplest way to find a file or directory. it display all maches so if
@@ -486,7 +492,10 @@
 
                                         </td>
                                     </tr>
-
+                                    <tr>
+                                        <td>clear or crtl+L </td>
+                                        <td>Clear your terminal window but the commnds historys still saved</td>
+                                    </tr>
                                     <tr>
                                         <td>history </td>
                                         <td>list your most recent commands, to delete it run "history -c && history -w"
@@ -539,8 +548,10 @@
                         </figure>
                     </li>
                 </ul><!-- Terminal end -->
+                <br><br><br><br><br><br><br><br>
 
                 <strong class="align-self-center BT2">Git & Github </strong><br>
+                <br><br><br><br><br><br><br><br>
                 <div class="d-flex flex-row justify-content-center w-100 ">
                     <div><img
                             src="https://cdn.discordapp.com/attachments/948299950008184902/1086336543574216724/image.png"
@@ -550,14 +561,15 @@
 
                     <li>GIT is the most widely version control system made as FOSS by Linus Torvalds same person that
                         developed linux.this is a system for keep track of changes that happen across a set of files
-                        (our sorce-code), any type of source code (is the orginal code that we write,unlike compiled
-                        code) can be tracked, basically we save an initial version of our code into git repo and turning
-                        on changes tracker and later we save changes on commit(save), also we can make branches so we
-                        can work on multiple versions on the app simultaneously(this is usfull in case of team
-                        working/try things/add things too larg/trey on currently-in-use code),then we can switch between
-                        branches and commits(snapshots),with "checkout" we can look back at all of the changes we have
-                        made previous version of the code to check it for clients using that version. note that vscode
-                        come with preinstalled source-controll extention that can used as gui to do the jop .
+                        (our sorce-code), any type of source code (is the orginal code that we write,unlike
+                        compiled/machine/binary code) can be tracked, basically we save an initial version of our code
+                        into git repo and turning on changes tracker and later we save changes on commit(save), also we
+                        can make branches so we can work on multiple versions on the app simultaneously(this is usfull
+                        in case of team working/try things/add things too larg/trey on currently-in-use code),then we
+                        can switch between branches and commits(snapshots),with "checkout" we can look back at all of
+                        the changes we have made previous version of the code to check it for clients using that
+                        version. note that vscode comes with preinstalled source-controll extention that can used as gui
+                        to do the jop but keep it to tui for mucsle memory .
                         <br>
                         meanwhile GITHUB a website owned by microsoft that offer a cloud storage solution for git
                         repositories (aka repo: is a stored copy of the project regardless the storage location/type) ,

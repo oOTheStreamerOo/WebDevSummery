@@ -150,7 +150,7 @@
 
                     </li>
                     <li>
-                        <p><span class="ST">primitives :</span> (in other langs: types)</p>
+                        <p><span class="ST"> Primitives :</span> (in other langs: types)</p>
                         <ol>
                             <li>Numbers: in vanilla JS there is only type called numbers (no float or integer) , <br>
                                 mathmatical operators: +-*/ are built, in addition %(modulo) **(raise power)
@@ -215,20 +215,20 @@
                         chaining we put the var indisde the () of the method .
                         <ol>
                             <li>Math object : with capital M is a collection of methods allows you to perform
-                                mathematical tasks on numbers, :
+                                mathematical tasks on numbers :
                                 <ol>
-                                    <li>eng reminder : ones , tens , hundreds after decimal point tenths , hundredths
+                                    <li>eng reminder : ones , tens , hundreds. after decimal point tenths , hundredths
                                     </li>
-                                    <i>Math.round() : rounding to its nearest true no.</i>
-                                    <li>Math.ceil() : is rounding up </li>
+                                    <i>Math.round() : rounding to its nearest natural no.</i>
+                                    <li>Math.ceil() : (ceiling =top of room)is rounding up </li>
                                     <li>Math.floor() : is rounding down </li>
                                     <li>Math.trunc() : cut(truncate) the decimal point with the digits to the right and
-                                        return the natural nombers (new in ES6)</li>
+                                        return the natural nombers (new in ES6) , this is eqaul to Math.floor</li>
                                     <li>Math.random() : gives random between 1-0 (0,1 not encluded) , if u want result
                                         between two no. u need to figure how much natural options between them by
                                         subtract them and then start point :between 24-57 (lower included!!!) are 33
                                         options start from 24 :
-                                        <code class="language-js">Math.floor/trunc(Math.random()*33)+24</code>
+                                        <code class="language-js"> Math.floor/trunc(Math.random()*33)+24</code>
                                     </li>
                                     <li>Math.pow(x, y) : returns the value of x to the power of y Math.pow(8,2) /// 64
                                     <li>Math.sqrt(x) returns the square root of x:</li>
@@ -241,7 +241,7 @@
                         <ol>
                             <li>alert(``) : gonaa through alert with ok , no input </li>
                             <li>prompt(``) : func that return the user input as STRING !! for numbers use u need
-                                to parsInt(userInput)so it need to be stored ;
+                                to parsInt(userInput)so it need to be stored ; <br>
                                 <code class="language-js">let USerInput = prompt(``)</code>
                             </li>
                             <li>parsInt(`str`) : take string and return it as no. , chage types(primitives) specially
@@ -250,7 +250,7 @@
 
                             <p>just to hear of these : </p>
                             <li>open(``) : Opens a new browser window with the name of the file in the corrent folder u
-                                can use ../xyz to go 1 lvl up and chhose file from there </li>
+                                can use ../xyz to go 1 lvl up and chose file from there </li>
                             <li>close() : Closes the current window</li>
                             <li>print() : Prints the content of the current window</li>
                             <li>scrollTo() : Scrolls the document to the specified coordinates</li>
@@ -267,22 +267,24 @@
 
                     </li><br><!-- Methods end -->
 
-                    <li>console at f12 on browser its a way to KNOW/DISPLAY values and returns of funcs for debug and
+                    <li>browser console on f12 its a way to KNOW/DISPLAY values and returns of funcs for debug and
                         test purposes , console methods : <ol>
-                            <li>typeOf(var) xyz : gives the type in console for check </li>
-                            <li>console.log(var) </li>
+                            <li>typeOf(var) xyz : gives the type in console for check ,also can be used in js file</li>
+                            <li>console.log(var) : print the value of var </li>
                             <li>console.warn(``) : print warning in console with yellow highlight </li>
                             <li>console.error(``) : print warning in console with red highlight </li>
-                            console.dir() : print a whole dir e.g document (DOM file)
+                            <i>console.dir() : print elements from document , the dir of the element can be entered
+                                directly as document.all/.body or as elVar. </i>
                         </ol>
                     </li>
                     <p>its prefered to read string from data structures and then continue here </p>
 
                     <li>JS oporators : Operators are mostly signs fond on ur keyboard that used to perform a specific
-                        mathematical and logical computations on operands. In other words, we can say that an operator
-                        operates the operands. In JavaScript, operators are used to compare values, perform arithmetic
-                        operations, etc. in each section that have its operators a table will be included , Mathmatical
-                        (Arithmetic) Oporators: <br><br>
+                        mathematical and logical computations . In JavaScript, operators are used to compare values,
+                        perform arithmetic/mathmatical, comparison, logical (used in comparison), assignment . in
+                        each section that have its own operators a table will be included , so far we use only assign
+                        oporator " = " .<br> <br>
+                        Mathmatical (Arithmetic) Oporators: <br><br>
 
                         <table class=" d-flex table table-striped table-info ">
                             <tbody>
@@ -324,7 +326,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p>there is special cetagory of oporators called "Type Operators" which is a js methods to check
+                        <p>when u want to increment the value of some var on the same var u can use classic
+                            re-assignment or combine assignment with math-op for auto re-assign or if u
+                            increment/decrement by 1 u can use only ++/-- <br>
+                            <code class="language-js"> let Count = Count - 3 or Count-=3 Count++</code>
+                        </p>
+                        <p>there is special cetagory of oporators called "Type Operators" which is used to check
                             varz usually in console :</p>
                         <table class="d-flex table table-striped table-info ">
                             <tbody>
@@ -333,12 +340,12 @@
                                     <th>Description</th>
                                 </tr>
                                 <tr>
-                                    <td>typeof()</td>
+                                    <td>typeof var</td>
                                     <td>Returns the type of a variable</td>
                                 </tr>
                                 <tr>
-                                    <td>instanceof()</td>
-                                    <td>Returns true if an object is an instance of an object type</td>
+                                    <td>instanceof var</td>
+                                    <td>Returns true if an object is an instance of this class </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -347,53 +354,64 @@
                     <li><span class="ST">Conditions : </span> activate funcs according to condition result if its true
                         or false:
                         <ol>
-                            <li>comparison operators : > &lt; &lt;=>= == ===(type) != !==(type) </li>
-                            <li>Logical operators : &&(and) , ||(or shift+\ = pipe) , !Var (used in cond mean if this
-                                var is falsy). </li>
-                            <li>when u check if var with equality operators ALWAYS USE ===/!== and u can check equality
-                                to -1 means its not there myVar.indexOf(``) === -1</li>
-                            <li> if statment : if (condition) {doThis} / condition1 ? doThis or myVar===`xyz` && doThis;
+                            <li>comparison operators : > &lt; &lt;=>= ==(value) ===(+type) !=(value) !==(+type) </li>
+                            <li>Logical operators : &&(and) , ||(or shift+\ = vertical Line) , !Var used in cond without
+                                comparing to any , it mean if this var is falsy . </li>
+                            <li>when u compare varz via equality operators ALWAYS USE ===/!== when u wna make condition
+                                for the outcome of a method u need to know what it return in different cases like
+                                myVar.indexOf(`qxq`) === -1 , this method return -1 index that dont exist as false
+                                so u cant make codition if myVar.indexOf(`qxq`) === false or !myVar.indexOf(`qxq`) </li>
+                            <li> if statment : if (condition) {doThis}; / or myVar===`xyz` && doThis;
                                 <br>
-                                if(condition){doThis};else{doThat} / condition1 ? doThis : DoThat;
+                                if(condition){doThis};else{doThat}; / condition ? doThis : doThat;
                                 <br>
-                                if(){};else if(){} / condition1 ? doThis : condition2 ? DoThat ; <br>
-                                , the action will be done only if the condetion is true
-                                , when else if added it will be executed when the 1st if is false . <br>
-                                because the executed moves to next condetion when the previous is false u can make
-                                gradiual ranges checking using else-if . else alone is to cover all other cases. <br>
-                                an old way to write it with ; according to online editor <code class="language-js">if(myVar==`go`){console.log('go');}else
-                                    {console.log('purple');}</code><br>
-                                nesting : if u wna use more than condition each one have its own false outcome but they
-                                have one true outcome when all of them must be true : u can nest them one inside the
-                                other and they dont have true outcome except the deepest it will get the one common true
-                                outcome for all . <br>
-                                when condition made for part of a range that covered by another condition , the one that
-                                take place is the condition that written 1st , not the one that cover smaller (specific)
-                                part !!! . <br>
-                                else-if used to start/test new cond with its own else , but without adding else nad
-                                making the new cond !1st cond it will be equal to else (instead of else if)
+                                if(){};else if(){} / condition1 ? doThis : condition2 ? DoThat :...; <br>
+                                the action will be done only if the condetion is true , when else if added it will be
+                                read when the 1st if statment is false (1st condetion fulfilled cancel what come after
+                                it). note that the syntactic sugar using ?: is valid when u write a confition in one
+                                line (like in c) <br>
+                                because the execution moves to next condetion when the previous is false u can make
+                                gradiual ranges checking using else-if . note that usually else is to cover all other
+                                cases other than the one in if . an old way to write it with ; according to online
+                                editor (vscode dont add ; with its intellisense)<br>
+                                <code class="language-js">if(myVar==`go`){console.log('go');}else {console.log('purple');}
+                                </code><br>
+                                nesting : the order of the nesting depend on what i want to check/know , if i want to
+                                know if somthing going wrong then i start from the best case cuz that mean nothing going
+                                wrong and will save the time for more checking like the more good contained in the case
+                                as implicit the more high placed in the nesting cuz its auto answer other condz and the
+                                more bad the case the more its down in the nesting , this way you can reach every case
+                                on the right logical sequence of asking question , like if we need to have live
+                                connection to server the 1st cond to ask : <br>
+                                isConnected and the last is isOffline and in between the cases from good to bad :
+                                isOnlineNoRecive & isOnlineNoSend if there is recive then there must be a send b4 it
+                                then recive is higher in the nesting , and vice versa in case u want to check/know if
+                                anything going good then start from the worst case cuz that mean nothing good happen
+                                and will save the time for more checking ... <br>
                             </li>
 
-                            <li>Switch statment : fancy way to write "else if" it uses when specific conditions needed
-                                to be checked and they cant be covered/grouped by ranges (except !var), note that the
-                                word break if not added it will execute every func come after the true condition with
-                                checking ther conditin , this can be used if u wana more than one func be activated when
-                                one condition is true or u can write 2+ cases one after another to give them same func ,
-                                the default is what funs to do if all of the conditions are false , and it can be just
-                                break.
+                            <li>Switch statment : fancy way to write "else if" regard one var, used when specific
+                                conditions needed to be checked and they cant be covered/grouped by ranges rather than
+                                !var, the statment can be read as : for this var switch from one case to other if case
+                                is true exute its func then break if false continue to next case note that if all cases
+                                are flase so the default func .
+                                the keyword break must be added after every case (true cond dont stop the excecution) if
+                                not added it will execute every true-cond-func that come after, this also can be used if
+                                u wana more than one func be activated or u can write 2+ cases one after another with
+                                one func , the default is what funcs to do if all of the conditions are false , and it
+                                can be just break.
                             </li>
-
-                            <li> on condetions u can use identifier alone without assign on what value and it will
+                            <li> on condetions u can use var alone without without comparing to value and it will
                                 mean if it true (defined with true value) , then if u used !var it will mean if the var
                                 have false value to cover the js false values .
                             </li>
                             <li>acording to w3schools: "The Boolean value of an expression is the basis for all
                                 JavaScript comparisons and conditions" <br>
-                                dont confuse true var with true conditionone , one sided condetion (without ==) is
-                                always check if true,if (!myVar) means if the opposite the Boolean value of myVar is tru
-                                (means if its false) </li>
-                            <li>special kind of condition without cond statment is used inside iterators-funcs like
-                                folows :
+                                dont confuse true var value with true condition result, one sided condetion (without ==)
+                                is always check if true,if (!myVar) means if myVar have false value and if the result is
+                                true (that myVar have false value) then the condition func will be execcuted </li>
+                            <li>special kind of condition without cond statment is used in iteration methods for arrays
+                                like folows (more about that at arrayz):
                                 <span><code class="language-js"> arr.filter(function(i){return i%2===0})
                                     </code></span> means return only the indexes that even
                             </li>
@@ -470,7 +488,7 @@
                     </li><br> <!-- Conditions end  -->
 
                     <li>
-                        <span class="ST">Data Structures : </span> structures that allow us to store multiple values
+                        <span class="ST"> Data Structures : </span> structures that allow us to store multiple values
                         in one var :
                         <ol>
                             <li>String : sequence of characters, wraped with ` ` or ' ' or " " (try to use backtick

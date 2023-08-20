@@ -138,8 +138,30 @@ printfDanger(numbz.indexOf(Math.max(...numbz)))
 
 
 
-let meme = 
-printfSuccess(meme)
+let x = 3;
+
+
+
+
+
+
+
+
+
+
+
+if (x === 3) { printfSecondary('go') } else if (x == `go`) { printfSecondary(`yes`) };
+
+
+switch (key) {
+    case value:
+
+        break;
+
+    default:
+        break;
+}
+
 
 // let myStrrr = `The lord of the rings`;
 // let myStrr = `The lord of the`;
