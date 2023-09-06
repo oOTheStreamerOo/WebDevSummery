@@ -153,7 +153,7 @@
                         <p><span class="ST"> Primitives :</span> (in other langs: types)</p>
                         <ol>
                             <li>Numbers: in vanilla JS there is only type called numbers (no float or integer) , <br>
-                                mathmatical operators: +-*/ are built, in addition %(modulo) **(raise power)
+                                mathmatical operators: +-*/ are built, in addition %(modulo/reminder) **(raise power)
                                 operations,all behave as math order of operations (* done prior to +-) . mod operator(%)
                                 gives(return) the remaining and through it js decide if a number is even(/2 %=0) or
                                 odd(/2 %=1) , raise power ** used like : 2**3=8 , js can store up to 16 no. after
@@ -183,8 +183,10 @@
                                     <li>var: is the old way to use "let" , so dont use it! </li>
                                     <li>let : when the variable value is likely to change or unknown if it gonna change
                                         then let is used with the declaration</li>
-                                    <li>const : when the variable value will change for sure like when u write a
-                                        function </li>
+                                    <li>const : when the variable value will NOT change for sure thats auto include
+                                        functions and classes , its a convention to write the identifier all capital to
+                                        be obvious when human reads the code
+                                    </li>
                                 </ul>
                                 the difference between var keyword and let is that var can be read from any
                                 scope/block while let isnt, we use let to avoide multi-scope-defines issues .
@@ -415,6 +417,8 @@
                                 <span><code class="language-js"> arr.filter(function(i){return i%2===0})
                                     </code></span> means return only the indexes that even
                             </li>
+                            <li>conditions and loobs dont need Semicolon after it , old IDEs may require it but all
+                                modern write without it </li>
                         </ol> <br>
 
                         JavaScript Comparison Operators :
