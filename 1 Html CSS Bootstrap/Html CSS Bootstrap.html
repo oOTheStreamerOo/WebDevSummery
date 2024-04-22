@@ -34,7 +34,7 @@
 
     <title>HTML CSS Bootstrap</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="https://cdn-icons-png.flaticon.com/512/4943/4943029.png">
+    <link rel="icon" type="image/ico" href="https://cdn-icons-png.freepik.com/256/1532/1532556.png">
     <!-- <link rel="icon" type="image/ico" href="https://cdn-icons-png.flaticon.com/512/4943/4943029.png"> -->
 
 
@@ -98,57 +98,151 @@
                     <hr style="width: 40%;height: 3px;color: rgb(0, 60, 255);margin-left: 60%;">
                 </label>
             </div>
+            <br><br><br><br><br>
+            <h2 style="color: rgb(223, 108, 0);font-size: 5vw;">Internet</h2>
 
 
-            <br><br><br><br><br><br>
+            <ul>
+                <h3>How Internet Works? (how the info travel?) :</h3> <br>
+                <li>User Request:
+                    You initiate a web browsing session by entering a Uniform Resource Locator (URL) like "google.com"
+                    into your web browser. This URL represents the information you're requesting in a human-readable
+                    format.
+                </li>
+                <li>Your Device and HTTP Request Construction:
+                    Your web browser interprets the URL and constructs a Hypertext Transfer Protocol (HTTP) request
+                    message. This request specifies the desired resource and the action to be performed.</li>
 
-            <h2>Internet Basics</h2>
+                <li>Data Serialization:
+                    The HTTP request and any additional data are serialized, converting them from a high-level
+                    representation into a stream of bytes suitable for network transmission. This data is encoded as
+                    binary information, represented as a series of ones and zeros.
+                </li>
 
-            <ol>
-                <li>IP Address</li>
-                <li>HTTP Request</li>
-                <li>Servers</li>
+                <li>Modem and Signal Modulation:
+                    Your modem acts as a digital-to-analog converter. It modulates the serialized binary data of your
+                    request onto a physical carrier signal for transmission over cables or fiber optic lines.
+                </li>
 
-            </ol>
-            <br><br><br><br>
+                <li>Router and IP Address:
+                    The router, acting as the traffic director of your network, encapsulates the serialized data into
+                    packets, adding header information including source and destination IP addresses for routing. Each
+                    device on the internet has a unique IP address, acting like an address for your device on the
+                    network.
+                </li>
+
+                <li>Packets and Routing:
+                    The serialized data stream is broken down into manageable units called data packets. Routers
+                    cooperate with each other using routing protocols to share information and collectively determine
+                    the optimal path for each data packet. This collaborative effort ensures that your request reaches
+                    the intended server efficiently, even though the internet may consist of countless interconnected
+                    networks and routers.
+                </li>
+
+                <li>DNS:
+                    The Domain Name System (DNS) acts like an internet phonebook, translating human-readable domain
+                    names (like "google.com") into numerical IP addresses that computers use to locate and communicate
+                    with servers. This translation is essential for routing your request to the correct server.
+                </li>
+
+                <li>Signal Through the Internet:
+                    The data packets, carrying the essence of your original request, travel through the internet
+                    backbone, represented by electrical or light signals.
+                </li>
+
+                <li>Servers:
+                    Once the data packets reach their destination, they are received by servers. Servers are powerful
+                    computers that store information and applications. When your request reaches the appropriate server
+                    (e.g., a server for google.com), it processes your request, retrieves the information you're looking
+                    for, and prepares a response. <br>
+
+                    Content Delivery Networks (CDNs): In many cases, the server you connect to might not be the origin
+                    server that actually holds the requested content. Content Delivery Networks (CDNs) are
+                    geographically distributed networks of servers that store cached copies of popular websites and
+                    content. When you request a website, the data might be
+                    retrieved from a closer CDN server, significantly improving loading times for users in different
+                    locations. This is because geographically closer servers can deliver the content faster than servers
+                    located far away. <br>
+
+                    Using CDN by Web Developers (Testing and Learning): While CDNs are primarily used to deliver content
+                    to end users in , web developers can also leverage CDNs to load development tools and libraries
+                    during the development process. This can be beneficial for testing and learning purposes,
+                    as it allows evelopers to access these resources from a reliable and geographically distributed
+                    source. However, relying solely on CDNs for development tools can introduce external
+                    dependencies and potential points of failure, so it's generally not recommended for production
+                    environments.
+                </li>
+
+                <li>Your Device:
+                    Your device receives the response from the server, deserializes it (converts it back from a data
+                    stream into a usable format), and displays the requested information on your screen.</li>
+                <br>
+                <p>This process happens incredibly quickly, allowing for near-instantaneous communication across the
+                    globe. It's the fundamental process that allows the internet to function. The transmission of binary
+                    data as electrical or light signals is a key aspect of this process, and the use of HTTP requests is
+                    a fundamental part of how data is requested and received. The cooperation of routers to determine
+                    the optimal path for data packets is a crucial part of this process.</p>
+            </ul>
+
+
+
+            <br><br>
 
             <h2 style="color: rgb(223, 108, 0);font-size: 5vw;">HTML</h2>
             <ul>
-                <li>Stands For <strong>Hyper Text Markup Language</strong></li>
+                <p>HTML (Hypertext Markup Language) is the standardized markup language for structuring and presenting
+                    content on the World Wide Web. It uses elements and attributes as its building blocks. Elements,
+                    defined
+                    by start and end tags, structure the content, which can include text, images, videos, and other
+                    multimedia elements. <br>
+                    Attributes, attached to elements, provide additional information for rendering and behavior. These
+                    tags
+                    are not displayed by the browser but are used to interpret the content. While HTML itself defines
+                    the
+                    structure and content, it works in conjunction with Cascading Style Sheets (CSS) for presentation
+                    and
+                    JavaScript for interactivity. The latest version, HTML5, supports multimedia elements like audio and
+                    video.</p>
                 <li>Tags + Info
 
                     <ul>
                         <li style="text-transform:capitalize"> <b>boilerplate : (shortcuts type
-                                !+enter/ctrl+space)</b>
-                            <ol>
-                                <li>doctype : mean this file using HTML 5</li>
-                                <li>hTML</li>
-                                <li>head :in here u add all the references (links like cdn's or files) that used to
-                                    import/include :"" code/styling from these sources : <ul>
-                                        <li>meta name="viewport">:tag for proper responsive on mobile devices.</li>
-                                        <li>css on link rel="stylesheet" </li>
-                                        <li>bootstrap : at its section</li>
-                                        <li>js file </li>
-                                        <li>CDN : Content Delivery Networkuse " away to include over internet
-                                            library insteade of file ,this is a slower method than a downloaded file
-                                        </li>
-                                        <li>
-                                            title : the name of the tab name on the browser also
-                                            search-engines basically look for titles (and some attributes)
-                                        </li>
-                                        <li>
-                                            favorit icon : is the img/ico that show up in the browser tab
-                                            using link rel="icon" type="image/png" href="../favicon.png"
-                                        </li>
-                                        <li>also in heading MINIMAL style or code can be written</li>
-                                        <li>u can check/find path/address of file/image by start writing at src
-                                            "../" (each time u add one it jump-up 1 dir) , this addressing is
-                                            provided by vs code so can be done on any coding lang</li>
-                                    </ul>
-                                </li>
-                                <li>body</li>
-                            </ol>
-                        </li>
+                                !+enter/ctrl+space)</b></li>
+                        <ol>
+                            <li>doctype : mean this file using HTML 5</li>
+                            <li>hTML take attribute of lang="en" , the attribute values are from ISO 639-1 Language
+                                Codes wich is abbreviations list for languagesnames and can be found <a target="_blank"
+                                    href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">here</a>
+                            </li>
+                            <li>head :in here u add all the references (links like cdn's or files dir) that used to
+                                import/include code/styling from these sources, head elements : <ul>
+                                    <li>meta charset="UTF-8": variable-length character encoding standard used for
+                                        electronic communication unlike others that can be used in document file on
+                                        local machine.</li>
+                                    <li>meta name="viewport">:tag for proper responsive on mobile devices.</li>
+                                    <li>css on link rel="stylesheet" </li>
+                                    <li>bootstrap : at its section</li>
+                                    <li>js file </li>
+                                    <li>CDN : Content Delivery Networkuse " away to include over internet
+                                        library insteade of file ,this is a slower method than a downloaded file
+                                    </li>
+                                    <li>
+                                        title : the name of the tab name on the browser also
+                                        search-engines basically look for titles (and some attributes)
+                                    </li>
+                                    <li>
+                                        favorit icon : is the img/ico that show up in the browser tab
+                                        using link rel="icon" type="image/png" href="../favicon.png"
+                                    </li>
+                                    <li>also in heading MINIMAL style or code can be added</li>
+                                    <li>u can check/find dir of file/image by start writing at src
+                                        "../" (each time u add one it jump-up 1 dir) , this addressing is
+                                        provided by vs code so can be done on any coding lang</li>
+                                </ul>
+                            </li>
+                            <li>body</li>
+                        </ol>
+
                     </ul><br>
 
                 <li><b>Basic Tags </b>
@@ -156,14 +250,14 @@
                         </strong>
                         <ol>
                             <li>Headings : h1-h6> use them for titling not for sizing (block-element) </li>
-                            <li>Paragraph : P>(block-element) note its break 2 lines after it </li>
+                            <li>Paragraph : P> note its break 2 lines after it (block-element) </li>
                             <li>blockquote> :to highlight paragraph as quote make margin-left and italics for it if
                                 it used inside p> it disable any css on the remain text after it</li>
                             <li>get one line down : br> (block-element)</li>
                             <li>drow a line : hr> notice its colours tend to be (block-element)</li>
                             <li>br> : (breaking row) is Line Break element it go down one line unlike </li>
-                            <li>Div : is a located space on web page (block-element)<b>unless it get dimintions or
-                                    assigned as display:inline/inline block </b> for better nested-divs-semantics
+                            <li>Div : is a located space on web page (block-element)<b>unless it assigned as
+                                    display:inline/inline block .</b> for better nested-divs-semantics
                                 can use another div names/tags :</li><br>
 
                             <div class="d-flex felx-row">
@@ -192,12 +286,10 @@
                                 </div>
 
 
-
-
-                            </div class="d-flex felx-row"><br><br><br>
+                            </div class="d-flex felx-row">
                             <li>note that figure is only one that automatically take margin from sides </li>
 
-                        </ol>
+                        </ol><br><br>
                         <strong>In-Line (on part of text):</strong>
 
                         <ol>
@@ -206,7 +298,7 @@
                             <li>HTML Entities like & nbsp; to get space between items in-line note that the start
                                 with & and end with semi-colon<br>
                                 HTML Entity List :
-                                <a href="https://dev.w3.org/html5/html-author/charref" target="_blank">here
+                                <a href="https://symbl.cc/en/html-entities/" target="_blank">here
                                 </a> or
                                 <a href="https://www.freeformatter.com/html-entities.html" target="_blank">
                                     here</a>
@@ -219,24 +311,29 @@
                             <li>Span : element which is used to color a part of a text it cant be dimensioned just
                                 by its content cant be centered by text-align like lable unles it got label or text
                                 inside it</li>
-                            <li>lable : basically for Screen-Reader/Accessibility users , uses :
+                            <li>lable : basically for Screen-Reader/Accessibility users , use cases :
                                 <ol>
                                     <li>
-                                        in Forms : it do make a one whole compound so you can click on the
-                                        text to
-                                        check the box <br>
-                                        or can hover over any part of the item to activate the hover
-                                        effect.
-                                    <li>can be used for styling and customization item and for tight
+                                        in Forms : it do make the whole allocated space clickable (the bg the text and
+                                        the check square) <br>
+                                        or hover over any part of the item space to activate the hover effect.
+                                    <li>(not supposed to) can be used for styling and customization item and for tight
                                         border like Images or inline text instead of span</li>
                                 </ol>
                             </li>
-                            <li> to use symbols as text : \" \&gt;; \\ or use html entities like & gt; stands for lesser
-                                than (&gt;) symbol and, the & lt; sign stands for greater than (&lt;) .</li>
-                            <li>img> map>area>shape="circle" coords="350,350,50" or shape="rect"
-                                coords="0,0,50,50"</li>
+                            <li>map> area> : map is a parent for area tags that used over images. result with an image
+                                with clickable areas. map name attribute is same as what after # in usemap="#workmap"
+                                attribute that found in img for linking then enlist area tags with hrefz to make
+                                clickable areas on the image , example in htmltry file and git file. <br>
+                                use <a href="https://www.image-map.net/" target="_blank">this website</a> as tool to
+                                generate map code but remember to change the name value cuz it use the same for all .
+                            </li>
 
-                            <li> data value="21053"> Cherry Tomato /data></li>
+                            <li> data-* attributes: allow us to store extra information about the element without other
+                                hacks such as non-standard attributes, or extra properties on DOM. these info can be
+                                collected/used buy JS method getAttribute() ,these info are hidden from the user and
+                                accessibility readers cant see it (keep in mind) : li> data-animal-type="bird">Owl /li>
+                            </li>
                             <li> <strong>while u write inline tags on html file if they writen at the same line in
                                     the file there will be no space between them in page but if u break the line in
                                     coding there will be a space , take in calcs!</strong> </li>
@@ -247,7 +344,7 @@
 
                 <li><strong>Attributes : is the elments-configs(specs) </strong> :
                     <ol>
-                        <li>any Style="" : to insert css customizationin for specific tag in html file
+                        <li>Style="" : to insert css customizationin for specific tag in html file
                         </li>
                         <li>alt="" : alternative text to be replaced with when element cannot be render (also for
                             for
@@ -383,7 +480,7 @@
                                 type="radio"
                                 value="Cats/Dog"><br>lable for="cats/dogs">Cats/Dogs /lable>
                                 all radio button must have same name="" , the value shall be sended as
-                                http post/get the label should be after the input + br :).
+                                http post/get the label should be after the input + br .
                             </li>
                             <li>in form free text : div>label for="txt">free text:/label>textarea id="txt"
                                 rows="4" cols="50" placeholder="enter opinion" style="width: 90%;">/textarea>/div>
@@ -514,16 +611,18 @@
                 <br><br><br><br>
 
                 <h2 style="color: rgb(223, 108, 0);font-size: 5vw;">CSS</h2>
-                Stands For <strong>Cascading Style Sheets</strong><br>
-                <p>in fact the css is taking the style attribute out of the html file and make a whole file and writing
-                    way
-                    for it bcz its massive so the basic web page is html and js only </p>
-                <ul>
-                    <strong>Info</strong><br>
+                </p><strong>Cascading Style Sheets (CSS) </strong><br>
+                is a stylesheet language used to describe the look and formatting of a
+                document written in HTML or XML. It controls the layout of web pages, including colors, fonts, and
+                responsiveness to different devices. CSS separates the presentation style from the content (html) to
+                another file, improving accessibility and reducing complexity. Its a core language of the open web
+                with a standardized W3C specification, but its not a programming language.</p>
 
+
+                <ul>
 
                     <ul style="list-style-type:square;">
-                        <li><strong style="font-size:2rem ;">MOBILE FIRST</strong></li>
+                        <li><strong style="font-size:2rem ;">MOBILE FIRST !!!</strong></li>
                         <li><strong>3 ways to add CSS :</strong>
                             <ol>
                                 <li>External CSS File, must be included at HTML Heading : link rel='stylesheet'
@@ -536,7 +635,7 @@
                                 <li>inline CSS by using style inside element tag or like heading between HTML
                                     lines (best for test then copy to css file)
                                 </li>
-                            </ol>
+                            </ol> <br>
 
                         <li>css Selectors are always read as "on-every/each" elements/Attributes , therefore
                             specificity is needed .
@@ -549,7 +648,7 @@
                             one
                             will be showen (closer to the item)</li>
                         <li>syntax proplems solve : check after the brackets No coma or semi-colon ?!! <br>
-                            to override higher css command must add "!important")
+                            to override higher css command must add "!important"
                         </li>
                         <li>border most have: border width ;border style ;border color ; these 3 can be
                             written on separate lines or in one line like so : border: 3px solid aqua;
@@ -717,12 +816,14 @@
 
                     &nbsp; &nbsp;can be applied on EVERY-THING inc img/td/input...
                     <ol>
-                        <li>width: when u choose it to be 100% u prevent it from breakline like in float/warp ..</li>
+                        <li>width: when u choose it to be 100% (or 100vw) u prevent it from breakline like in float/warp
+                            ..</li>
                         <li>height: for main div use units of vh (viewport height) & vw (viewport width) for each every
-                            1
-                            unit is 1/100 of the height/width and that makes it responsive according to device viewport
-                            size
+                            1 unit is 1/100 of the height/width and that makes it responsive according to device
+                            viewport size
                         </li>
+                        <li>vh and vw units are a percentage of the height and width of the screen and not the container
+                            for that use % (% dont work with height on the page directly only in container) </li>
                         <li>border: 3px solid aqua; , border(-left)-width/color/style/ ,
                         <li>box-sizing:border-box(a properties which makes
                             the box borders included with the dimintions) ,<br>
