@@ -1,0 +1,396 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+.qw .mac .qwer {
+    background-color: brown;
+}
+
+
+
+
+.navtd {
+    width: 10%;
+    height: 100%;
+    border: 5px solid rgb(255, 255, 255);
+    margin: auto 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: cyan;
+
+}
+
+.tb {
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    height: 40px;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+    background-color: rgb(255, 230, 0);
+    position: fixed;
+    margin: 0;
+}
+
+.sidenavdiv {
+    display: inline-block;
+    height: auto;
+    width: 5%;
+    background-color: rgb(255, 255, 255);
+    top: 20%;
+    left: 5px;
+    position: fixed;
+}
+
+.sidetd {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+}
+
+img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: 3px solid rgb(0, 0, 0);
+
+}
+
+#buttt {
+    color: #e95500;
+    background-color: rgba(245, 245, 220, 0);
+    border: 2px solid;
+    font-size: 1.05em;
+    padding: 1em 2em;
+    transition: all 0.25s;
+
+
+}
+
+#buttt:hover {
+    color: #fd0000;
+    border-color: #3b0088;
+    background-color: #150031;
+    box-shadow: 0 0.5em 0.5em -0.4em #ff5100;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+#maindiv {
+    background-color: #08bfdf54;
+    width: 100%;
+}
+
+#maindiv2 {
+    text-align: center;
+}
+
+.movinr {
+    background-color: #013f2c;
+    height: 100px;
+    width: 100px;
+    border: 3px dashed rgb(0, 0, 0);
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.movingdiv {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(162, 0, 255);
+    border: 3px dashed rgb(0, 0, 0);
+    text-align: center;
+
+
+
+}
+
+#div2 {
+    display: inline-block;
+}
+
+#div3 {
+    display: inline-block;
+
+}
+
+#div123444 {
+
+    background-image: url(https://www.tradeinn.com/f/13776/137760975/paladone-icons-zombie-minecraft-light.jpg);
+    background-position: center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+
+#div12333 {
+    background-color: aqua;
+    color: black;
+    font-size: 1.0em;
+    transition: 2s;
+}
+
+#div12333:hover {
+    margin-right: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(https://i.imgur.com/qGRHc5C.png);
+    background-position: center;
+    color: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
+
+.mainflex {
+    background-color: rgb(0, 0, 112);
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* align-items: flex-start; */
+
+
+}
+
+.inFlex {
+    width: 100px;
+    height: 100px;
+}
+
+
+#navFlex,
+#sectionFlex {
+    align-self: flex-end;
+
+}
+
+#footerFlex {
+    /* align-self: flex-start; */
+}
+
+
+
+.forCubic {
+    background-color: rgb(0, 0, 112);
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.cubic {
+    width: 20%;
+    height: 20%;
+    background-color: #013f2c;
+    border: 3px dashed rgb(255, 30, 0);
+
+
+}
+
+#lolo2 {
+    background-color: #150031;
+    flex-grow: 0.5;
+
+}
+
+@media (min-width:1000px) {
+    #lolo2 {
+        background-color: #013f2c;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1080px) {}
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media #navFlex {
+    background-color: #1572A1;
+}
+
+#sectionFlex {
+    background-color: #9AD0EC;
+}
+
+#articleFlex {
+    background-color: #EFEFEF;
+}
+
+#asideFlex {
+    background-color: #EFDAD7;
+}
+
+#footerFlex {
+    background-color: #E3BEC6;
+}
+
+
+
+.dir {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+
+    display: inline-block;
+    margin: auto 0;
+    width: 500px;
+    height: 500px;
+}
+
+.dir2 {
+    background-color: rgb(0, 56, 9);
+    border: 2px solid rgb(146, 136, 0);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 370px;
+    left: 10px;
+    margin: 100px;
+}
+
+
+
+
+
+#u123 {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a::before {
+    content: "";
+}
+
+.myButton::before {
+    content: none
+}
+
+button {
+
+    background-color: #f4a261;
+}
+
+[aria-checked] {
+
+    background-color: rgb(130, 128, 0);
+    color: rgb(252, 235, 0);
+}
+
+
+
+.myButton {
+    box-shadow: inset -50px 19px 0px 1px #23395e;
+    background-color: transparent;
+    border-radius: 17px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 12px 48px;
+    text-decoration: none;
+    text-shadow: 12px -13px 0px #263666;
+    animation: kazad_314893126 3s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+
+.myButton:hover {
+    background-color: transparent;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+
+}
+
+@keyframes kazad_314893126 {
+    0% {
+        transform: perspective(100px)rotate(0deg);
+    }
+
+    16.667% {
+        transform: perspective(100px)rotateX(180deg)rotateY(0);
+    }
+
+    33.333% {
+        transform: perspective(100px)rotateX(180deg)rotateY(180deg);
+    }
+
+    50% {
+        transform: perspective(100px)rotateX(0)rotateY(180deg);
+    }
+
+    66.667% {
+        transform: perspective(100px)rotateX(0)rotateY(0);
+    }
+
+    100% {
+        transform: perspective(100px)rotateX(0)rotateY(0);
+    }
+}
