@@ -59,14 +59,22 @@
             background-position: center;
             background-attachment: fixed;
         }
+
+        div+p {
+            color: chartreuse !important;
+        }
+
+        th,
+        td {
+            border: 3px solid rgb(0, 0, 0);
+        }
     </style>
 
 
     <style>
-        div+p {
-            color: chartreuse !important;
-        }
+
     </style>
+
 </head>
 
 
@@ -214,10 +222,11 @@
                     <input type="text" id="inputName" placeholder="Name" style="width: 30%;" required>
                     <br>
                     <label for="password">Enter password</label> &nbsp;
-                    <input type="password" id="password" placeholder="password" style="width: 30%;" required>
+                    <input type="password" id="password" name="password" placeholder="password" style="width: 30%;"
+                        required>
                     <br>
                     <label for="Email">Enter your Email</label>
-                    <input type="Email" id="Email" placeholder="Email" style="width: 30%;" required>
+                    <input type="email" id="email" name="email" placeholder="Email" style="width: 30%;" required>
                     <br>
                     <label for="birthday">Enter Birthday</label> &nbsp; &nbsp;
                     <input type="date" name="birthday" id="birthday" required>
@@ -228,9 +237,11 @@
                     <br>
                     <input name="university" id="Stanford" type="radio" value="Stanford" required>
                     <lable for="Stanford">Stanford University</lable>
-                    <br><input name="university" id="Harvard" type="radio" value="Harvard" required>
+                    <br>
+                    <input name="university" id="Harvard" type="radio" value="Harvard" required>
                     <lable for="Harvard">Harvard University</lable>
-                    <br><input name="university" id="California" type="radio" value="California" required>
+                    <br>
+                    <input name="university" id="California" type="radio" value="California" required>
                     <lable for="California">University of California</lable>
                     <br><br>
                     <label for="subjects" required>My study subject is :</label>
@@ -288,7 +299,7 @@
         <div>
             <div style="background-color: rgb(63, 7, 0);color: darkturquoise;">
                 <main style="background-color: rgb(0, 43, 49);width: 75%;margin: 0 auto;text-align: center;">
-                    <table border="2" style="margin: 0 auto;">
+                    <table style="margin: 0 auto;">
                         <thead>
                             <th>Subscription</th>
                             <th colspan="2">Price</th>
@@ -297,12 +308,14 @@
                         <tbody>
                             <tr>
                                 <td rowspan="2">Free</td>
-                                <td colspan="2">1</td>
+                                <td>1</td>
+                                <td>2</td>
                                 <td rowspan="2" colspan="2">N/A</td>
 
                             </tr>
                             <tr>
-                                <td colspan="2">2</td>
+                                <td>3</td>
+                                <td>4</td>
 
 
                             </tr>
@@ -335,7 +348,7 @@
             <br><br><br><br>
             <div class="container " style="background-color: rgb(9, 63, 0);color: darkturquoise;">
                 <main style="background-color: rgb(0, 43, 49);width: 75%;margin: 0 auto;">
-                    <table border-color="red" border="2" style="margin: 0 auto;">
+                    <table border-color="red" style="margin: 0 auto;">
                         <thead>
                             <th>Subscription</th>
                             <th colspan="2">Price</th>
