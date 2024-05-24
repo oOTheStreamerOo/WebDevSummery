@@ -64,6 +64,7 @@
             background-repeat: repeat;
             background-attachment: fixed;
             font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
         }
 
         main {
@@ -80,6 +81,15 @@
             background-color: rgba(0, 40, 83, 0);
             height: px;
             padding-bottom: -5%;
+        }
+
+        #center {
+            font-size: 2vh;
+            background-color: black;
+            width: 100%;
+            text-shadow: 0px 3px 4px rgb(87, 94, 0);
+            padding: 3%;
+            line-height: 1.5;
         }
     </style>
 
@@ -114,14 +124,14 @@
             <br><br><br><br><br>
             <h2 style="color: rgb(223, 108, 0);font-size: 5vw;">Internet</h2>
 
+            <h5 style="color: rgb(253, 174, 55);">How Internet Works? (how the info travel?) :</h5>
+            <ul style="list-style: circle;">
 
-            <ul>
-                <h3>How Internet Works? (how the info travel?) :</h3> <br>
                 <li>User Request:
-                    You initiate a web browsing session by entering a Uniform Resource Locator (URL) like "google.com"
-                    into your web browser. This URL represents the information you're requesting in a human-readable
-                    format.
-                </li>
+                    You initiate a web browsing session by entering a Uniform Resource Locator (URL) like
+                    "google.com" into your web browser. This URL represents the information you're requesting in a
+                    human-readable format.
+                </li><br>
                 <li>Your Device and HTTP Request Construction:
                     Your web browser interprets the URL and constructs a Hypertext Transfer Protocol (HTTP) request
                     message. This request specifies the desired resource and the action to be performed.</li>
@@ -130,71 +140,73 @@
                     The HTTP request and any additional data are serialized, converting them from a high-level
                     representation into a stream of bytes suitable for network transmission. This data is encoded as
                     binary information, represented as a series of ones and zeros.
-                </li>
+                </li><br>
 
                 <li>Modem and Signal Modulation:
-                    Your modem acts as a digital-to-analog converter. It modulates the serialized binary data of your
-                    request onto a physical carrier signal for transmission over cables or fiber optic lines.
-                </li>
+                    Your modem acts as a digital-to-analog converter. It modulates the serialized binary data of
+                    your request onto a physical carrier signal for transmission over cables or fiber optic lines.
+                </li><br>
 
                 <li>Router and IP Address:
-                    The router, acting as the traffic director of your network, encapsulates the serialized data into
-                    packets, adding header information including source and destination IP addresses for routing. Each
-                    device on the internet has a unique IP address, acting like an address for your device on the
+                    The router, acting as the traffic director of your network, encapsulates the serialized data
+                    into packets, adding header information including source and destination IP addresses for routing.
+                    Each device on the internet has a unique IP address, acting like an address for your device on the
                     network.
-                </li>
+                </li><br>
 
                 <li>Packets and Routing:
                     The serialized data stream is broken down into manageable units called data packets. Routers
-                    cooperate with each other using routing protocols to share information and collectively determine
-                    the optimal path for each data packet. This collaborative effort ensures that your request reaches
-                    the intended server efficiently, even though the internet may consist of countless interconnected
-                    networks and routers.
-                </li>
+                    cooperate with each other using routing protocols to share information and collectively
+                    determine the optimal path for each data packet. This collaborative effort ensures that your request
+                    reaches the intended server efficiently, even though the internet may consist of countless
+                    interconnected networks and routers.
+                </li><br>
 
                 <li>DNS:
                     The Domain Name System (DNS) acts like an internet phonebook, translating human-readable domain
-                    names (like "google.com") into numerical IP addresses that computers use to locate and communicate
-                    with servers. This translation is essential for routing your request to the correct server.
-                </li>
+                    names (like "google.com") into numerical IP addresses that computers use to locate and
+                    communicate with servers. This translation is essential for routing your request to the correct
+                    server.
+                </li><br>
 
                 <li>Signal Through the Internet:
                     The data packets, carrying the essence of your original request, travel through the internet
                     backbone, represented by electrical or light signals.
-                </li>
+                </li><br>
 
                 <li>Servers:
-                    Once the data packets reach their destination, they are received by servers. Servers are powerful
-                    computers that store information and applications. When your request reaches the appropriate server
-                    (e.g., a server for google.com), it processes your request, retrieves the information you're looking
-                    for, and prepares a response. <br>
+                    Once the data packets reach their destination, they are received by servers. Servers are
+                    powerful computers that store information and applications. When your request reaches the
+                    appropriate server (e.g., a server for google.com), it processes your request, retrieves the
+                    information you're looking for, and prepares a response. <br>
 
-                    Content Delivery Networks (CDNs): In many cases, the server you connect to might not be the origin
-                    server that actually holds the requested content. Content Delivery Networks (CDNs) are
+                    Content Delivery Networks (CDNs): In many cases, the server you connect to might not be the
+                    origin server that actually holds the requested content. Content Delivery Networks (CDNs) are
                     geographically distributed networks of servers that store cached copies of popular websites and
-                    content. When you request a website, the data might be
-                    retrieved from a closer CDN server, significantly improving loading times for users in different
-                    locations. This is because geographically closer servers can deliver the content faster than servers
-                    located far away. <br>
+                    content. When you request a website, the data might be retrieved from a closer CDN server,
+                    significantly improving loading times for users in different locations. This is because
+                    geographically closer servers can deliver the content faster than servers located far away. <br>
 
-                    Using CDN by Web Developers (Testing and Learning): While CDNs are primarily used to deliver content
-                    to end users in , web developers can also leverage CDNs to load development tools and libraries
-                    during the development process. This can be beneficial for testing and learning purposes,
+                    Using CDN by Web Developers (Testing and Learning): While CDNs are primarily used to deliver
+                    content to end users in , web developers can also leverage CDNs to load development tools and
+                    libraries during the development process. This can be beneficial for testing and learning purposes,
                     as it allows evelopers to access these resources from a reliable and geographically distributed
                     source. However, relying solely on CDNs for development tools can introduce external
                     dependencies and potential points of failure, so it's generally not recommended for production
                     environments.
-                </li>
+                </li><br>
 
                 <li>Your Device:
                     Your device receives the response from the server, deserializes it (converts it back from a data
-                    stream into a usable format), and displays the requested information on your screen.</li>
-                <br>
+                    stream into a usable format), and displays the requested information on your screen.
+                </li> <br>
+
                 <p>This process happens incredibly quickly, allowing for near-instantaneous communication across the
-                    globe. It's the fundamental process that allows the internet to function. The transmission of binary
-                    data as electrical or light signals is a key aspect of this process, and the use of HTTP requests is
-                    a fundamental part of how data is requested and received. The cooperation of routers to determine
-                    the optimal path for data packets is a crucial part of this process.</p>
+                    globe. It's the fundamental process that allows the internet to function. The transmission of
+                    binary data as electrical or light signals is a key aspect of this process, and the use of HTTP
+                    requests is a fundamental part of how data is requested and received. The cooperation of routers to
+                    determine the optimal path for data packets is a crucial part of this process.
+                </p>
             </ul>
 
 
@@ -212,18 +224,20 @@
                     defines the structure and content, it works in conjunction with Cascading Style Sheets (CSS) for
                     presentation and JavaScript for interactivity. The latest version, HTML5, supports multimedia
                     elements like audio and video.</p>
-                <li>Tags + Info
 
+
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">Tags + Info</h5>
                     <ul>
-                        <li>element vs tag : an element includes the start tag, the end tag, and everything in between
-                            (2 tags + data). A tag is part of an element, marking the beginning or the end of that
-                            element (the one with angle braces) </li>
+                        <li>element vs tag : an element includes the start tag, the end tag, and everything in
+                            between (2 tags + data). A tag is part of an element, marking the beginning or the end of
+                            that element (the one with angle braces) </li>
                         <li style="text-transform:capitalize"> <b>boilerplate : (shortcuts type
                                 !+enter/ctrl+space)</b></li>
                         <ol>
                             <li>doctype : mean this file using HTML 5</li>
-                            <li>hTML take attribute of lang="en" , this attribute is used to declare the language of the
-                                Web page. This helps search engines and browsers., the attribute values are from ISO
+                            <li>hTML take attribute of lang="en" , this attribute is used to declare the language of
+                                the Web page. This helps search engines and browsers., the attribute values are from ISO
                                 639-1 Language Codes wich is abbreviations list for languagesnames and can be found
                                 <a target="_blank"
                                     href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">here</a>
@@ -233,7 +247,8 @@
                                 <ul>
                                     <li>meta charset="UTF-8": variable-length character encoding standard used for
                                         electronic communication unlike others that can be used in document file on
-                                        local machine.This is important for the proper display of non-ASCII characters.
+                                        local machine.This is important for the proper display of non-ASCII
+                                        characters.
                                     </li>
                                     <li>meta name="viewport">:tag for proper responsive on mobile devices.</li>
                                     <li>css on link rel="stylesheet" </li>
@@ -243,9 +258,9 @@
                                         library instead of file ,this is a slower method than a downloaded file
                                     </li>
                                     <li>
-                                        title : the name of the tab name on the browser also search-engines basically
-                                        look for titles (and some attributes),This is important for SEO and social
-                                        sharing.
+                                        title : the name of the tab name on the browser also search-engines
+                                        basically look for titles (and some attributes),This is important for SEO and
+                                        social sharing.
                                     </li>
                                     <li>favicon : is the img/ico that show up in the browser tab
                                         using link rel="icon" type="image/png" href="../favicon.png"
@@ -261,227 +276,233 @@
                         </ol>
 
                     </ul><br>
-                    <ul>
-                        <li><b>Basic Tags </b>
-                            <strong>Block-Elements :
-                            </strong>
+
+
+
+
+                    <h5 style="color: rgb(253, 174, 55);">Block-Elements tags : </h5>
+                    <ol>
+                        <li>Headings : These are used for creating different levels of headings in HTML,
+                            with h1 being the highest (or most important) and h6 the least. They are not meant
+                            for controlling the size of the text but for ndicating the importance of the
+                            text </li>
+                        <li>Paragraph : P> This tag is used to define a paragraph. Browsers
+                            automatically add some space (margin) before and after it. </li>
+                        <li>blockquote> :to highlight paragraph as quote by making margin-left and
+                            italics it . if it used inside p> it disable these customization .</li>
+                        <li>get one line down : br> </li>
+                        <li>drow a line : hr> notice its colours tend to be /li>
+                        <li>br> : (breaking row) is Line Break element it go down one line unlike </li>
+                        <li>Div : is allocated space on web page <strong> unless it assigned as display:inline/inline
+                                block .</strong></li>
+                        <li>HTML5 Semantic Elements : a div replacment that provides meaningful
+                            structure to web pages. By using them you improve web accessibility, SEO, code readability,
+                            and future-proofing capabilities (maintainable code).</li>
+                        <br>
+                        <div class="d-flex felx-row">
+                            <div>
+                                <ul>
+                                    <li>&lt;article&gt;</li>
+                                    <li>&lt;aside&gt;</li>
+                                    <li>&lt;figcaption&gt;</li>
+                                    <li>&lt;figure&gt;</li>
+                                    <li>&lt;footer&gt;</li>
+                                    <li>&lt;header&gt;</li>
+                                    <li>&lt;main&gt;</li>
+                                    <li>&lt;nav&gt;</li>
+                                    <li>&lt;section&gt;</li>
+                                    <li>&lt;summary&gt;</li>
+                                    <li>&lt;time&gt;</li>
+                                </ul>
+                            </div>
+
+
+                            <div style="margin-left:15%">
+                                <img alt="HTML Semantic Elements"
+                                    src="https://www.w3schools.com/html/img_sem_elements.gif" width="219" height="258">
+                            </div>
+
+
+                        </div class="d-flex felx-row">
+                        <li>note that figure is only one that automatically take margin from sides </li>
+
+                    </ol><br><br>
+
+
+
+
+                    <h5 style="color: rgb(253, 174, 55);">In-Line tags (on part of text):</h5>
+                    <ol>
+                        <li>in general inline elements designed to manipulate and decorate text and
+                            images,note that an inline element center placed in a fixed space (margin) from the top of
+                            its container (to insure the words line is in standard spacing) , for same reason it
+                            cant have dimintions with width and height but it can with padding (not a good
+                            practice). also inline elements can be moved by "text-align" .
+                        </li>
+                        <li> <strong>while u write inline tags on html file if they writen at the same line
+                                in the file there will be no space(margin) between them in the webpage but if u
+                                break the line in coding there will be a space , take in calcs!</strong>
+                        </li>
+                        <li><i>italics</i> : i> </li>
+                        <li><b>bold </b>: b> </li>
+                        <li>HTML Entities: HTML entities are used to display reserved characters in HTML
+                            that cannot be displayed using regular ASCII characters. e.g & nbsp; to get space
+                            between items in-line note that the start with & and end with semi-colon<br>
+                            HTML Entity List :
+                            <a href="https://symbl.cc/en/html-entities/" target="_blank">here
+                            </a> or
+                            <a href="https://www.freeformatter.com/html-entities.html" target="_blank">
+                                here</a>
+                        </li>
+                        <li>mark> : make yellow background for text its part of Semantic elelments its
+                            theonly one thats inline </li>
+                        <li> a> tag defines a hyperlink </li>
+                        <li>sup : inline for text make it superscribt which appears half a character above
+                            the snormal line and is sometimes rendered in a smaller font (like square in math)
+                        </li>
+                        <li>sub : inline for text make it subscribt which appears half a character below the
+                            normal line and is sometimes rendered in a smaller font(like numbers in
+                            chemistry and log in math) , combine sup and sub to make proper math fractions (1/2).
+                        </li>
+                        <li>Span : element which is used to decorate a part of a text . </li>
+                        <li>lable : basically for Screen-Reader/Accessibility users , use cases :
                             <ol>
-                                <li>Headings : These are used for creating different levels of headings in HTML, with h1
-                                    being the highest (or most important) and h6 the least. They are not meant for
-                                    controlling the size of the text but for ndicating the importance of the text </li>
-                                <li>Paragraph : P> This tag is used to define a paragraph. Browsers automatically add
-                                    some space (margin) before and after it. </li>
-                                <li>blockquote> :to highlight paragraph as quote by making margin-left and italics it .
-                                    if it used inside p> it disable these customization .</li>
-                                <li>get one line down : br> </li>
-                                <li>drow a line : hr> notice its colours tend to be /li>
-                                <li>br> : (breaking row) is Line Break element it go down one line unlike </li>
-                                <li>Div : is allocated space on web page <b> unless it assigned as
-                                        display:inline/inline block .</b></li>
-                                <li>HTML5 Semantic Elements : a div replacment that provides meaningful structure to web
-                                    pages. By using them you improve web accessibility, SEO, code readability, and
-                                    future-proofing capabilities (maintainable code).</li>
-                                <br>
-                                <div class="d-flex felx-row">
-                                    <div>
-                                        <ul>
-                                            <li>&lt;article&gt;</li>
-                                            <li>&lt;aside&gt;</li>
-                                            <li>&lt;figcaption&gt;</li>
-                                            <li>&lt;figure&gt;</li>
-                                            <li>&lt;footer&gt;</li>
-                                            <li>&lt;header&gt;</li>
-                                            <li>&lt;main&gt;</li>
-                                            <li>&lt;nav&gt;</li>
-                                            <li>&lt;section&gt;</li>
-                                            <li>&lt;summary&gt;</li>
-                                            <li>&lt;time&gt;</li>
-                                        </ul>
-                                    </div>
-
-
-                                    <div style="margin-left:15%">
-                                        <img alt="HTML Semantic Elements"
-                                            src="https://www.w3schools.com/html/img_sem_elements.gif" width="219"
-                                            height="258">
-                                    </div>
-
-
-                                </div class="d-flex felx-row">
-                                <li>note that figure is only one that automatically take margin from sides </li>
-
-                            </ol><br><br>
-                            <strong>In-Line (on part of text):</strong>
-
-                            <ol>
-                                <li>in general inline elements designed to manipulate and decorate text and images,note
-                                    that an inline element center placed in a fixed space (margin) from the top of its
-                                    container (to insure the words line is in standard spacing) , for same reason it
-                                    cant have dimintions with width and height but it can with padding (not a good
-                                    practice). also inline elements can be moved by "text-align" .
-                                </li>
-                                <li> <strong>while u write inline tags on html file if they writen at the same line in
-                                        the file there will be no space(margin) between them in the webpage but if u
-                                        break the line in coding there will be a space , take in calcs!</strong> </li>
-                                <li><i>italics</i> : i> </li>
-                                <li><b>bold </b>: b> </li>
-                                <li>HTML Entities: HTML entities are used to display reserved characters in HTML that
-                                    cannot be displayed using regular ASCII characters. e.g & nbsp; to get space
-                                    between items in-line note that the start with & and end with semi-colon<br>
-                                    HTML Entity List :
-                                    <a href="https://symbl.cc/en/html-entities/" target="_blank">here
-                                    </a> or
-                                    <a href="https://www.freeformatter.com/html-entities.html" target="_blank">
-                                        here</a>
-                                </li>
-                                <li>mark> : make yellow background for text its part of Semantic elelments its theonly
-                                    one thats inline </li>
-                                <li> a> tag defines a hyperlink </li>
-                                <li>sup : inline for text make it superscribt which appears half a character above the
-                                    normal line and is sometimes rendered in a smaller font (like square in math) </li>
-                                <li>sub : inline for text make it subscribt which appears half a character below the
-                                    normal line and is sometimes rendered in a smaller font(like numbers in chemistry
-                                    and log in math) , combine sup and sub to make proper math fractions (1/2). </li>
-                                <li>Span : element which is used to decorate a part of a text . </li>
-                                <li>lable : basically for Screen-Reader/Accessibility users , use cases :
-                                    <ol>
-                                        <li>
-                                            in Forms : it do make the whole allocated space clickable (the bg the text
-                                            and the check square) <br>
-                                            or hover over any part of the item space to activate the hover effect.
-                                        <li>(not supposed to) can be used for styling and customization item and for
-                                            tight border like Images or inline text instead of span</li>
-                                    </ol>
-                                </li>
-                                <li>map> area> : map is a parent for area tags that used over images. result with an
-                                    image with clickable areas. map name attribute is same as what after # in this
-                                    attribute usemap="#workmap" that found in img for linking then enlist area tags with
-                                    href to make clickable areas on the image , example in html-try file .
-                                    <br>
-                                    use <a href="https://www.image-map.net/" target="_blank">this website</a> as tool to
-                                    generate map code but remember to change the name value cuz it use the same for all
-                                    .
-                                </li>
-
+                                <li>
+                                    in Forms : it do make the whole allocated space clickable (the bg the
+                                    text and the check square) <br>
+                                    or hover over any part of the item space to activate the hover effect.
+                                <li>(not supposed to) can be used for styling and customization item and for
+                                    tight border like Images or inline text instead of span</li>
                             </ol>
-                    </ul>
+                        </li>
+                        <li>map> area> : map is a parent for area tags that used over images. result with an
+                            image with clickable areas. map name attribute is same as what after # in this
+                            attribute usemap="#workmap" that found in img for linking then enlist area tags
+                            with href to make clickable areas on the image , example in html-try file .
+                            <br>
+                            use <a href="https://www.image-map.net/" target="_blank">this website</a> as
+                            tool to generate map code but remember to change the name value cuz it use the same for
+                            all
+                            .
+                        </li>
+                    </ol>
+
                 </li><br>
 
 
-                <li><strong>Attributes : is the elments-configs(specs) </strong> :
-                    <ol>
-                        <li>lang="eng" : This information helps search engines return language specific results ,
-                            it also used by screen readers that switch language profiles to provide the correct
-                            accent and pronunciation.</li>
-                        <li>style="" : to insert css customization for specific tag in html file </li>
-                        <li>alt="" : alternative text to be replaced with when element cannot be render (also for
-                            for accessibility ??) </li>
-                        <li>title:"" : specifies extra information about an element as popup as tooltip on Hover</li>
-                        <li>a target="_blank" : open link in new tab .</li>
-                        <li>a target="popup" : open link in new Windows .</li>
-                        <li>if you use onclick event then leave href empty : a href="nothing" target="popup"
-                            onclick="window.open('https://angular.io/','name','width=1280,height=720')">
-                            Open new window /a> or <br>
-                            a href="" target="popup"
-                            onclick="window.open('C:/Users/Owner/Desktop/Recap Origin/Html CSSBootstrap.html'
-                            ,'name','width=800,height=600')">Open new window /a> or <br>
-                            a href="nothing" target="popup"
-                            onclick="window.open('file:///C:/Users/Owner/Desktop/Recap%20Origin/Html%20CSS%20Bootstrap.html','name','width=1280,height=720')">
-                            Open new window /a> this is how html give address for files after double click on
-                            address in the browser.</li>
-                        <li>img src="" : image wouldn't take the div dimension,just its own ,then
-                            u must add px/% </li>
-                        <li>img
-                            src="https://repository-images.githubusercontent.com/24195339/87018c00-694b-11e9-8b5f-c34826306d36"
-                            title="Angular" alt="Angular image"></li>
-                        <li>name:"" The name attribute is used to reference elements in a JavaScript, or to reference
-                            form data after a form is submitted. it can be multiple elements on the same page with the
-                            same name in case there are not part of the same form. (more about it in forms).</li>
-                        <li>id="" used to uniquely identify an element on a DOM, No two elements on a page can have the
-                            same ID .</li>
-                        <li>class="" HTML Class attribute collectively represents (target) a group of elements on a DOM,
-                            thus multiple elements may have the same class , and that what pre-built classes (aka css
-                            libraries) use . </li>
-                        <li>for=" means this label is linked to "id".. (belong to)</li>
-                        <li>in table there is attribute "border" it is basic double line its value is px , DONT USE IT
-                            cuz it has been deprecated, instead write the decoration in css : table,th,td border: {3px
-                            solid black;border-collapse:collapse;}
-                        </li>
-                        <li> data-* attributes: These are custom attributes ntroduced in HTML5, that allow you to store
-                            extra information directly in the HTML tag. They are always prefixed with data- followed by
-                            something descriptive. These attributes can be accessed and manipulated by JavaScript and
-                            CSS (mostly JS) these give us extra properties on DOM which can be
-                            targeted by JS method getAttribute() ,the info in it is hidden from the user and
-                            accessibility readers (keep in mind) i.g: li> data-animal-type="bird">Owl
-                        </li>
+                <h5 style="color: rgb(253, 174, 55);">Attributes : is the elments-configs(specs) </h5> :
+                <ol>
+                    <li>lang="eng" : This information helps search engines return language specific results ,
+                        it also used by screen readers that switch language profiles to provide the correct
+                        accent and pronunciation.</li>
+                    <li>style="" : to insert css customization for specific tag in html file </li>
+                    <li>alt="" : alternative text to be replaced with when element cannot be render (also for
+                        for accessibility ??) </li>
+                    <li>title:"" : specifies extra information about an element as popup as tooltip on Hover</li>
+                    <li>a target="_blank" : open link in new tab .</li>
+                    <li>a target="popup" : open link in new Windows .</li>
+                    <li>if you use onclick event then leave href empty : a href="nothing" target="popup"
+                        onclick="window.open('https://angular.io/','name','width=1280,height=720')">
+                        Open new window /a> or <br>
+                        a href="" target="popup"
+                        onclick="window.open('C:/Users/Owner/Desktop/Recap Origin/Html CSSBootstrap.html'
+                        ,'name','width=800,height=600')">Open new window /a> or <br>
+                        a href="nothing" target="popup"
+                        onclick="window.open('file:///C:/Users/Owner/Desktop/Recap%20Origin/Html%20CSS%20Bootstrap.html','name','width=1280,height=720')">
+                        Open new window /a> this is how html give address for files after double click on
+                        address in the browser.</li>
+                    <li>img src="" : image wouldn't take the div dimension,just its own ,then
+                        u must add px/% </li>
+                    <li>img
+                        src="https://repository-images.githubusercontent.com/24195339/87018c00-694b-11e9-8b5f-c34826306d36"
+                        title="Angular" alt="Angular image"></li>
+                    <li>name:"" The name attribute is used to reference elements in a JavaScript, or to reference
+                        form data after a form is submitted. it can be multiple elements on the same page with the
+                        same name in case there are not part of the same form. (more about it in forms).</li>
+                    <li>id="" used to uniquely identify an element on a DOM, No two elements on a page can have the
+                        same ID .</li>
+                    <li>class="" HTML Class attribute collectively represents (target) a group of elements on a DOM,
+                        thus multiple elements may have the same class , and that what pre-built classes (aka css
+                        libraries) use . </li>
+                    <li>for=" means this label is linked to "id".. (belong to)</li>
+                    <li>in table there is attribute "border" it is basic double line its value is px , DONT USE IT
+                        cuz it has been deprecated, instead write the decoration in css : table,th,td border: {3px
+                        solid black;border-collapse:collapse;}
+                    </li>
+                    <li> data-* attributes: These are custom attributes ntroduced in HTML5, that allow you to store
+                        extra information directly in the HTML tag. They are always prefixed with data- followed by
+                        something descriptive. These attributes can be accessed and manipulated by JavaScript and
+                        CSS (mostly JS) these give us extra properties on DOM which can be
+                        targeted by JS method getAttribute() ,the info in it is hidden from the user and
+                        accessibility readers (keep in mind) i.g: li> data-animal-type="bird">Owl
+                    </li>
 
 
 
-                    </ol>
-                </li><br>
+                </ol><br>
 
 
 
 
 
 
-                <li><strong>List</strong>
-                    <ol>
-                        <li>ol type="1|a|A|i|I" = ordered list , the values of type represent decimal numbers, lower
-                            alpha, upper alpha, lower Roman, and upper Roman respectively. </li>
-                        <li>ul : unordered list style="list-style-type:square/disc/circle" </li>
-                        <li>li : list item</li>
-                        <li>details>summary> : details like ui have clickable arrow b4 it and can take multiple summary
-                            that gonna be shown when the arrow clicked , use case is FAQ</li>
+                <h5 style="color: rgb(253, 174, 55);">List</h5>
+                <ol>
+                    <li>ol type="1|a|A|i|I" = ordered list , the values of type represent decimal numbers, lower
+                        alpha, upper alpha, lower Roman, and upper Roman respectively. </li>
+                    <li>ul : unordered list style="list-style-type:square/disc/circle" </li>
+                    <li>li : list item</li>
+                    <li>details>summary> : details like ui have clickable arrow b4 it and can take multiple summary
+                        that gonna be shown when the arrow clicked , use case is FAQ</li>
 
 
-                    </ol>
-                </li><br>
-                <li><strong>Table</strong>
-                    <ol>
-                        <li>dimentional thinking when builde tabel is just about row (cuz in code u builds
-                            only rows) , To build cells in the 3rd column, for example, you need to look for the 3rd
-                            cell (td) in each row (tr). </li>
-                        <li>start with : table > </li>
-                        <li>thead> tbody> tfoot> just for arrangement and accessibility , td=table data , th = table
-                            header , tr = table row , </li>
-                        <li>the 1st row is (thead) (insteadof tr) and it contain th (insteadof td) </li>
-                        <li>th/td colspan="2"> = table header that get a width of 2 coloms and its count as 2 colomns do
-                            if your table originally 3 colomns now (code wise) its 4 e.g when you put this attributeon
-                            2nd colom out of 3 and add in-row 3 td it will stay 3 coloms with larg cell in the middle
-                            but if you put on the same row 4 td the 2 td will be in this row under colomn 2 , notice
-                            that always the cell that take the attribute made large but you cant enter 2 td to it only
-                            to what come after in the next row , then what become if u wana split th cell ? make a new
-                            th !!! which make a whole colomn and if in one row down you want less colomns then make a
-                            cell take 2 colomns with colspan="2" !!! .
-                        </li>
-                        <li>th/td rowspan="2"> : its 100% the opposite of colspan. </li>
-                        <li>** when colspan used you must cover the same space in the next rows with 2 td or with 1 td
-                            that have same colspan as b4 (or mix an match) ,eg.g if u used colspan=3 on any td then next
-                            rows u must fill 3 tds or td colspan=2+td otherwise u wouldnt reach the last column td. <br>
-                            when rowspan used (say at 1st td at 1st row) you must add row after at current one and
-                            consider the 1st td in this added row taken so your 1st td gonna be shown visually as 2nd td
-                            , so to make it look right every place that need 2 td above each over there must be a td on
-                            both rows (the original and the additional) and the place that need to look like 1 td you
-                            MUST make a td on the original row with rowspan.(like say if rowspan used on td it takes 2
-                            rows the next row will start from column 2) </li>
-                        <li>Basic table on emmet would be (in one row) : <br>
-                            div>table[style="margin: 0 auto;border:solid 3px
-                            aqua;"]>caption+thead>tr>th+th+th^^tbody>tr>td+td+td^tr>td+td+td^tr>td+td+td^^tfoot>tr>td+td+td
-                        </li>
+                </ol><br>
 
-                    </ol>
+                <h5 style="color: rgb(253, 174, 55);">Table</h5>
+                <ol>
+                    <li>dimentional thinking when builde tabel is just about row (cuz in code u builds
+                        only rows) , To build cells in the 3rd column, for example, you need to look for the 3rd
+                        cell (td) in each row (tr). </li>
+                    <li>start with : table > </li>
+                    <li>thead> tbody> tfoot> just for arrangement and accessibility , td=table data , th = table
+                        header , tr = table row , </li>
+                    <li>the 1st row is (thead) (insteadof tr) and it contain th (insteadof td) </li>
+                    <li>th/td colspan="2"> = table header that get a width of 2 coloms and its count as 2 colomns do
+                        if your table originally 3 colomns now (code wise) its 4 e.g when you put this attributeon
+                        2nd colom out of 3 and add in-row 3 td it will stay 3 coloms with larg cell in the middle
+                        but if you put on the same row 4 td the 2 td will be in this row under colomn 2 , notice
+                        that always the cell that take the attribute made large but you cant enter 2 td to it only
+                        to what come after in the next row , then what become if u wana split th cell ? make a new
+                        th !!! which make a whole colomn and if in one row down you want less colomns then make a
+                        cell take 2 colomns with colspan="2" !!! .
+                    </li>
+                    <li>th/td rowspan="2"> : its 100% the opposite of colspan. </li>
+                    <li>** when colspan used you must cover the same space in the next rows with 2 td or with 1 td
+                        that have same colspan as b4 (or mix an match) ,eg.g if u used colspan=3 on any td then next
+                        rows u must fill 3 tds or td colspan=2+td otherwise u wouldnt reach the last column td. <br>
+                        when rowspan used (say at 1st td at 1st row) you must add row after at current one and
+                        consider the 1st td in this added row taken so your 1st td gonna be shown visually as 2nd td
+                        , so to make it look right every place that need 2 td above each over there must be a td on
+                        both rows (the original and the additional) and the place that need to look like 1 td you
+                        MUST make a td on the original row with rowspan.(like say if rowspan used on td it takes 2
+                        rows the next row will start from column 2) </li>
+                    <li>Basic table on emmet would be (in one row) : <br>
+                        div>table[style="margin: 0 auto;border:solid 3px
+                        aqua;"]>caption+thead>tr>th+th+th^^tbody>tr>td+td+td^tr>td+td+td^tr>td+td+td^^tfoot>tr>td+td+td
+                    </li>
 
-                    <div class="d-flex flex-row justify-content-center mt-3">
-                        <div>
+                </ol>
 
-                            <img src="https://lh3.googleusercontent.com/pw/AP1GczNuMfpmVA-YVXQblXzf_LPP4h7Wx_lioderYKY4ioVgZh5xDsMb7-Th2lv_mRjT0zrNBUQ8XocHF5AT0it1c1g5XzX7CeDNF7hFZ3NKVNdCTz1FnGpOqJ2RYFZjoNeODbMP-iFa8ooGW4ONW_d9XY5a=w1278-h731-s-no-gm?authuser=0"
-                                alt="Tabel tags" class="img-fluid">
+                <div class="d-flex flex-row justify-content-center mt-3">
+                    <div>
 
-                        </div>
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNuMfpmVA-YVXQblXzf_LPP4h7Wx_lioderYKY4ioVgZh5xDsMb7-Th2lv_mRjT0zrNBUQ8XocHF5AT0it1c1g5XzX7CeDNF7hFZ3NKVNdCTz1FnGpOqJ2RYFZjoNeODbMP-iFa8ooGW4ONW_d9XY5a=w1278-h731-s-no-gm?authuser=0"
+                            alt="Tabel tags" class="img-fluid">
+
                     </div>
+                </div>
 
-                </li>
+
                 <br><br>
 
 
@@ -490,55 +511,57 @@
 
 
 
-                <li><strong>Form</strong>
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">Form</h5>
                     <ul>
                         <li>an example with all tags (without bootstrap) in
                             <a target="_blank"
                                 href="file:///home/streamer/Desktop/WebDevSummery/1%20Html%20CSS%20Bootstrap/1st_HTML.html">tryHTML</a>
                         </li>
                         <li>start with : form action="http://..."> : for where to send on submit , so if u have
-                            multiple submit/search buttons each one will get its own form-tag to insure having its own
-                            action attribute. </li>
+                            multiple submit/search buttons each one will get its own form-tag to insure having its
+                            own action attribute. </li>
                         <li>HTML input Element: The input HTML element is used to create interactive controls for
-                            web-based forms in order to accept data from the user. wide variety of types of input data
-                            and control widgets are available, depending on the device and user agent. The input element
-                            can be displayed in several ways, depending on the type attribute. Some common types include
-                            text, email, password, radio, checkbox, submit, etc. The type attribute of the input tag
-                            specifies what kind of input field to display.
+                            web-based forms in order to accept data from the user. wide variety of types of input
+                            data and control widgets are available, depending on the device and user agent. The input
+                            element can be displayed in several ways, depending on the type attribute. Some common types
+                            include text, email, password, radio, checkbox, submit, etc. The type attribute of the input
+                            tag specifies what kind of input field to display.
                         </li>
                         <li>HTML label Element:
                             The label HTML element represents a caption for an item in a user interface.
                             It is used to associate a label with a form control, such as an input, textarea, select,
                             etc. This improves the accessibility and usability of forms by providing a textual
                             description or name for the associated form control.
-                            When a user clicks or touches/taps a label, the browser passes the focus to its associated
-                            input. This increased hit area for focusing the input provides an advantage to anyone trying
-                            to activate it, including those using a touch-screen device.
-                            To explicitly associate a label element with an input element, you first need to add the id
-                            attribute to the input element. Next, you add the for attribute to the label element,
+                            When a user clicks or touches/taps a label, the browser passes the focus to its
+                            associated input. This increased hit area for focusing the input provides an advantage to
+                            anyone trying to activate it, including those using a touch-screen device.
+                            To explicitly associate a label element with an input element, you first need to add the
+                            id attribute to the input element. Next, you add the for attribute to the label element,
                             where the value of for is the same as the id in the input element. <br>
-                            use it for text instead of p or div in forms so u can use "for" to link the text with the
-                            check-button-id for click(trigger the area/button) best practice is to place the label
+                            use it for text instead of p or div in forms so u can use "for" to link the text with
+                            the check-button-id for click(trigger the area/button) best practice is to place the label
                             element before the input element. best practice to make div>label+input instead of
                             div>label>input
                         </li>
-                        <li>name="" : The name attribute main use in HTML forms to specify a name for an HTML element
-                            which serve couple of purposes,In Form Uses:
+                        <li>name="" : The name attribute main use in HTML forms to specify a name for an HTML
+                            element which serve couple of purposes,In Form Uses:
                             <ol>
                                 <li>Key-Value Pairs: The name attribute uniquely identifies form controls and
                                     contributes to creating key-value pairs of form data. It enables functionalities
                                     like data transmission on form submission, data storage for later use, and
                                     identification of selected options.</li>
-                                <li>Associating with Labels: The name attribute is used in conjunction with the "label"
-                                    element to associate labels with form controls, enhancing form accessibility and
-                                    usability.</li>
+                                <li>Associating with Labels: The name attribute is used in conjunction with the
+                                    "label" element to associate labels with form controls, enhancing form accessibility
+                                    and usability.</li>
                                 <li>note that name attribute is a must on each input element and it doesnt come
                                     automatically with vscode intellisense.</li>
                             </ol>
-                        <li>id="" (attribute): to address/target one particular elemet with ur code, it must be unique
-                            to address it by css/JS and it cant be number(css dont recognize it) , also in htm for
-                            elements that work on another element like linking lable to input or map to img or button to
-                            a div (to view it) .
+                        </li>
+                        <li>id="" (attribute): to address/target one particular elemet with ur code, it must be
+                            unique to address it by css/JS and it cant be number(css dont recognize it) , also in htm
+                            for elements that work on another element like linking lable to input or map to img or
+                            button to a div (to view it) .
                         </li>
                         <li>class:"" : targing multi-items with same class (theming) by css/JS for styling/events
                             use class="form-control" to bootstrap it (must CDN or inc. file 1st )
@@ -547,123 +570,129 @@
                         <li>select : another kind of input it make a DownList to sellect from :
                             select name="lsCars"> option value="optAudi">Audi /option> /select>
                             you can choose the 1st option as "pleaseselect.." and set empty value ,
-                            use label before select (as always) to explain what the input about , this CANT be required
+                            use label before select (as always) to explain what the input about , this CANT be
+                            required
                         </li> <br>
 
-                        <li>all form tags examples:</li>
-                        <ol>
-                            <li>in-form User Name/email input : label for="inputName">enter ur name /lable>
-                                input type="text/email" class="form-control" id="Name" placeholder="Enter
-                                First Name"></li>
-                            <li>in form Password input : label for="inputPassword4" style="width:
-                                100%;">enter/Confirm ur pass /label>
-                                input type="password" class="form-control" id="inputPassword4"
-                                placeholder="enter/Confirm Password"></li>
-                            <li>in-form checkbox : input class=" type="checkbox" id="XZ" checked>label
-                                class="" for="XZ">p> I accept... /lable></li>
-                            <li>in-form radio button for one choice: input name="PetChoice" id="cats/dogs"
-                                type="radio"
-                                value="Cats/Dog"><br>lable for="cats/dogs">Cats/Dogs /lable>
-                                all radio button must have same name="" , the value shall be sended as
-                                http post/get the label should be after the input + br .
-                            </li>
-                            <li>in form free text : div>label for="txt">free text:/label>textarea id="txt"
-                                rows="4" cols="50" placeholder="enter opinion" style="width: 90%;">/textarea>/div>
-                            </li>
-                            <li>input built in types : input type="color" name="btncolor"> //
-                                input type="date" name="date">//
-                                input type="email" name="txtMail"> //
-                                input type="file" name="btnFile"> //
-                                input type="search" name="q" or "txtSearch"> //</li>
-                            <li>in-form Submit button :
-                                div class="" style="text-align: center;">
-                                label for="register" class="reg-btn">/label>
-                                button id="register" type="submit" class="buttonz/">Register /button>
-                                /div>/label>/div><br>
-                                any button in the form do submit it if type="" not
-                                specified,e.g"button" . by hitting Enter on input area the form submit therefore JS
-                                auth must be added + prevent submit on err.
-                                notice that button auto center the text on the 2 axis while div and link inside dont
-                            </li>
-                            <br>
-                        </ol>
-
-                        <br><br>
-                        <li> <strong>HTML Validation :</strong>
+                        <li>all form tags examples:
                             <ol>
-                                <li>add required (not attribute) to the element </li>
-                                <li>add minlenth="" maxlenth="" for text input</li>
-                                <li>add min=" max=" for numbered input</li>
-                                <li>using pattern="" attribute , google it :/ , or using type-attributes that have
-                                    built in pattern maching like : date, search, url, tel,email. </li>
-                                <li>checkout JS Validation : regularExpression </li>
+                                <li>in-form User Name/email input : label for="inputName">enter ur name /lable>
+                                    input type="text/email" class="form-control" id="Name" placeholder="Enter
+                                    First Name"></li>
+                                <li>in form Password input : label for="inputPassword4" style="width:
+                                    100%;">enter/Confirm ur pass /label>
+                                    input type="password" class="form-control" id="inputPassword4"
+                                    placeholder="enter/Confirm Password"></li>
+                                <li>in-form checkbox : input class=" type="checkbox" id="XZ" checked>label
+                                    class="" for="XZ">p> I accept... /lable></li>
+                                <li>in-form radio button for one choice: input name="PetChoice" id="cats/dogs"
+                                    type="radio"
+                                    value="Cats/Dog"><br>lable for="cats/dogs">Cats/Dogs /lable>
+                                    all radio button must have same name="" , the value shall be sended as
+                                    http post/get the label should be after the input + br .
+                                </li>
+                                <li>in form free text : div>label for="txt">free text:/label>textarea id="txt"
+                                    rows="4" cols="50" placeholder="enter opinion" style="width:
+                                    90%;">/textarea>/div>
+                                </li>
+                                <li>input built in types : input type="color" name="btncolor"> //
+                                    input type="date" name="date">//
+                                    input type="email" name="txtMail"> //
+                                    input type="file" name="btnFile"> //
+                                    input type="search" name="q" or "txtSearch"> //</li>
+                                <li>in-form Submit button :
+                                    div class="" style="text-align: center;">
+                                    label for="register" class="reg-btn">/label>
+                                    button id="register" type="submit" class="buttonz/">Register /button>
+                                    /div>/label>/div><br>
+                                    any button in the form do submit it if type="" not specified . by hitting Enter on
+                                    input area the form submit therefore JS auth must be added + prevent submit on err.
+                                    notice that button auto center the text on the 2 axis while div and link inside
+                                    doesn't .
+                                </li>
+                                <br>
                             </ol>
                         </li>
                     </ul>
                 </li>
+                <br><br>
 
+
+
+
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">HTML Validation :</h5>
+                    <ol>
+                        <li>add required (not attribute) to the element </li>
+                        <li>add minlenth="" maxlenth="" for text input</li>
+                        <li>add min=" max=" for numbered input</li>
+                        <li>using pattern="" attribute , google it :/ , or using type-attributes that have
+                            built in pattern maching like : date, search, url, tel,email. </li>
+                        <li>checkout JS Validation : regularExpression </li>
+                    </ol>
                 </li>
 
 
-                <br><br><br><br>
 
-                <h2>Emmet shortcuts : </h2>
-                <ul>
-                    <li>all shorts : Child (>), Sibling (+), Climb-up (^), Grouping (()), Multiplication (*), Item
-                        numbering ($), ID (#), CLASS attributes (.), Custom attributes ([]), Text ({}),</li>
-                    <li>if u just type .bb it gonna turn into div with class bb as .bb#ui calass+id also .+enter will
-                        incert div with empty class</li>
-                    <li>all inshort : > + ^ () $ $$$ $@3*5 $@-6*5 </li>
-                    <li>emmet written in same line if its broken into 2 lines in vsCode it wouldnt work</li>
-                    <li>Nesting Child with " > " : div>ul>li ...will produce div>ul>li>/li>/ul>/div></li>
-                    <li>Nesting Sibling with " + " : div+p+bq ...will output div> /div> p> /p> blockquote> /blockquote>
-                    </li>
-                    <li>Nesting Climb-up with " ^ " : div+div>p>lable>span>em^^bq ...this take u above the lvl u write
-                        in ,will output the blockquote> element inside p> with lable ,, bq> need to be
-                        after p> otherwise use bq+p(in same lvl) </li>
-                    <li>Nesting with Multiplication using " * " : ul>li*5 ...will output unordered list with 5 li </li>
-                    <li>Nesting with Grouping" () " : in case there is an elements that hive multi-levels in it and
-                        after it there is another element to avoid counting lot of ^ put the 1st element tree in
-                        parentheses then + 2nd element like :<br>
-                        div>p>ul>li+li>ol>li*3+li>ol>li*5^^^^^^p => div>(p>ul>li+li>ol>li*3+li>ol>li*5)+p
-                    </li>
-                    <li>adding text inside an element with {} : a{Click me} ==> a href="">Click me /a></li>
-                    <li>to include an attribute to tag : label[for="tisID"] </li>
-                    <li>in Emmet you can use # fir id and . for class as special case , but name still go with the
-                        general way : input[name="myName"]
-                    </li>
-                    <li>Nesting with numbering " $ " : in case you want several copies of same element with name or id
-                        increasing : <br>
-                        ul>li#item$*2 will ==> ul> li class="item1">/li> i class="item2">/li>/ul><br>
-                        .item$$$*5 ==> item001-005: for number format: <br>
-                        .item$@3*5 ==> item3-8: ascending starts with 3 a list of 5 items <br>
-                        item$@-6*4 ==> item6-2: descending starts with 6 a list of 4 items
-                    </li>
-                    <li>lorem*N choose how much of lorem-ipsum-paragraphs to insert , or loremN to choos how many words
-                        to enter</li>
-                    <li>events can be added as attr like this : button[onclick="myFunction()"] tho its not
-                        recommendedbetter to put the element in JS variable () </li>
-                    <li></li>
-                </ul>
+
+
+
+
             </ul><!-- end of HTML -->
+
+            <br><br><br><br>
+            <h2 style="color: rgb(223, 108, 0);font-size: 5vw;">Emmet shortcuts :</h2>
+
+            <ul>
+                <li>all shorts : Child (>), Sibling (+), Climb-up (^), Grouping (()), Multiplication (*), Item
+                    numbering ($), ID (#), CLASS attributes (.), Custom attributes ([]), Text ({}),</li>
+                <li>if u just type .bb it gonna turn into div with class bb as .bb#ui calass+id also .+enter
+                    will incert div with empty class</li>
+                <li>all inshort : > + ^ () $ $$$ $@3*5 $@-6*5 </li>
+                <li>emmet written in same line if its broken into 2 lines in vsCode it wouldnt work</li>
+                <li>Nesting Child with " > " : div>ul>li ...will produce div>ul>li>/li>/ul>/div></li>
+                <li>Nesting Sibling with " + " : div+p+bq ...will output div> /div> p> /p> blockquote>
+                    /blockquote>
+                </li>
+                <li>Nesting Climb-up with " ^ " : div+div>p>lable>span>em^^bq ...this take u above the lvl u
+                    write in ,will output the blockquote> element inside p> with lable ,, bq> need to be
+                    after p> otherwise use bq+p(in same lvl) </li>
+                <li>Nesting with Multiplication using " * " : ul>li*5 ...will output unordered list with 5 li
+                </li>
+                <li>Nesting with Grouping" () " : in case there is an elements that hive multi-levels in it and
+                    after it there is another element to avoid counting lot of ^ put the 1st element tree in
+                    parentheses then + 2nd element like :<br>
+                    div>p>ul>li+li>ol>li*3+li>ol>li*5^^^^^^p => div>(p>ul>li+li>ol>li*3+li>ol>li*5)+p
+                </li>
+                <li>adding text inside an element with {} : a{Click me} ==> a href="">Click me /a></li>
+                <li>to include an attribute to tag : label[for="tisID"] </li>
+                <li>in Emmet you can use # fir id and . for class as special case , but name still go with the
+                    general way : input[name="myName"]
+                </li>
+                <li>Nesting with numbering " $ " : in case you want several copies of same element with name or
+                    id increasing : <br>
+                    ul>li#item$*2 will ==> ul> li class="item1">/li> i class="item2">/li>/ul><br>
+                    .item$$$*5 ==> item001-005: for number format: <br>
+                    .item$@3*5 ==> item3-8: ascending starts with 3 a list of 5 items <br>
+                    item$@-6*4 ==> item6-2: descending starts with 6 a list of 4 items
+                </li>
+                <li>lorem*N choose how much of lorem-ipsum-paragraphs to insert , or loremN to choos how many
+                    words to enter</li>
+                <li>events can be added as attr like this : button[onclick="myFunction()"] tho its not
+                    recommendedbetter to put the element in JS variable () </li>
+                <li></li>
+            </ul>
+
 
             <br><br><br><br>
 
 
 
 
-
-
-
-
-
-
-
-
-
             <h2 style="color: rgb(223, 108, 0);font-size: 4vw;">VS Code :</h2>
-            these sittings may vary on linux and mac
-            <ul> * * configs :
+            <p>** these sittings may vary on linux and mac</p>
+            <h5 style="color: rgb(253, 174, 55);">Configs :</h5>
+            <ul>
                 <li>on Extentions : One Dark Pro + Night Owl + vscode-icons </li>
                 <li> File -&gt; Auto Save</li>
                 <li>any lang boilerplate : shortcuts type !+enter / ctrl+space</li>
@@ -672,18 +701,14 @@
                 <li>Auto document format : shift+alt+f , or Sittings -&gt; Text Editor -&gt; Formatting -&gt; on
                     save on paste </li>
                 <li>set default terminal : open terminal with ctrl+` then press the arrow down icon then select
-                    default
-                    profile and choose for the menu above </li>
+                    default profile and choose for the menu above </li>
                 <li>set ctrl+r as reload without extention : go to sitting icon -&gt;keyboard shortcuts -&gt;
-                    search
-                    for
-                    "Developer: Reload With Extention Disabled" and set its keybinding to ctrl+r </li>
+                    search for "Developer: Reload With Extention Disabled" and set its keybinding to ctrl+r </li>
                 <li>to open sittings.json op</li>
                 <li>set a wallpaper : <ol>
                         <li>install "Wallpaper Setting" extention</li>
                         <li>note every future change need doing the following steps all over , which will reload
-                            vs-code
-                            without your opened tabs , if u dint auto-save then save !!</li>
+                            vs-code without your opened tabs , if u dint auto-save then save !!</li>
                         <li>ctrl+shift+p to open command palette </li>
                         <li>search for wallpaper and choose " Preference: Wallpaper Setting "</li>
                         <li>choose setup image/slide then press on the folder icon and choose image/folder</li>
@@ -693,15 +718,15 @@
                         <li>Multi-Cursor Editing: Use alt+click to create multiple cursors for simultaneous editing.
                         </li>
                         <li>Find&Replace: Use ctrl+f to find or ctrl+h to find and replace .</li>
-                        <li></li>
                     </ol>
                 </li>
             </ul>
 
-            <ul>* * shortcut keybinds :
+
+            <h5 style="color: rgb(253, 174, 55);">shortcut keybinds :</h5>
+            <ul>
                 <li>ctrl+p (+shift): open the palette to search for files of ur own if u add shift to the
-                    keybind or
-                    added > in the plate it turn to vscode-inner-cli </li>
+                    keybind or added > in the plate it turn to vscode-inner-cli </li>
                 <li>ctrl+/ : comment the line </li>
                 <li>ctrl+B : toggle left-side bar </li>
                 <li>ctrl+` : open terminal</li>
@@ -710,12 +735,11 @@
                 <li>alt+shift+tab : change the opened tab(file) to next</li>
                 <li>ctrl+shift+arrowDown/up : (windows) copy the selected lines to before/after (linux) check in
                     keyboard shortcuts editor.action.copyLinesDownAction and up and it can be changed to
-                    ctrl+up/down as
-                    it only binded to scroll </li>
+                    ctrl+up/down as it only binded to scroll </li>
                 <li>shift+alt+i : put cursor at the end of each line u selected line/marked-text</li>
                 <li>ctrl+k+t : open themes menue</li>
                 <li>ctrl+shift+l : highlight text then press this to select all occurrences of the same text ,
-                    moving left or right will cancel highlight and move cursor for each </li>
+                    moving left or right will cancel highlight and move cursor for each. </li>
                 <li>Quick Open: Use ctrl+p to quickly navigate to files in your workspace.</li>
 
             </ul><!-- end of VS-Code -->
@@ -742,46 +766,56 @@
 
 
             <ul>
+                <p><strong style="font-size:2rem ;">MOBILE FIRST !!! </strong>
+                    is a design strategy that puts mobile at the forefront of the design process. It recognizes the
+                    importance of the mobile web and emphasizes the need to create an experience tailored
+                    specifically to mobile devices.
+                </p><br>
 
+
+                <strong>3 ways to add CSS :</strong>
+                <ol>
+                    <li>External CSS File, must be included at HTML Heading : link rel='stylesheet'
+                        type='text/css' href='XYZ.css'>if the file not at same dir use ../ (go 1 folder up)
+                        then the address(../WebDevSummery/XYZ.css) which is more automated way (cuz if the whole
+                        project changed location the tree of folders still relative) , general syntax:
+                        Element{property:value;}. every one CSS customization/styling called property.
+                    </li>
+                    <li>Internal CSS : in-heading CSS inside style> tag, syntax as External . This method is
+                        useful when you want to apply styles that are specific to a single HTML page.
+                    </li>
+                    <li>inline CSS by using style inside the element tag used best for test and debug then
+                        copy to css file or to apply a unique style to a single specific element.
+                    </li>
+                </ol> <br>
+
+                <strong>Notes</strong>
                 <ul style="list-style-type:square;">
-                    <li><strong style="font-size:2rem ;">MOBILE FIRST !!!</strong></li>
-                    <li><strong>3 ways to add CSS :</strong>
-                        <ol>
-                            <li>External CSS File, must be included at HTML Heading : link rel='stylesheet'
-                                type='text/css' href='XYZ.css'>if the file not at same dir use / then the
-                                address(/e:\file\XYZ.css) , general syntax: htmlElement{property:value;}
-                            </li>
-                            <li>in-heading CSS inside style> syntax: as External
 
-                            </li>
-                            <li>inline CSS by using style inside element tag or like heading between HTML
-                                lines (best for test then copy to css file)
-                            </li>
-                        </ol> <br>
-
-                    <li>css Selectors are always read as "on-every/each" elements/Attributes , therefore
-                        specificity is needed .
+                    <li>initiate evrey div with the property display:flex (or d-flex class at bootstrap) so you can
+                        move inner divs with "self.." , you will need also to set dimensions for inner
+                        divs/elements.
                     </li>
-                    <li>initiate evrey div with display:flex attribute (or d-flex class at bootstrap) so you can
-                        move
-                        inner divs with "self.."
-                    </li>
-                    <li>css is applied top to bottom so if there is 2 properties that affect the same axis the
-                        l8er
-                        one
-                        will be showen (closer to the item)</li>
+                    <li>css file applied top to bottom so if there same property twice targeted to the same element
+                        the later one will take effect , also if there is same property in more that one way of
+                        applying css the closer to the element will take effect (inline>internal>file).</li>
                     <li>syntax proplems solve : check after the brackets No coma or semi-colon ?!! <br>
-                        to override higher css command must add "!important"
+                        to override higher css property specially that comming from libraries you can add
+                        "!important".
                     </li>
-                    <li>border most have: border width ;border style ;border color ; these 3 can be
-                        written on separate lines or in one line like so : border: 3px solid aqua;
+                    <li>border can have: border width ;border style ;border color ; these 3 can be
+                        written as separate properties or in one line like so : border: 3px solid aqua;
                     </li>
-
                 </ul><br>
-                <strong>Selectors and Combinators :</strong><br>
+
+
+                <h5 style="color: rgb(253, 174, 55);">Selectors and Combinators :</h5><br>
                 <ul>
-                    <li>basically selector is the name of css selecting ur elements/attributes to specify what to
-                        customize.
+                    <li>are patterns used to select the elements you want to style.
+                        css Selectors are always read as "on-every/each" elements/Attributes , therefore
+                        specificity is needed . They enable targeting HTML elements based on their type, attributes,
+                        current states, and even position in the DOM.Combinators define the relationship between the
+                        selectors.
                     </li>
                     <li>element{ ;} : to customize all this element type ( like div , p ..)</li>
                     <li>#id{ ;} : to customize one specific id</li>
@@ -792,12 +826,9 @@
                     <li>P a{ ;} : (descendant selector) customize evrey "a" inside p (no conditions of direct or
                         position) </li>
                     <li>p>a{ ,} : (direct child) customize evrey link(a) that directly child in Paragraph(no
-                        matter
-                        position) </li>
+                        matter position) </li>
                     <li>p+a{ ;} : (adjacent selector) customize evrey 1st a AFTERRRR (NOT INSIDE) every p , u
-                        can
-                        add
-                        any sequence only last element will take the effect, e.g if u wana 1st and 2nd li
+                        can add any sequence only last element will take the effect, e.g if u wana 1st and 2nd li
                         afterevery h4 : h4+li{} h4+li+li{} = 1st and 2nd </li>
                     <li>div:nth-of-type(2){ ;} , table>tbody>tr:nth-of-type(even/odd) {} : customize the lines
                         Alternately for better list/table read, (3n)= every+3z ,(3n+2)=2ns and after it +3z
@@ -808,39 +839,21 @@
                     </li>
                 </ul><br>
 
-                <li> <strong>order :</strong><br>
-                    if same element got a style changing with same selector twice, it will get tha last
-                    one ,though if it not same sellector it will go with the more specific (deeper in the
-                    lvlz(root) of the elements),when id and class is in use specificity(priority) is : <br>
-                    Bootstrap>important!>inline style>id>class>element (try not use inline and important!) </li>
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">order :</h5><br>
+                    if an element got smae style twice, it will get tha last one ,though if it not same css way it
+                    will go with the more specific (deeper in the lvlz(root) of the elements),when id and class : <br>
+                    Bootstrap>important!>inline style>id>class>elementBath (try not use inline and important!) .
+                    its is enough to take part of the class (unique part)while addressing .qw .box .qwer{}
+                </li>
                 <br>
 
 
                 <li>
-                    <strong>styling hierarchy</strong><br>
-                    &nbsp; &nbsp; Styling element got an impact by the tags hierarchy(lvl) , its starts inside out
-                    the
-                    div , notice that :
-                    <ol>
-                        <li>to override general style in specific point you need to address it
-                            by classes till that point or give an unique id/class<br></li>
-                        <li>if the word !important is included higher same style tags got no effect </li>
-                        <li>if you stuck by the downloaded template styling just creat new tag in
-                            CSS file and add !important </li>
-                        <li>its is enough to take part of the class (unique part)while addressing .qw .box .qwer{}
-                        </li>
-
-
-                    </ol>
-                </li><br>
-
-
-                <li>
-                    <strong>Text properties:</strong>
-                    Text properties:
+                    <h5 style="color: rgb(253, 174, 55);">Text properties :</h5>
                     <ul>
                         <li>color : text color</li>
-                        <li>font-size:use rem/em for responsive (px em vw) </li>
+                        <li>font-size:use rem/em or vh and vw for responsive </li>
                         <li>font-weight:100-900*;to control how much strong>(bold)</li>
                         <li>font-family:Arial,Futura,Times New Roma; (choose ascending priorities in case font
                             missing)</li>
@@ -848,16 +861,21 @@
                         <li>text-transform: uppercase/lowercase/capitalize (for all words)</li>
                         <li>text-shadow:0px 3px 4px red; by adding 3 lines one under the other in css u gain 3
                             layers of shadow , better same color just darker ( or from generatorz)</li>
-                        <li>text-decoration:(lines)Red underline/line-through/double/dashed/wavy 4px; (none to
-                            remove
-                            built-in like on link)</li>
+                        <li>text-decoration: 3px overline wavy aqua; thickness and
+                            position(overline,line-through,underline,underline overline) must be added and its
+                            optional to add color and style(dashed dotted double none solid wavy), you can chose none to
+                            remove built-in decoration like on link .these 4 can be written as (there original way)
+                            separate properties : text-decoration-line, text-decoration-color, text-decoration-style,
+                            text-decoration-thickness
+                        </li>
                         <li>line-height: 2/200%/3em/3ex/20px; space between lines;</li>
                         <li>letter-spacing: 2/200%/3em/20vw/3ex/20px;</li>
                         <li>word-break: break-word; to adjust the paragraph to element width</li>
                     </ul><br>
                 </li>
 
-                <li><strong>Background properties:</strong>
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">Background properties :</h5>
                     <ul>
                         <li>background-image: url('w3css.gif');</li>
                         <li>background-repeat: no-repeat;</li>
@@ -867,130 +885,287 @@
                     </ul>
                 </li>
                 <br>
+                <li>
+                    <h5 style="color: rgb(253, 174, 55);">border properties :</h5>
+                    <ol>
+                        <li>border: 3px solid aqua; same with text-decoration these 3 can be written as separate
+                            properties , another properties (cant be part of one-line): <ul>
+                                <li>border-radius</li>
+                                <li>border-bottom</li>
+                                <li>border-top</li>
+                                <li>border-left</li>
+                                <li>border-right</li>
+                                <li>border-top-left-radius</li>
+                                <li>border-top-right-radius</li>
+                                <li>border-bottom-left-radius</li>
+                                <li>border-color</li>
+                                <li>border-width</li>
+                                <li>border-style</li>
+                            </ul>
+                        </li>
+                        <li>border-collapse: collapse; to make the double line border as solid </li>
+                        <li>note that the border is is an extra space from outside the element.</li>
+                    </ol>
+                </li>
+                <br><br>
 
-                <strong>table properties:</strong>
-                <ul>
-                    <li>border-collapse:collapse ; to make single line border</li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <br>
 
 
-
-                <strong style="letter-spacing: 1vw;">Notes:</strong><br>
+                <strong style="letter-spacing: 1vh;">Notes:</strong><br>
                 <ul>
                     <li>make item responsive : add width: 100%;height: 100% to the item while if u set a px
                         number for width the page wouldn't be responsive any more , its important with pictures.
                     </li>
-                    <li>Simple good button is div with background and link in it ^_^</li>
+                    <li>Simple good button is div with background inside (Wrapped with) a-tag link ^_^</li>
                     <li>text tags that precustomized like a-tag or h1 not all text properties applyed to it from
-                        parent
-                        , some of them need to be assigned directly on it </li>
+                        parent , some of them need to be assigned directly on it </li>
 
 
                     <li><br>
-                        <h4
-                            style="background-color: black;width: 100%;text-shadow:0px 3px 4px rgb(87, 94, 0);padding: 3%;">
+
+
+                        <ol id="center">
                             <strong>
                                 Centering Methods: <br><br>
-                                <ol>
-                                    <li>
-                                        <ul>For Inline elements :
-                                            <li>all inline/inline-block elelments can be centered with
-                                                text-align at
-                                                its container bcz inline is supposed to wrap text !
-                                            </li><br>
-                                            <li>the ultimate method is with <b>label </b> Center:
-                                                div style="text-align: center;">label>ur block elelment
-                                            </li>
-                                        </ul>
-                                    </li><br><br>
 
-                                    <li>
-                                        <ul>
-                                            For Block Elements :
-                                            <li>(margin: 0 auto) : must added to the tag u wna center and it has
-                                                to
-                                                be in a bigger container (not on body) andmust have a width so
-                                                it
-                                                doesnt fill the container parent, this also can be used on
-                                                inline by
-                                                adding display-block, so its look like this : <br>
-                                                <strong style="font-size: 3vw;">
-                                                    (display: block;width: 25%;margin: 0 auto;)
-                                                </strong>
-                                            </li>
-                                        </ul>
-                                    </li><br><br>
+                                <li>
+                                    <ul>For Inline elements :
+                                        <li>all inline/inline-block elelments can be centered/moved with
+                                            text-align at its parent container bcz inline elements are supposed to
+                                            contain text !
+                                        </li><br>
+                                        <li>bad practice method is with <b>label </b> Center:
+                                            div style="text-align: center;">label>ur block elelment
+                                        </li>
+                                    </ul>
+                                </li><br><br>
 
-                                    <li>
-                                        <ul>For Any :
-                                            <li> use x% as width of the elelment then make for it
-                                                margin-left:(100%-x)/2;
-                                            </li><br>
-                                            <li>initiate evrey div as display:flex (or d-flex at bootstrap) so
-                                                you can move inner divs with "self.."
-                                            </li>
-                                        </ul>
-                                </ol>
-                            </strong>
-                        </h4>
+                                <li>
+                                    <ul>
+                                        For Block Elements :
+                                        <li>(margin: 0 auto) : must added to the tag u wna center while its located
+                                            in a bigger container (not on body) and width is specified so
+                                            it doesnt fill the parent container ,this also can be used on
+                                            inline by adding display-block(otherwise it cant have dimensions), so
+                                            its look like this : <br>
+                                            <strong style="font-size: 2.5vw;">
+                                                (display: block;width: 25%;margin: 0 auto;)
+                                            </strong>
+                                        </li>
+                                    </ul>
+                                </li><br><br>
+
+                                <li>
+                                    <ul>For Any :
+                                        <li> use x% as width of the elelment then make for it
+                                            margin-left:(100%-x)/2;
+                                        </li><br>
+                                        <li>initiate evrey div as display:flex (or d-flex at bootstrap) so
+                                            you can move inner divs with "self.." and remove spaces between (more
+                                            about displayin box model)
+                                        </li>
+                                    </ul>
+                                </li>
+                        </ol>
+                        </strong>
+
                     </li>
-                </ul><br>
+                </ul><br><br>
 
 
-
-                <strong>tweeks (built-in complex stuff) :</strong>
+                <h5 style="color: rgb(253, 174, 55);">Pseudo-Classes:</h5>
                 <ol>
-                    <li> if u wana devide space between divs evenly u can pass calc(100%-Y.t.len/Yno. x 2)
-                        like margin:calc(10%/6) </li>
-                    <li>if u wna make particular styling in chiled as parent make it = inherit </li>
-                    <li>changing cursor: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor"
-                            target="_blank">MDN`</a></li>
-                    <li>Pseudo Classes: like the customization will be active on-event or in
-                        particular way its
-                        like: div:hover{ ;)} , .checkbox/radio:checked{ ;)} ,:active(when clicked) ,
-                        :nth-of-type(2n)/nth-child(odd) these most be used with the repeated .class not
-                        the container , u can selec an element:nth-of-type() and select 1 or 2 like 1st and 2nd
-                        on
-                        the
-                        page or div>a:nth-of-type() odd even
-                        for complete list of Pseudo Classes :<a
-                            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements"
+                    <p>these are special keywords added to CSS selectors that define styles
+                        for elements based on their:State (e.g., hovered over, focused, active) Position in the
+                        document structure (e.g., first child, nth child) User interactions (e.g., clicked,
+                        hovered) These styles are temporary and only apply under specific conditions. <br>
+                        Instructions:
+                        Pseudo-classes are attached to existing selectors using a colon (:) like button:hover
+                        Here are some common pseudo-Classes:</p>
+
+
+                    <li>:hover Applies styles to an element when the user hovers over it with a mouse
+                        pointer. This is a great way to add interactivity and visual cues to your website.
+                        <br>
+                        Instructions:
+                        Use :hover appended to an element selector (e.g., a:hover { color: red; }). This example
+                        changes the color of a link to red when hovered over. Style properties like
+                        background-color, color, text-decoration, or cursor to change the element's appearance
+                        on hover. You can customize these properties to create various effects.
+                    </li><br>
+                    <li>:fullscreen (Experimental) An experimental pseudo-class that applies styles to an
+                        element when displayed in fullscreen mode (e.g., through the browser's fullscreen API).
+                        <br>
+                        Instructions: Use :fullscreen appended to an element selector (e.g., div:fullscreen).
+                        Style properties like background color, text color, or margins to customize the
+                        element's appearance in fullscreen mode.
+                        <br>
+                        Notes: Browser support for :fullscreen is limited and constantly evolving. It's best to
+                        check compatibility before extensive use. Consider using JavaScript to manage fullscreen
+                        functionality and apply styles conditionally.
+                    </li><br>
+                    <li>:target Applies styles to the element whose ID matches the URL fragment (the part
+                        after the hash symbol #). This is useful for creating smooth scrolling effects or
+                        highlighting specific sections.
+                        <br>
+                        Instructions: Use :target appended to the element's ID selector (e.g.,
+                        #some-section:target). Style properties to highlight or modify the appearance of the
+                        targeted element when the URL points to it.
+                        <br>
+                        Notes: Useful for creating smooth scrolling effects or highlighting specific sections of
+                        a page when linked to. Ensure the element has a unique ID for proper targeting.
+                    </li><br>
+                    <li>:checked Applies styles to checkboxes or radio buttons when they are
+                        selected (in a checked state). This helps provide visual feedback to users.
+                        <br>
+                        Instructions: Use :checked appended to the checkbox or radio button selector (e.g.,
+                        input[type="checkbox"]:checked). Style properties like background color, border, or text
+                        color to differentiate checked elements.
+                        <br>
+                        Notes: Commonly used to provide visual feedback for form elements and improve user
+                        experience. Can be combined with other selectors for more specific targeting.
+                    </li><br>
+                    <li>:valid, :invalid These pseudo-classes apply styles based on the validity of form element
+                        input according to HTML5 validation constraints.
+                        <br>
+                        Instructions: Use :valid for elements with valid input and :invalid for elements with
+                        invalid input. Style properties like background color, border, or text color to provide
+                        visual cues about input validity.
+                        <br>
+                        Notes: Useful for enhancing user experience by indicating potential errors in form
+                        filling. Requires defining validation rules using HTML5 attributes for proper
+                        functionality.
+                    </li><br>
+                    <li>:nth-child(odd), :nth-child(even) These pseudo-classes target specific child elements
+                        based on their position within a group of siblings. This is useful for creating
+                        alternating styles in lists or grids.
+                        <br>
+                        Instructions: Use :nth-child(odd) for odd-numbered children and :nth-child(even) for
+                        even-numbered children. Style properties to create alternating styles within lists or
+                        grids.
+                        <br>
+                        Notes: Requires using them with a class selector for repeated elements, not directly on
+                        the container element. Can be combined with other selectors and n values for more
+                        complex targeting (e.g., :nth-child(3n))
+                    </li><br>
+                    <li>:not() (Negation) this allows you to exclude elements from a selector. it offers
+                        flexibility in targeting by selecting specific elements.
+                        <br>
+                        Instructions: Use :not() followed by a selector
+                    </li><br>
+                    <li> for complete list of Pseudo Classes :<a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
                             target="_blank">MDN</a>
                     </li>
-                    <li>Pseudo Elements : to customize PARTS of the element specially text like :
-                        p::first-letter/line ,.UplodBTN::file-selector-button , ::after/before{content}
-                        ,p::selection(marking text BG) , for complete list of Pseudo Elements :<a
+
+                </ol>
+                <br><br>
+
+                <h5 style="color: rgb(253, 174, 55);">Pseudo-Elements:</h5>
+                <ol>
+                    are special keywords in CSS that allow you to style specific parts of an
+                    element or insert content before or after the element's content. They are particularly
+                    useful for manipulating text appearance and adding decorative touches.
+                    <br>
+                    Instructions: Pseudo-elements are appended to selectors using double colons (::).
+                    Here are some common examples:
+                    <li>::first-letter or ::first-line Styles the first letter or line of a text element (e.g.,
+                        paragraph, heading).
+                        <br>
+                        Instructions: Use ::first-letter for styling the first letter or ::first-line for
+                        styling the first line. Style properties like font-size, color, or text-transform to
+                        customize the appearance. Example: p::first-letter { text-transform: uppercase;
+                        font-size: 1.5em; }
+                    </li><br>
+                    <li> ::before / ::after { content: "..." } Inserts content before or after the element's
+                        content.
+                        <br>
+                        Instructions: Use ::before to insert content before and ::after to insert content after
+                        the element's content. The content property specifies the text or generated content to
+                        be inserted. Example: p::after { content: " (required)"; } - This adds "(required)"
+                        after the content of the paragraph.
+                    </li><br>
+                    <li>::placeholder Styles the placeholder text that appears in form elements before the user
+                        enters a value.
+                        <br>
+                        Instructions: Use ::placeholder to target the placeholder text.
+                        Style properties like color, opacity, or font-style to customize the appearance of the
+                        placeholder text. Example: input::placeholder { color: lightgray; }
+                    </li><br>
+                    <li>::selection Styles the background and text color of the selected text by the user.
+                        <br>
+                        Instructions: Use ::selection to target the selected text. Style properties like
+                        background-color and color to change the appearance of the selection. Example:
+                        p::selection { background-color: lightblue; color: white; }
+                    </li><br>
+                    <li>Element specific pseudo-elements : Certain elements have specific pseudo-elements for
+                        additional styling options. Here are a few examples:
+                        <br>
+                        input::file-selector-button: Styles the button that appears when using a file upload
+                        input. <br>
+                        button::marker: Styles the marker displayed on a checkbox or radio button.
+                    </li><br>
+                    <li>Notes: Pseudo-elements are particularly useful for adding decorative elements or subtle
+                        visual cues without modifying the actual content of the element.
+                    </li><br>
+                    <li> for complete list of Pseudo Classes :<a
                             href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
                             target="_blank">MDN</a>
-
-                    <li>combine Pseudos : div p:first-child::first-line { ;} </li>
+                    </li>
                 </ol><br>
 
-                <strong>box model :</strong>
+
+                <p>Combine Pseudos: You can combine pseudo-classes and pseudo-elements for more specific
+                    selections. For example: <br>
+                    `div p:first-child::first-line { ;}`.
+                </p><br><br>
+
+
+                <h5 style="color: rgb(253, 174, 55);">tweeks (built-in complex stuff) :</h5>
+                <ul>
+                    <li>while vh is reliable unit for height and font and other things(its % of height of the whole
+                        viewport which always usable the whole of it), vw on the other hand is not because any
+                        container element can have extra decorative margin and this can be ignored by using % that
+                        relative to the current width insteade of vw (which is % of the whole viewport width). note that
+                        % cant be used with height. </li>
+                    <li> if u wana devide space between divs equally u can use margin left and right for each div
+                        and the value should be 100%-(total divs size)=totalEmptySpace/no.Spaces = each space size .
+                        <br>
+                        now this number is the margin-left of each div (if the div with align-right then
+                        margin-right if align-center then only between the divs no need for the sides ).
+                    </li>
+                    <li>if u wna make some property in chiled to be always as parent make it value in the child =
+                        inherit </li>
+                    <li>changing cursor: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor"
+                            target="_blank">MDN`</a></li>
+                </ul><br><br>
+
+
+
+                <h5 style="color: rgb(253, 174, 55);">box model :</h5><br>
 
                 &nbsp; &nbsp;can be applied on EVERY-THING inc img/td/input...
                 <ol>
                     <li>width: when u choose it to be 100% (or 100vw) u prevent it from breakline like in
-                        float/warp
-                        ..</li>
+                        float/warp ..</li>
                     <li>height: for main div use units of vh (viewport height) & vw (viewport width) for each
-                        every
-                        1 unit is 1/100 of the height/width and that makes it responsive according to device
+                        every 1 unit is 1/100 of the height/width and that makes it responsive according to device
                         viewport size
                     </li>
                     <li>vh and vw units are a percentage of the height and width of the screen and not the
-                        container
-                        for that use % (% dont work with height on the page directly only in container) </li>
-                    <li>border: 3px solid aqua; , border(-left)-width/color/style/ ,
-                    <li>box-sizing:border-box(a properties which makes
-                        the box borders included with the dimintions) ,<br>
-                        border-radius:10px 5%; (rounding corners better in px)</li>
+                        container for that use % (% dont work with height on the page directly only in container)
                     </li>
-                    <li>padding/margin to make nice spacing ,pading:3vw 35%; ,normally work block.el not same on
-                        inline , to remove
+                    <li>border: 3px solid aqua; , border(-left)-width/color/style/ ,
+                    <li>box-sizing:border-box(a properties which makes the box borders included with the dimintions)
+                        <br>
+                        border-radius:10px 5%; (rounding corners better in px)
+                    </li>
+                    </li>
+                    <li>padding/margin to make nice spacing ,pading:3vw 35%; WARNING : the space gained when using
+                        margin/padding is not usable (its like gray area) !!!! if u want usable use width or height
+                        .
+                        note that exceptional case is when element have fixed width then margin-right wouldnttake
+                        effect if nothing on the right.
                     </li>
                     <li>margin is make distance at outer side of the box at the chosen direction</li>
                     <li>padding is make distance at inner side of the box at the chosen direction</li>
@@ -1002,7 +1177,10 @@
                     <li>diriction-Prop can be assigned as one value for all directions, 2 values for Y then X axis,
                         3 for up down , </li>
                     <li>start evrey div as display:flex (or d-flex at bootstrap) to move the inner elements , its
-                        automatically turn the contained elements into inline (instead of block) </li>
+                        automatically turn the contained elements into inline (instead of block) , not that if
+                        images
+                        inside the div with Display:flex the images automatically take all of the height and need to
+                        be dimensioned (not in bootstrap d-flex tho ) </li>
                     <li>display:inline/block/inline-block/none : <br>
                         display: block; : makes the element block (take all the width on both sides) <br>
                         display: inline;: makes it as inline element (that fit/tighted for text/element as
@@ -1022,15 +1200,10 @@
                         lvl elements only,if it used on nested elements font will go larger and larger
                     </li>
                     <li>rem(root em) : instead of taking parent font size it take the root one . </li>
-                    <li>VW ???</li>
-                    <li> </li>
-
                     <li> <strong>opacity:</strong>(0-1); makes the element and all children transparent <br>
                         rgba : alpha channel is for transparency this can give shade of color abouve the other</li>
-                    <br>
                     <li> <strong>*position property :</strong><br>
                         <ol>
-
                             <li>static: the default initiated with each element , and it cant be moved <br></li>
                             <li>relative: it can be moved by top/left/right/bottm relative to current position <br>
                             </li>
@@ -1055,145 +1228,131 @@
 
                 </ol>
                 <br>
-                <ul>
-                    </li>
-                    <br>
-                    <li><strong>*transition prop :</strong> <br>
-                        in order for this to work u need to use 2 customizations blocks, one for the normal state
-                        and
-                        the other what happen on event/PseudClass like: #divId:hover{ ;},
-                        .checkboxes/radios:checked{
-                        ;}, button:active{;}(whenClicked). the transition property contain 4 parts : specific
-                        property/transitionDuration/a timing function/transitionDelay. no specific mean to all(or
-                        type
-                        all) .it can be in the normal state or the transition state .
-                        a timing function specify the rate of change for properties over time like :
-                        ease-in;ease-out;ease-in-out;linear;step-start;step-end;
-                        can be added in same transition line : margin-left 1s ease-in 0.5s,background... .
-                        or on separate line : transition-timing-function:ease-in;
-                        transFuncs mixing can found on : <a href="https://easings.net/">easings</a></li>
 
-                    <li><strong>*transform prop :</strong> <br>
+
+
+
+
+                <h5 style="color: rgb(253, 174, 55);">*transition prop :</h5> <br>
+
+                <p>in order for this to work u need to use 2 customizations blocks, one for the normal state
+                    and the other what happen on event/PseudClass like: #divId:hover{ ;},
+                    .checkboxes/radios:checked{ ;}, button:active{;}(whenClicked). the transition property contain 4
+                    parts : specific property/transitionDuration/a timing function/transitionDelay. no specific mean
+                    to all(or type all) .it can be in the normal state or the transition state .
+                    a timing function specify the rate of change for properties over time like :
+                    ease-in;ease-out;ease-in-out;linear;step-start;step-end;
+                    can be added in same transition line : margin-left 1s ease-in 0.5s,background... .
+                    or on separate line : transition-timing-function:ease-in;
+                    transFuncs mixing can found on : <a href="https://easings.net/">easings</a></p>
+
+
+                <h5 style="color: rgb(253, 174, 55);">*transform prop :</h5><br>
+                <ul>
+                    <li>
                         transform:rotate(45deg),scale(x y)[one no. for all],translateX/Y(moving),skew(x y)[oblique
-                        shapes] .
-                        u can combine by spacing betweenthem , if u apply transfom on a parent it also apply on the
-                        children
-                        translate is got better performance than margin
+                        shapes] . u can combine by spacing betweenthem , if u apply transfom on a parent it also apply
+                        on the children translate is got better performance than margin
                     </li><br>
 
                     <li>fonts : while u dont use bootstrap u can use google fonts : add fonts to the cart then copy
-                        the
-                        embed link to head then apply it on target element on css font-family, if u wana choose
-                        different
-                        font-weight u may include that weight in the cart </li><br>
-                    <li>
-                        <strong>Flexbox:</strong>
-                        <ul class="text-info">
-                            <li>on css file assign the container div to be display:flex; </li>
-                            <li>when a div is flex it force inner elements to get fit to it dimentions when they
-                                assigned .</li>
-                            <li>inline elements moves with text align (text-start on bootstrap) and self properties
-                                doesnt work on them </li>
-                            <li>properties for main axis (row)
-                                <ol>
+                        the embed link to head then apply it on target element on css font-family, if u wana choose
+                        different font-weight u may include that weight in the cart </li><br>
+                </ul><br><br>
 
-                                    <li>justify-content: flex-start; (default) property for the main axis (X)</li>
-                                    <li>justify-content:end; move the elements to the other side without reverse
-                                        them ,
-                                        use this
-                                        and reverse to reverse order of elments on same side.</li>
-                                    <li>justify-content:center; </li>
-                                    <li>justify-content:space-between; devide the space between elements equally 1st
-                                        and
-                                        last
-                                        stick to the edges(with tiny space on sides). </li>
-                                    <li>justify-content:space-around; like space-between just add space at edges as
-                                        half
-                                        space
-                                        on each side. </li>
-                                    <li>justify-content:space-evenly; same space also on sides.</li>
-                                </ol>
+
+
+                <h5 style="color: rgb(253, 174, 55);">Flexbox:</h5>
+                <ul style="color: aqua;">
+                    <li>on css file assign the container div to be display:flex; </li>
+                    <li>when a div is flex it force inner elements to get fit to it dimentions when they
+                        assigned .</li>
+                    <li>inline elements moves with text align (text-start on bootstrap) and self properties
+                        doesnt work on them </li><br>
+
+                    <li>properties for main axis (row)
+                        <ol>
+
+                            <li>justify-content: flex-start; (default) property for the main axis (X)</li>
+                            <li>justify-content:end; move the elements to the other side without reverse
+                                them , use this and reverse to reverse order of elments on same side.</li>
+                            <li>justify-content:center; </li>
+                            <li>justify-content:space-between; devide the space between elements equally 1st
+                                and last stick to the edges(with tiny space on sides). </li>
+                            <li>justify-content:space-around; like space-between just add space at edges as
+                                half space on each side. </li>
+                            <li>justify-content:space-evenly; same space also on sides.</li>
+                        </ol>
+                    </li><br>
+
+                    <li> properties for cross axis (column)
+                        <ol>
+                            <li>flex-direction:column; (row is default).</li>
+                            <li>flex-direction:column-reverse/row-reverse; start from the other side and
+                                with reverse elements direction.</li>
+                            <li>align-items: flex-start; (default) property for the cross axis (Y)</li>
+                            <li>align-items: center/flex-start/flex-end/reverse/space-around/space-between;
                             </li>
+                            <li>if u choose to make divs as flex-direction:column then u use align-items to
+                                move it on main axis and justify-content for the cross axis !!!</li>
 
-                            <li> properties for cross axis (column)
-                                <ol>
-                                    <li>flex-direction:column; (row is default).</li>
-                                    <li>flex-direction:column-reverse/row-reverse; start from the other side and
-                                        with
-                                        reverse elements direction.</li>
-                                    <li>align-items: flex-start; (default) property for the cross axis (Y)</li>
-                                    <li>align-items: center/flex-start/flex-end/reverse/space-around/space-between;
-                                    </li>
-                                    <li>if u choose to make divs as flex-direction:column then u use align-items to
-                                        move
-                                        it on main axis and justify-content for the cross axis !!!</li>
+                        </ol>
+                    </li><br>
 
-                                </ol>
+                    <li>Warp:
+                        <ol>
+                            <li>flex-wrap: wrap/wrap-reverse(reverse 2 axis); the elements will not shrink,
+                                they will be spreaded through the space by pushing forword to the next
+                                symmetric-division column/row
                             </li>
-                            <li>Warp:
-                                <ol>
-                                    <li>flex-wrap: wrap/wrap-reverse(reverse 2 axis); the elements will not shrink,
-                                        they
-                                        will be spreaded through the space by pushing forword to the next
-                                        symmetric-division column/row
-                                    </li>
-                                    <li><strong>align-content:</strong>
-                                        center/flex-start/flex-end/reverse/space-around/space-between,
-                                        this is usable after wrap ONLY ,make items meet on the decided direction.
-                                    </li>
-                                    <li>while warp if u wna meet 2 columns togother and u moving one from start to
-                                        end
-                                        : 1st on
-                                        the container align-items: flex-end; then on the moving column align-items:
-                                        flex-start;vice versa for colum to move from left to right , same for rows
-                                    </li>
-                                </ol>
+                            <li><strong>align-content:</strong>
+                                center/flex-start/flex-end/reverse/space-around/space-between,
+                                this is usable after wrap ONLY ,make items meet on the decided direction.
                             </li>
-                            <li>align/justify-self:center/flex-start/flex-end: it moves one element </li>
-                            <li>Flex sizing:
-                                <ol>
-                                    <li>Flex-basis:px %; override any width(if applied on row)or height(on column)
-                                    </li>
-                                    <li>Flex-grow:0-1; when applied the element take all the empty space on the
-                                        parent
-                                        container if applied on 2 elements they share it . its all about
-                                        proportions.
-                                    </li>
-                                    <li>Flex-shrink:0+; when applied its shrink the div , useful when applying same
-                                        dimensions for all and wnat one to be shrinked with responsives res</li>
-                                    <li>so basically u can use these for sizing and 3 of them can be shortened in 1
-                                        line
-                                        with flex : 2 3 10% 1st is growth 2nd is shrink 3d is basis if u write 2
-                                        values
-                                        ans no. it will be growthand shrink if the 2nd one is width unit like em or
-                                        px
-                                        then its basis </li>
-                                </ol>
+                            <li>while warp if u wna meet 2 columns togother and u moving one from start to
+                                end : 1st on the container align-items: flex-end; then on the moving column align-items:
+                                flex-start;vice versa for colum to move from left to right , same for rows
                             </li>
-                            <li>Basic responsive css i by using Media Query :
-                                <ol>
-                                    <li>@media screen and (min-width: 900px) and (max-width: 1080px){};</li>
-                                    <li>@media (orientation : landscape){}; (portrait is the default)</li>
-                                    <li>more properties at <a target="_blank"
-                                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDN</a>
-                                    </li>
-                                </ol>
+                        </ol>
+                    </li><br>
+
+                    <li>align/justify-self:center/flex-start/flex-end: it moves one element </li> <br>
+
+                    <li>Flex sizing:
+                        <ol>
+                            <li>Flex-basis:px %; override any width(if applied on row)or height(on column)
                             </li>
-                            <li>most of the small orientation issues can be solve but the end and reverse properties
-                                of
-                                warp+align+justify AND align-content , for that u need to remember thatcss is
-                                applied
-                                top to bottom so if there is 2 properties that affect the same axis the last one
-                                will be
-                                showen</li>
-                        </ul>
+                            <li>Flex-grow:0-1; when applied the element take all the empty space on the
+                                parent container if applied on 2 elements they share it . its all about
+                                proportions.
+                            </li>
+                            <li>Flex-shrink:0+; when applied its shrink the div , useful when applying same
+                                dimensions for all and wnat one to be shrinked with responsives res</li>
+                            <li>so basically u can use these for sizing and 3 of them can be shortened in 1
+                                line with flex : 2 3 10% 1st is growth 2nd is shrink 3d is basis if u write 2
+                                values ans no. it will be growthand shrink if the 2nd one is width unit like em or
+                                px then its basis </li>
+                        </ol>
+                    </li><br>
 
-                    <li></li><br>
-                    <li></li><br>
+                    <li>Basic responsive css i by using Media Query :
+                        <ol>
+                            <li>@media screen and (min-width: 900px) and (max-width: 1080px){};</li>
+                            <li>@media (orientation : landscape){}; (portrait is the default)</li>
+                            <li>more properties at <a target="_blank"
+                                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDN</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>most of the small orientation issues can be solve but the end and reverse properties
+                        of warp+align+justify AND align-content , for that u need to remember thatcss is
+                        applied top to bottom so if there is 2 properties that affect the same axis the last one
+                        will be showen</li>
+                </ul><br><br>
 
 
-
-
+                <h5 style="color: rgb(253, 174, 55);">Notes</h5>
+                <ul>
                     <li>float:left;</li>
 
                     <li>at property set: inherit: Get the property from the parent
@@ -1206,14 +1365,8 @@
                     <li>add a styling line under text-element : border-bottom: 30px solid black; &
                         width:30%(if no width on the element);</li>
                 </ul>
+                <br><br>
 
-                <br>
-                <li><strong> Properties </strong>
-                    <ol>
-                        <li>fore tables : border-collapse: collapse; to make single line border</li>
-                        <li></li>
-                    </ol>
-                </li>
 
                 <li>CSS Generators :
                     <ul>
@@ -1231,13 +1384,13 @@
                         <li><a href="https://html-css-js.com/css/generator/" target="_blank">All CSS Best</a></li>
                         <li><a href="#">CSS xyz</a></li>
                     </ul>
-                </li>
+
+            </ul><!-- end of CSS -->
+            <br><br>
 
 
-                <h2>jQuery </h2>
-                <p style="color: rgb(130, 211, 0);">Signs of jQuery been used : $, .on, </p><br> <br>
 
-                <br><br><br><br>
+            <br><br><br><br>
 
 
 
@@ -1252,10 +1405,8 @@
                     shortcuts actually writen as part of class attribute and its stronger than all css order
                     (Bootstrap>important!>inline style>id>class>element), <br> means if u use explicitly same kind
                     of decoration on Bootstrap and css (text-success vs color:"red") bootstrap will be stronger ,
-                    but
-                    if the text coloris part of bootstrap other decoration like navbar-dark (make text pale white)
-                    it
-                    can be override at css by addressing with id of the parent with "non-explicit decoration" and
+                    but if the text coloris part of bootstrap other decoration like navbar-dark (make text pale white)
+                    it can be override at css by addressing with id of the parent with "non-explicit decoration" and
                     the class of this element . </li>
                 <li>u can know that Bootstrap is applied successfully when u refresh the page the font change</li>
                 <li>including Bootstrap broject with 2 ways :
@@ -1276,235 +1427,234 @@
 
                 </li>
                 <br>
-                <li><strong style="color: rgb(253, 174, 55);">fast custom[Utilities]:(like css replacement)</strong>
-                    <ol>
-                        <li>.text-primary/info/light bg-dark : fast text coloring </li>
-                        <li>.bg-primary : same for bg</li>
-                        <li>.text-center</li>
-                        <li>.border/border-top : to add al or just one , thickness cant controled css needed ,,
-                            .border-top-0: to delete one ,, .border border-primary : the previous must be added 1st
-                            ,, .rounded/rounded-top/rounded-circle : for corners</li>
-                        <li>.ml-auto : add this class to move the element all the way far from left. </li>
-                        <li>shadow for button of element (not text) :shadow/shadow-sm-lg-none</li>
-                        <li>Display classes :.d-inline/inline-block/block/table/teble-cell/table-row/flex/
-                            inline-flex and .d-lg-non to hide element on break point </li>
-                        <li>suffixes:
-                            <ul>
-                                <li>color : -danger-info-primary-secondary-warning-dark-light <br>
-                                    also can copy custom from
-                                    <a href="https://getbootstrap.com/docs/5.2/customize/color/">here</a>
-                                </li>
-                                <li>Width : work only with w-25-50-75-100-auto u may change abit with px-# otherwise
-                                    css ike in css predefined-height, best responsive way to use vh-100 on
-                                    parent(like
-                                    height:100vh) </li>
-                                <li>height : w-25 (like width:25%) but like in css this need to be inside div with
-                                    predefined-height, best responsive way to use vh-100 on parent(like
-                                    height:100vh)
-                                </li>
-                                <li>to disable/reset bootstrap/browser auto margin/padding : use container-fluid(and
-                                    padding: 0 !important; on child) or on bootstraped parent (padding/margin: 0
-                                    !important;) then width: 100vw;(width: 100vw;) </li>
-                                <li>.text-start .text-center .text-end</li>
-                                <li>.text-wrap used to make text getting inside the space when it tend to got out of
-                                    its width </li>
-                                <li>.text-break : to adjust the text to the element width (like.text-wrap?) </li>
-                                <li>.fs-1/-6 : same as h1-6</li>
-                                <li>Display headings Display-1/6 is larger heading notice NOW this is notresponsive.
-                                </li>
-                                <li>Line height :.lh-1/sm/bace/lg </li>
-                                <li>.text-decoration-none</li>
-                                <li>.fw-bold .fw-bolder .fw-normal .fw-light .fw-lighter .fst-italic .fst-normal
-                                </li>
-                                <li>sizing and directions: -lg and -sm , need to repeate the main classname with it
-                                    separatelly (btn-lg) <br>
-                                    m-margin m-mt-mb-ms(start=left)-me(end=left)mx-my m-0 m-auto <br>
-                                    p-paddingp pt-ps-pb-pe-px-py p-auto p-0 , negative are disabled ! <br>
-                                    .mx-auto class for horizontally centering <br>
-                                    then : <br>
-                                    1 - sets to .25rem (4px if font-size is 16px) <br>
-                                    2 - sets to .5rem (8px if font-size is 16px) <br>
-                                    3 - sets to 1rem (16px if font-size is 16px) <br>
-                                    4 - sets to 1.5rem (24px if font-size is 16px) <br>
-                                    5 - sets to 3rem (48px if font-size is 16px) <br>
-                                    u can use mb-# instead of br , notice thate this is not responsive and u may use
-                                    p-sm-1 p-xl-5 . <br></li>
 
-                                <li>opacity: same</li>
-                                <li>.d-grid with .gap on parent container. to save margin on each individual
-                                    grid items , cant be used with d-flix</li>
-                                <li>.sticky-top / .fixed-top </li>
+                <h5 style="color: rgb(253, 174, 55);">fast custom[Utilities]:(like css replacement)</h5>
+                <ol>
+                    <li>.text-primary/info/light bg-dark : fast text coloring </li>
+                    <li>.bg-primary : same for bg</li>
+                    <li>.text-center</li>
+                    <li>.border/border-top : to add al or just one , thickness cant controled css needed ,,
+                        .border-top-0: to delete one ,, .border border-primary : the previous must be added 1st
+                        ,, .rounded/rounded-top/rounded-circle : for corners</li>
+                    <li>.ml-auto : add this class to move the element all the way far from left. </li>
+                    <li>shadow for button of element (not text) :shadow/shadow-sm-lg-none</li>
+                    <li>Display classes :.d-inline/inline-block/block/table/teble-cell/table-row/flex/
+                        inline-flex and .d-lg-non to hide element on break point </li>
+                    <li>suffixes:
+                        <ul>
+                            <li>color : -danger-info-primary-secondary-warning-dark-light <br>
+                                also can copy custom from
+                                <a href="https://getbootstrap.com/docs/5.2/customize/color/">here</a>
+                            </li>
+                            <li>Width : work only with w-25-50-75-100-auto u may change abit with px-# otherwise
+                                css ike in css predefined-height, best responsive way to use vh-100 on
+                                parent(like height:100vh) </li>
+                            <li>height : w-25 (like width:25%) but like in css this need to be inside div with
+                                predefined-height, best responsive way to use vh-100 on parent(like
+                                height:100vh)
+                            </li>
+                            <li>to disable/reset bootstrap/browser auto margin/padding : use container-fluid(and
+                                padding: 0 !important; on child) or on bootstraped parent (padding/margin: 0
+                                !important;) then width: 100vw;(width: 100vw;) </li>
+                            <li>.text-start .text-center .text-end</li>
+                            <li>.text-wrap used to make text getting inside the space when it tend to got out of
+                                its width </li>
+                            <li>.text-break : to adjust the text to the element width (like.text-wrap?) </li>
+                            <li>.fs-1/-6 : same as h1-6</li>
+                            <li>Display headings Display-1/6 is larger heading notice NOW this is notresponsive.
+                            </li>
+                            <li>Line height :.lh-1/sm/bace/lg </li>
+                            <li>.text-decoration-none</li>
+                            <li>.fw-bold .fw-bolder .fw-normal .fw-light .fw-lighter .fst-italic .fst-normal
+                            </li>
+                            <li>sizing and directions: -lg and -sm , need to repeate the main classname with it
+                                separatelly (btn-lg) <br>
+                                m-margin m-mt-mb-ms(start=left)-me(end=left)mx-my m-0 m-auto <br>
+                                p-paddingp pt-ps-pb-pe-px-py p-auto p-0 , negative are disabled ! <br>
+                                .mx-auto class for horizontally centering <br>
+                                then : <br>
+                                1 - sets to .25rem (4px if font-size is 16px) <br>
+                                2 - sets to .5rem (8px if font-size is 16px) <br>
+                                3 - sets to 1rem (16px if font-size is 16px) <br>
+                                4 - sets to 1.5rem (24px if font-size is 16px) <br>
+                                5 - sets to 3rem (48px if font-size is 16px) <br>
+                                u can use mb-# instead of br , notice thate this is not responsive and u may use
+                                p-sm-1 p-xl-5 . <br></li>
 
-
-
-                            </ul>
-                        </li>
-                    </ol>
-                </li><br>
-
-
-                <li><strong style="color: rgb(253, 174, 55);">multi-custom classes :</strong>
-                    <ol>
-                        <li>.container(with margin)/.container-fluid(without margin) is the basic class to add on
-                            div and it give the content a margin (almost)
-                            and auto responsive predefined grid. it can be use on more elements than div ,<br>
-                            .container-fluid make the dive spread on all the width. <br>
-                            .container-md : the container-effects is appliedon on medium resolution/screen and
-                            higher when u go below</li>
-                        <li>Buttons : class="btn btn-default-lg(sm,xs)
-                            (btn-info,btn-primary,btn-success,btn-warning,btn-danger)" can includ the class
-                            into a href:"" , color can be changed by css by styling the class <br>
-                            Outline buttons : class="btn btn-outline-primary" <br>
-                            remember to assign type:"button" to change the default submet behaviour <br>
-                            add btn block to make it width 100% <br>
-                            add disabled <br>
-                        </li>
-                        <li>.btn-group-lg : put it on div that contain buttons to delete the margin between them u
-                            should add role=group for scr-readers </li>
-                        <li>select class="form-select form-select-sm">option selected>Open this select menu
-                            /option>/select></li>
-                        <li>.blockquote : it doesnt margin-left !!! if it added on footer(div) give author sign</li>
-                        <li>.lead improve Paragraph looking by font size and add weightg </li>
-                        <li>.badge badge-primary/badge-pill badge-primary : fast span custom with color and shape
-                        </li>
-                        <li>.alert alert-success : ad to dive to make it as alert for user . inside it u can add
-                            alert-heading on h4 tag , to make alert dismissible use this code :
-                            div class="alert alert-danger alert-dismissible fade show" role="alert" <br>
-                            button type="button" class="btn-close" data-bs-dismiss="alert"
-                            aria-label="Close">/button>/div>
-                        </li>
-                        <li>to make an element dismissible add on it class "alert-dismissible fade show" then at end
-                            this button: <br>
-                            button aria-label="close" class="close" data-dismiss="(elementClass!!!!)">
-                            span aria-hidden="true" >&times;</span>
-                            /button>
-                        </li>
-                        <li>Navbar : check the built-in at dics :
-                            <a href="https://getbootstrap.com/docs/5.2/components/navbar/">here</a><br>
-                            on expandable nav be sure the button data-target="#links-div-id" WITH # !!! <br>
-                            notice that to change a-tag text-color go directly on it . also whe use .navbar-dark
-                            .bg-dark togother it automatically make text white
-                        </li>
-                        <li>dropdowns : there menus used often in navs (custom js forum ??) <a
-                                href="https://getbootstrap.com/docs/5.2/components/dropdowns/#content">here</a>
-                        </li>
-                        <li>advanced/modern pre-built templates: <ul>
-                                <li>cards : basically a div with border and special pieces inside, often used with
-                                    grid system for gridy look , copy code from the docs :
-                                    <a href="https://getbootstrap.com/docs/5.2/components/card/#content">here</a>
-                                </li>
-                                <li>carousel : copy code from the docs :
-                                    <a href="https://getbootstrap.com/docs/5.2/components/carousel/#content">here</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>worth mention : spinners (waiting loops), progress bar , models (popup dialog in screen
-                            center) ,toasts (notifications) </li>
-                        <li>for these build in classes u can always override the padding amd margin with py-0 mx-0
-                        </li>
-                    </ol>
-                <li>** for each class that u want the responsiveness bot not the margin and padding u need to go to
-                    its
-                    css and add margin/padding=0 , or add `-flex-` the class name to fit warp the elements </li>
-                </li><br><br>
+                            <li>opacity: same</li>
+                            <li>.d-grid with .gap on parent container. to save margin on each individual
+                                grid items , cant be used with d-flix</li>
+                            <li>.sticky-top / .fixed-top </li>
 
 
 
-                <li><strong style="color: rgb(253, 174, 55);">moving items (flex-box):</strong><br>
-                    <ul class="text-info">
-                        <li>in order for flex-box to be accurate when flex-prefix add it elemenate m/p to
-                            start/end/center be on the original div dimensions </li>
-                        <li>.d-flex : <ol>
-                                <li>rememeber to apply theis on the element 1st then add :
-                                    .flex-row/.flex-row-reverse/.flex-column/.flex-column-reverse </li>
-                                <li>move on main axis (on cross axis when column choosen): <br>
-                                    .justify-content-start <br>
-                                    .justify-content-end <br>
-                                    .justify-content-center <br>
-                                    .justify-content-between <br>
-                                    .justify-content-around <br>
-                                    .justify-content-sm-start
-                                </li>
-                                <li>move on cross axis (on cross main when column choosen): <br>
-                                    .align-items-start <br>
-                                    .align-items-end <br>
-                                    .align-items-center <br>
-                                    .align-items-baseline <br>
-                                    .align-items-stretch <br>
-                                    .align-items-sm-start
-                                </li>
-                                <li>self move inside d-flex flex-column/row : <br>
-                                    .align-self-start <br>
-                                    .align-self-end <br>
-                                    .align-self-center <br>
-                                    .align-self-baseline <br>
-                                    .align-self-stretch <br>
-                                    .align-self-sm-start <br>
-                                    .align-self-sm-end <br>
-                                </li>
-                            </ol>
-                        </li>
-                        <li>in order for between/around/evenly to work the total width of divs must be less than
-                            100%!!
-                        </li>
+                        </ul>
+                    </li>
+                </ol><br>
 
-                    </ul>
-                </li><br>
+                <h5 style="color: rgb(253, 174, 55);">multi-custom classes :</h5>
+                <ol>
+                    <li>.container(with margin)/.container-fluid(without margin) is the basic class to add on
+                        div and it give the content a margin (almost)
+                        and auto responsive predefined grid. it can be use on more elements than div ,<br>
+                        .container-fluid make the dive spread on all the width. <br>
+                        .container-md : the container-effects is appliedon on medium resolution/screen and
+                        higher when u go below</li>
+                    <li>Buttons : class="btn btn-default-lg(sm,xs)
+                        (btn-info,btn-primary,btn-success,btn-warning,btn-danger)" can includ the class
+                        into a href:"" , color can be changed by css by styling the class <br>
+                        Outline buttons : class="btn btn-outline-primary" <br>
+                        remember to assign type:"button" to change the default submet behaviour <br>
+                        add btn block to make it width 100% <br>
+                        add disabled <br>
+                    </li>
+                    <li>.btn-group-lg : put it on div that contain buttons to delete the margin between them u
+                        should add role=group for scr-readers </li>
+                    <li>select class="form-select form-select-sm">option selected>Open this select menu
+                        /option>/select></li>
+                    <li>.blockquote : it doesnt margin-left !!! if it added on footer(div) give author sign</li>
+                    <li>.lead improve Paragraph looking by font size and add weightg </li>
+                    <li>.badge badge-primary/badge-pill badge-primary : fast span custom with color and shape
+                    </li>
+                    <li>.alert alert-success : ad to dive to make it as alert for user . inside it u can add
+                        alert-heading on h4 tag , to make alert dismissible use this code :
+                        div class="alert alert-danger alert-dismissible fade show" role="alert" <br>
+                        button type="button" class="btn-close" data-bs-dismiss="alert"
+                        aria-label="Close">/button>/div>
+                    </li>
+                    <li>to make an element dismissible add on it class "alert-dismissible fade show" then at end
+                        this button: <br>
+                        button aria-label="close" class="close" data-dismiss="(elementClass!!!!)">
+                        span aria-hidden="true" >&times;</span>
+                        /button>
+                    </li>
+                    <li>Navbar : check the built-in at dics :
+                        <a href="https://getbootstrap.com/docs/5.2/components/navbar/">here</a><br>
+                        on expandable nav be sure the button data-target="#links-div-id" WITH # !!! <br>
+                        notice that to change a-tag text-color go directly on it . also whe use .navbar-dark
+                        .bg-dark togother it automatically make text white
+                    </li>
+                    <li>dropdowns : there menus used often in navs (custom js forum ??) <a
+                            href="https://getbootstrap.com/docs/5.2/components/dropdowns/#content">here</a>
+                    </li>
+                    <li>advanced/modern pre-built templates: <ul>
+                            <li>cards : basically a div with border and special pieces inside, often used with
+                                grid system for gridy look , copy code from the docs :
+                                <a href="https://getbootstrap.com/docs/5.2/components/card/#content">here</a>
+                            </li>
+                            <li>carousel : copy code from the docs :
+                                <a href="https://getbootstrap.com/docs/5.2/components/carousel/#content">here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>worth mention : spinners (waiting loops), progress bar , models (popup dialog in screen
+                        center) ,toasts (notifications)
+                    </li>
+                    <li>for these build in classes u can always override the padding amd margin with py-0 mx-0
+                    </li>
+                    <li>** for each class that u want the responsiveness bot not the margin and padding u need to go to
+                        its css and add margin/padding=0 , or add `-flex-` the class name to fit warp the elements </li>
+                </ol>
 
-                <li> <strong style="color: rgb(253, 174, 55);">make responsive (grid):</strong>
-                    <ol>
-                        <li>container that inside it rows </li>
-                        <li>xs is for xs and below , -sm-md-lg-xl mean on this size or higher , so if
-                            u making responsive page and already built for mobile u should use lg and xl for pc</li>
-                        <li>if u use 1920px width screen can imagine that : <br>
-                            xs is under 2/6 of the whole screen(all suffixes without assign scrn-size meaning xs)
-                            <br>
-                            sm is like 2/6 of the whole screen width and higher<br>
-                            md is like 1/2 of the whole screen width and higher<br>
-                            lg is like 4/6 of the whole screen width and higher<br>
-                            xl is like 5/6 of the whole screen width and higher<br>
-                        </li>
-                        <li>declare only col-md-6 make the div half of viewport on md and higher and full viewporton
-                            small </li>
-                        <li>usually on xs/sm the elements take more col to give more space in grid (.row) (col-xs-12
-                            col-sm-12)<br>
-                            and col-md-6 col-lg-6/4 and col-xl-4/3 , so while u build mobile v. set on md and higher
-                            to share the width
-                        </li>
-                        <li>cuz u had to build mobile 1st the initial code sould be with col-xs(or just col,same)
-                        </li>
-                        <li>images can made responsive when u add .img-fluid to it (and they inside responsive
-                            element .row.comtainer) </li>
-                        <li>to remove gutter between divs use .no-gutter</li>
-                        <li>
-                            <strong>Grid:</strong><br> i way to make responsive elements , u need to assign the main
-                            div/container as .row (it also make it flex) which devide the space inside it to 12
-                            equal columns (col), then inside it u can assign how much column for each element by
-                            using .col-3 , if u didnt assign no. for some then it just devided equally the space
-                            that left over, also each new row need a new div with .row (so its a container div with
-                            multi bg-success div.row inside it). <br>
-                            been .row make it flex , bootstrap have flex commads as classes .align-items-center
-                            .align-self-md-end justify-content-lg-center <br>
-                            .flex-{grow|shrink}-0/.flex-{grow|shrink}-1/.flex-sm-{grow|shrink}-0 <br>
-                            .flex-nowrap/.flex-wrap/.flex-wrap-reverse <br>
-                            .align-content-start/.align-content-end/.align-content-center/.align-content-between/
-                            .align-content-around/.align-content-stretch/.align-content-sm-start <br>
-
-                            how it behave ? :
-                            the general use is to declare 1st div as container/con-fluid next one as .row . <br>
-                            or it can be enough on same div .row and then justify-content
-
-                            declare direct parent as d-flex(default as flex-row) or flex-column
-                            then u can use justify/align-itemS from parents on all or on elements using self . note
-                            that when u use positioning on main axis the the unused width is shrinking. <br>
-                        <li>inline elements moves with text align (text-start on bootstrap) and self properties
-                            doesnt work on them </li>
+                <br><br>
 
 
 
-                    </ol>
-                </li>
-                <li>Form : start the main form-element with .form-group then to make every in-form-element
+                <h5 style="color: rgb(253, 174, 55);">moving items (flex-box):</h5><br>
+                <ul class="text-info">
+                    <li>in order for flex-box to be accurate when flex-prefix add it elemenate m/p to
+                        start/end/center be on the original div dimensions </li>
+                    <li>.d-flex : <ol>
+                            <li>rememeber to apply theis on the element 1st then add :
+                                .flex-row/.flex-row-reverse/.flex-column/.flex-column-reverse </li>
+                            <li>move on main axis (on cross axis when column choosen): <br>
+                                .justify-content-start <br>
+                                .justify-content-end <br>
+                                .justify-content-center <br>
+                                .justify-content-between <br>
+                                .justify-content-around <br>
+                                .justify-content-sm-start
+                            </li>
+                            <li>move on cross axis (on cross main when column choosen): <br>
+                                .align-items-start <br>
+                                .align-items-end <br>
+                                .align-items-center <br>
+                                .align-items-baseline <br>
+                                .align-items-stretch <br>
+                                .align-items-sm-start
+                            </li>
+                            <li>self move inside d-flex flex-column/row : <br>
+                                .align-self-start <br>
+                                .align-self-end <br>
+                                .align-self-center <br>
+                                .align-self-baseline <br>
+                                .align-self-stretch <br>
+                                .align-self-sm-start <br>
+                                .align-self-sm-end <br>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>in order for between/around/evenly to work the total width of divs must be less than
+                        100%!!
+                    </li>
+
+                </ul>
+                <br>
+
+                <h5 style="color: rgb(253, 174, 55);">make responsive (grid):</h5>
+                <ol>
+                    <li>container that inside it rows </li>
+                    <li>xs is for xs and below , -sm-md-lg-xl mean on this size or higher , so if
+                        u making responsive page and already built for mobile u should use lg and xl for pc</li>
+                    <li>if u use 1920px width screen can imagine that : <br>
+                        xs is under 2/6 of the whole screen(all suffixes without assign scrn-size meaning xs)
+                        <br>
+                        sm is like 2/6 of the whole screen width and higher<br>
+                        md is like 1/2 of the whole screen width and higher<br>
+                        lg is like 4/6 of the whole screen width and higher<br>
+                        xl is like 5/6 of the whole screen width and higher<br>
+                    </li>
+                    <li>declare only col-md-6 make the div half of viewport on md and higher and full viewporton
+                        small </li>
+                    <li>usually on xs/sm the elements take more col to give more space in grid (.row) (col-xs-12
+                        col-sm-12)<br>
+                        and col-md-6 col-lg-6/4 and col-xl-4/3 , so while u build mobile v. set on md and higher
+                        to share the width
+                    </li>
+                    <li>cuz u had to build mobile 1st the initial code sould be with col-xs(or just col,same)
+                    </li>
+                    <li>images can made responsive when u add .img-fluid to it (and they inside responsive
+                        element .row.comtainer) </li>
+                    <li>to remove gutter between divs use .no-gutter</li>
+                    <li>
+                        <strong>Grid:</strong><br> i way to make responsive elements , u need to assign the main
+                        div/container as .row (it also make it flex) which devide the space inside it to 12
+                        equal columns (col), then inside it u can assign how much column for each element by
+                        using .col-3 , if u didnt assign no. for some then it just devided equally the space
+                        that left over, also each new row need a new div with .row (so its a container div with
+                        multi bg-success div.row inside it). <br>
+                        been .row make it flex , bootstrap have flex commads as classes .align-items-center
+                        .align-self-md-end justify-content-lg-center <br>
+                        .flex-{grow|shrink}-0/.flex-{grow|shrink}-1/.flex-sm-{grow|shrink}-0 <br>
+                        .flex-nowrap/.flex-wrap/.flex-wrap-reverse <br>
+                        .align-content-start/.align-content-end/.align-content-center/.align-content-between/
+                        .align-content-around/.align-content-stretch/.align-content-sm-start <br>
+
+                        how it behave ? :
+                        the general use is to declare 1st div as container/con-fluid next one as .row . <br>
+                        or it can be enough on same div .row and then justify-content
+
+                        declare direct parent as d-flex(default as flex-row) or flex-column
+                        then u can use justify/align-itemS from parents on all or on elements using self . note
+                        that when u use positioning on main axis the the unused width is shrinking. <br>
+                    <li>inline elements moves with text align (text-start on bootstrap) and self properties
+                        doesnt work on them
+                    </li>
+                </ol><br>
+
+
+                <h5 style="color: rgb(253, 174, 55);"> Form : </h5>
+                <p>start the main form-element with .form-group then to make every in-form-element
                     bootstrapized by add to it .form-control (not to the ther lablez) ,basic sizing with
                     .form-control-sm/lg ,<br>
                     for check and radio copy the code from docs
@@ -1513,8 +1663,7 @@
                     <a href="https://getbootstrap.com/docs/5.2/forms/input-group/">here</a> as .container and .row
                     need separate divs also .input-group need one , notice when u spacing the input it need to warp
                     it ALSO with separate div . <br>
-
-                </li>
+                </p>
 
                 <li>Bootstrap icons : <a href="https://icons.getbootstrap.com/">here</a>
                     these are svg (Scalable Vector Graphics) which is basically a text can be decorated with text
@@ -1522,10 +1671,9 @@
                     script src="https://kit.fontawesome.com/c6a6e33750.js" crossorigin="anonymous">/script>
                 </li><br><br>
 
-
-                <li><strong style="color: rgb(253, 174, 55);">Notes:</strong>
+                <h5 style="color: rgb(253, 174, 55);">Notes:</h5>
+                <li>
                     <ul>
-                        <li></li>
                         <li>u cant use the responsive/grid system on tables or lists (unless u made div inside)
                         </li>
                         <li>class="table table-hover" : make shadow on hover ?? </li>
@@ -1557,98 +1705,97 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-                    <br><br><br><br>
-
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-                    <div class="d-flex flex-column align-items-center">
-
-                        <div class="d-flex img-fluid w-100 mb-3">
-                            <img src="https://www.box.co.uk/Images/rtx-logos-FP_1808301001.jpg""
-                                    class=" img-fluid">
-                        </div>
-                    </div>
-
-
-
-                    <br><br><br><br><br><br><br>
-
-
-                    <div>
-                        <div class="container py-2" style="background: rgba(0, 0, 0, 0.664);width: 100%;">
-                            <hr style="height: 0vw; width: 40%;border: 3px solid rgb(255, 0, 0);">
-                            <hr style="height: 0vw; width: 60%;border: 3px solid rgb(255, 145, 0);">
-                            <hr style="height: 0vw; width: 60%;border: 3px solid rgb(0, 255, 149);margin-left: 20%;">
-                            <hr style="width: 60%;height: 3px;border: 3px solid rgb(0, 153, 255);margin-left: 40%;">
-                            <hr style="height: 0vw; width: 40%;border: 3px solid rgb(0, 60,255);margin-left: 60%;">
-
-                        </div>
-                    </div>
-
-
-                    <br><br><br><br><br><br>
-
-                    <div class=" " style="text-align: center;">
-                        <i class="fas fa-biohazard" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label>
-                            <h1 class="text-danger" style="text-align: center;font-size: 5vw"> Experamental
-                                Zone
-                            </h1>
-                        </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="fas fa-radiation-alt" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
-                    </div>
-
-
-                    <br><br><br><br><br><br>
-
-
-                    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-                        Click me to display Date and Time.</button>
-
-                    <p id="demo"></p>
-
-
-
-
-
-
-                    <br><br><br>
-
-                    <button class="btn btn-info p-sm-2 p-md-3 p-lg-5"
-                        onclick="document.getElementById('Date').innerHTML = Date()">Show the
-                        Date</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p style="color: currentColor;" id="Date"></p>
-
-
-
-
-
                 </li>
-                </ol>
+            </ul> <!-- end of Bootstrab -->
 
 
 
 
 
-                <br><br><br><br>
 
 
-                <br><br><br><br><br><br><br>
+
+
+            <br><br><br><br>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+            <div class="d-flex flex-column align-items-center">
+
+                <div class="d-flex img-fluid w-100 mb-3">
+                    <img src="https://www.box.co.uk/Images/rtx-logos-FP_1808301001.jpg""
+                                    class=" img-fluid">
+                </div>
+            </div>
+
+
+
+            <br><br><br><br><br><br><br>
+
+
+            <div>
+                <div class="container py-2" style="background: rgba(0, 0, 0, 0.664);width: 100%;">
+                    <hr style="height: 0vw; width: 40%;border: 3px solid rgb(255, 0, 0);">
+                    <hr style="height: 0vw; width: 60%;border: 3px solid rgb(255, 145, 0);">
+                    <hr style="height: 0vw; width: 60%;border: 3px solid rgb(0, 255, 149);margin-left: 20%;">
+                    <hr style="width: 60%;height: 3px;border: 3px solid rgb(0, 153, 255);margin-left: 40%;">
+                    <hr style="height: 0vw; width: 40%;border: 3px solid rgb(0, 60,255);margin-left: 60%;">
+
+                </div>
+            </div>
+
+
+            <br><br><br><br><br><br>
+
+            <div class=" " style="text-align: center;">
+                <i class="fas fa-biohazard" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>
+                    <h1 class="text-danger" style="text-align: center;font-size: 5vw"> Experamental
+                        Zone
+                    </h1>
+                </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-radiation-alt" style="font-size: 5vw;color: rgb(189, 6, 0);"></i>
+            </div>
+
+
+            <br><br><br><br><br><br>
+
+
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                Click me to display Date and Time.</button>
+
+            <p id="demo"></p>
+
+
+
+
+
+
+            <br><br><br>
+
+            <button class="btn btn-info p-sm-2 p-md-3 p-lg-5"
+                onclick="document.getElementById('Date').innerHTML = Date()">Show the
+                Date</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p style="color: currentColor;" id="Date"></p>
+
+
+
+
+
+
+
+
+
+
+            <br><br><br><br>
+
+
+            <br><br><br><br><br><br><br>
         </div>
     </main>
 
